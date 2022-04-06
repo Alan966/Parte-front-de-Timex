@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef  } from 'react';
 import Li_Element from '../Atoms/Li_element';
 
-const Ulcontend = ({ url, children, id })  =>  {
+const Ulcontend = ({ url, children, id, img })  =>  {
 
 
     const [ulcontend, setUlcontend] = useState([]);
@@ -27,7 +27,7 @@ const Ulcontend = ({ url, children, id })  =>  {
 
 
 return(
-    <ul key={id} className='menu'ref={useref}>
+    <ul key={id} className={`menu`}ref={useref}>
         {
             ulcontend ?
             ulcontend.map(item => { 
@@ -41,6 +41,7 @@ return(
                                 grandFather={id}
                                 categoryOne={item.submenuone._id } 
                                 padre={useref.current}
+                                img={img}
                             /> ) 
                     }else if(item.submenutwo){
                         return(
