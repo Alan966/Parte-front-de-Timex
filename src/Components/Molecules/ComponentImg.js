@@ -1,24 +1,37 @@
 import { useEffect, useState } from "react";
 import ImgReturn from "../Atoms/Imges";
 
-const ComponentImg = ({ name, data}) => {
-    const [idImagen, setIdImagen] = useState(null);
+const ComponentImg = ({ img, name}) => {
+    const [listImg, setListImg] = useState(null);
 
     useEffect(() => {
-        if(name === data.submenuName){
-            setIdImagen(true)
-        }
-    }, [name, data])
+        funcionPeticionImagenes(img)
+    }, [img])
 
-    if(idImagen === true){
-        return(
-            <ImgReturn 
-            data={data}
-            />
-        )
-    }else{
-        return null
+    const funcionPeticionImagenes = (img) => {
+        if(img){
+        fetch(img)
+        .then(res => res.json())
+        .then(data => {
+            data.map(item => {
+                if(item.name === name){
+                    setListImg(item._id)
+                }
+            })
+        })
+        .catch(err => {
+            console.log(err)
+        })
+        }else{
+            console.log('No se paso el parametro IMG')
+        }
     }
+
+    return(
+        <ImgReturn 
+        id={listImg}
+        />
+    )
     
     
 }

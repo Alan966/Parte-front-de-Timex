@@ -236,10 +236,22 @@ input, select {
  .menu{
   display: flex;
   justify-content:space-around;
+  align-items: center;
+  align-content: center;
   list-style: none;
   position: relative;
-} 
-
+}
+.item-2{
+  min-height: 7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link-2{
+  height: 100%;
+  position: relative;
+  top: 50%;
+}
 
 .menu li {
   display: inline-block;
@@ -268,7 +280,6 @@ input, select {
 
 .menu li.item:hover > ul.submenu {
   display: flex;
-  background-color: red;
   min-width: 100%;
   position: absolute;
   left: 0;
@@ -293,4 +304,17 @@ input, select {
 }
 .menu .submenu li {
   width: min-content;
+}
+
+.menu-3{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  max-height: fit-content;
+} 
+
+main{
+  max-width: 1000px;
+  margin: 50px auto;
+  overflow: hidden;
 }

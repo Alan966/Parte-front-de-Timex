@@ -27,7 +27,7 @@ const Ulcontend = ({ url, children, id, img })  =>  {
 
 
 return(
-    <ul key={id} className={`menu`}ref={useref}>
+    <ul key={id} className={`menu menu-${id}`}ref={useref}>
         {
             ulcontend ?
             ulcontend.map(item => { 

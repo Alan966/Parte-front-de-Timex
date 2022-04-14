@@ -3,7 +3,8 @@ import {
   Routes, 
   Route
 } from "react-router-dom"
-import Header from "./Templates/Header";
+import Header from "./Templates/Header"; 
+import SliderShowPage from "./Organisms/SliderShowPage";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
         <Header/>
       </BrowserRouter>
+      <SliderShowPage />
       <a href="https://www.flaticon.com/free-icons/world" title="world icons">World icons created by Freepik - Flaticon</a>
     </div>
   );
