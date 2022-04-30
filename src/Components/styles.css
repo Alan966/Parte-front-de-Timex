@@ -660,9 +660,212 @@ align-items: center;
   padding: 5px;
   color: #000;
 }
+.contend_logos{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  position: relative;
+  padding: 0.5em 0 ;
+}
+.contend_logos_tarjetas{
+  display:flex; 
+  justify-content: space-around;
+  position: relative;
+  top: 5em;
+  width: 100%;
+  padding: 0.5em 0;
+}
+
+.contend_email_pagar{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F6F6;
+}
+.description_parrafo{
+  position: relative;
+  top: 4em;
+  font-family: var(--body-font);
+  font-size: var(--font-medium);
+}
 .contend_facebook::after{
   content: " ";
   position: absolute;
-  background-image: url('../img/Imagenes/facebook.png');
+  background-image: url('../img//icons/facebook.png');
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.contend_twitter::after{
+  content: " "; 
+  position: absolute; 
+  background-image: url('../img//icons/twitter.png');
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.contend_pinteres::after{
+  content: " ";
+  position: absolute;
+  background-image: url('../img//icons/pinterest.png');
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.contend_instagram::after{
+  content: " "; 
+  position: absolute;
+  background-image: url('../img//icons/instagram.png');
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.contend_youtube::after{
+  content: " "; 
+  position: absolute;
+  background-image: url('../img//icons/youtube.png');
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.visa_card::after{
+  content: " ";
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  background-image: url('../img//icons/tarjetas/visa.png'); 
+  background-repeat: no-repeat;
+  background-size: contain; 
+}
+.americanexpress::after{
+content: " ";
+position: absolute;
+width: 3em;
+height: 3em;
+background-image: url('../img//icons/tarjetas/americanexpress.png');
+background-repeat: no-repeat;
+background-size: contain;
+}
+.discover::after{
+content: " ";
+position: absolute;
+background-image: url('../img//icons/tarjetas/discover.png');
+width: 3em;
+height: 3em;
+background-repeat: no-repeat;
+background-size: contain;
+}
+.jcb::after{
+content: " ";
+position: absolute;
+background-image: url('../img//icons/tarjetas/jcb.png');
+width: 3em;
+height: 3em;
+background-repeat: no-repeat;
+background-size: contain;
+}
+.maestro::after{
+  content: " ";
+  position: absolute;
+  background-image: url('../img//icons/tarjetas/maestro.png');
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.mastercard::after{
+  content: " ";
+  position: absolute;
+  background-image: url('../img//icons/tarjetas/mastercard.png');
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.pay::after{
+  content: " ";
+  position: absolute;
+  background-image: url('../img//icons/tarjetas/pay.png');
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.paypal::after{
+  content: " ";
+  position: absolute;
+  background-image: url('../img//icons/tarjetas/paypal.png');
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.contend_mexixo::after{
+  content: " ";
+  position: absolute;
+  background-image: url('../img//icons/banderas/mexico.png');
+  width: 1.5em;
+  height: 1.5em;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.contend_email_pagar{
+  display: flex;
+  justify-content: space-around;
+}
 
+.card_formulario{
+  width: 25em;
+
+}
+.stay_connected{
+  width: 25em;
+  position: relative;
+  top: -3em;
+}
+.title_stay_connected{
+  font-family:var(--title-font);
+  text-align: center;
+  font-size: var(--font-large);
+}
+.contendformulario{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title_formulario{
+  font-family: var(--title-font);
+  font-size: var(--font-large);
+  padding:  0.5em;
+}
+.description_formulario{
+  font-family: var(--body-font); 
+  font-size: var(--font-medium);
+  padding: 0.5em;
+}
+.input_formulario{
+  width: 87%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3em;
+  margin: 0.5em;
+}
+.button_sign_up{
+ width: 90%;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8em;
+  margin: 0.5em; 
+  background-color: #000;
+  color: white;
+  font-family: var(--title-font);
 }

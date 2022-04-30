@@ -1,20 +1,20 @@
 const FormularioEmail = ({ name, type, description }) => {
 return(
-    <div>
+    <div className="card_formulario">
         <form action="#">
-            <h2>{ name }</h2>
-            <p> { description }</p>
-            <fieldset>
-                <div>
+            <h2 className="title_formulario">{ name }</h2>
+            <p className="description_formulario"> { description }</p>
+            <fieldset className="contendformulario">
+                <div >
                     <input 
                      type="text"
-                     className={type}
+                     className="input_formulario"
                      id={type}
                      />
                     <label for={type}></label>
                 </div>
             </fieldset>
-            <input type="submit" value={"SIGN UP"} />
+            <input className="button_sign_up" type="submit" value={"SIGN UP"} />
         </form>
     </div>
 )

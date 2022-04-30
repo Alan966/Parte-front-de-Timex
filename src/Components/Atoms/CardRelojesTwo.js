@@ -12,7 +12,7 @@ return(
             }</h1>
         </div>
         <div>
-        <a href="#">
+        <a href={`/${name}`}>
                 <button className="button button_shop">
                     SHOP NOW
                 </button>
