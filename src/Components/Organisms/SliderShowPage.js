@@ -1,46 +1,45 @@
+import { useEffect, useState } from "react"
 import {Slideshow, Slide, TextoSlide} from "../Molecules/SliderShow"
-import styled from "styled-components" 
-import img1 from "../../img/Imagenes/1.jpg"
-import img2 from "../../img/Imagenes/2.jpg"
-import img3 from "../../img/Imagenes/3.jpg"
-import img4 from "../../img/Imagenes/4.jpg"
-const SliderShowPage = () => {
+import styled from "styled-components"
+
+
+const SliderShowPage = ({ _id }) => {
+
+    const [guardaImg, setGuardarImg] = useState(null);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/slider/slidershow')
+        .then(response => response.json())
+        .then(data => {
+            setGuardarImg(data);
+            
+        })
+    },[guardaImg])
+
 return(
-<main>
+<main className="main_slider" key={_id}>
     <Titulo>Productos Destacados</Titulo>
     <Slideshow controles={true} autoplay={true} velocidad="500" intervalo="5000">
-    <Slide>
-                <a href="/hola.com">
-                    <img src={img1} alt="imagen 1" />
-                </a>
-                <TextoSlide colorFondo="navy" colorTexto="#fff">
-                    <p>15% descuento en productos de TIMEX</p>
-                </TextoSlide>
-            </Slide>
-            <Slide>
-                <a href="/hola.com">
-                    <img src={img2} alt="imagen 1" />
-                </a>
-                <TextoSlide>
-                    <p>15% descuento en productos de TIMEX</p>
-                </TextoSlide>
-            </Slide>
-            <Slide>
-                <a href="/hola.com">
-                    <img src={img3} alt="imagen 1" />
-                </a>
-                <TextoSlide>
-                    <p>15% descuento en productos de TIMEX</p>
-                </TextoSlide>
-            </Slide>
-            <Slide>
-                <a href="/hola.com">
-                    <img src={img4} alt="imagen 1" />
-                </a>
-                <TextoSlide>
-                    <p>15% descuento en productos de TIMEX</p>
-                </TextoSlide>
-            </Slide>
+            {
+                guardaImg? 
+                guardaImg.map(({_id, description, name}) => {
+                    return(
+                    <Slide>
+                        <a href="/hola.com">
+                            <img className="img_sliderShow" src={`http://localhost:5000/slider/photo/${_id}`} alt={name} />
+                        </a>
+                        <TextoSlide colorFondo="rgba(0,0,0, 0.6)" colorTexto="#fff">
+                        <p>
+                            {
+                                description
+                            }
+                        </p>
+                        </TextoSlide>
+                    </Slide>
+                    )
+                }): 
+                null
+            }
     </Slideshow>
 </main>
 );

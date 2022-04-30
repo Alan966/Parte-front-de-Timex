@@ -4,7 +4,7 @@ import {
   Route
 } from "react-router-dom"
 import Header from "./Templates/Header"; 
-import SliderShowPage from "./Organisms/SliderShowPage";
+import Home from "./Pages/Home";
 
 
 function App() {
@@ -12,8 +12,10 @@ function App() {
     <div className="body">
       <BrowserRouter>
         <Header/>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+      </Routes>
       </BrowserRouter>
-      <SliderShowPage />
       <a href="https://www.flaticon.com/free-icons/world" title="world icons">World icons created by Freepik - Flaticon</a>
     </div>
   );

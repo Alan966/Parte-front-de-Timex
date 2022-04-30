@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef  } from 'react';
 import Li_Element from '../Atoms/Li_element';
 
-const Ulcontend = ({ url, children, id, img })  =>  {
+const Ulcontend = ({ url, children, _id, img, contraseña })  =>  {
 
 
     const [ulcontend, setUlcontend] = useState([]);
@@ -19,7 +19,7 @@ const Ulcontend = ({ url, children, id, img })  =>  {
         })
 
 
-        if(useref !== null && id !== 1){
+        if(useref !== null && _id !== 1){
             useref.current.classList.add('submenu') 
             }
 
@@ -27,7 +27,7 @@ const Ulcontend = ({ url, children, id, img })  =>  {
 
 
 return(
-    <ul key={id} className={`menu menu-${id}`}ref={useref}>
+    <ul key={contraseña} className={`menu menu-${_id}`}ref={useref}>
         {
             ulcontend ?
             ulcontend.map(item => { 
@@ -38,7 +38,7 @@ return(
                                  _id={item._id}
                                 name={item.name}
                                 children={children}
-                                grandFather={id}
+                                grandFather={_id}
                                 categoryOne={item.submenuone._id } 
                                 padre={useref.current}
                                 img={img}
@@ -48,7 +48,7 @@ return(
                             <Li_Element 
                                  _id={item._id}
                                 name={item.name}
-                                grandFather={id}
+                                grandFather={_id}
                                 categoryTwo={item.submenutwo._id } 
                                 padre={useref.current}
                             /> ) 
@@ -57,7 +57,7 @@ return(
                             <Li_Element 
                                  _id={item._id}
                                 name={item.name}
-                                grandFather={id}
+                                grandFather={_id}
                                 children={children}
                                 padre={useref.current}
                             /> ) 
@@ -68,7 +68,7 @@ return(
                              _id={item._id}
                             name={item.name}
                             children={children}
-                            grandFather={id}
+                            grandFather={_id}
                         /> ) 
                 }
                     })

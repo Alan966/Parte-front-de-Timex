@@ -17,13 +17,13 @@ useEffect(()  => {
         }
 },[ grandFather, padre, categoryTwo , categoryOne, img ])
 
+
 const retonarPrimerosHijos = () =>{
     SetaprovarReturn(true)
 }
 
 if(aprovarReturn === true){
     return(
-        // <div className="contend_img">
         <>
         <li key={_id} className={`item item-${grandFather}`} data={_id} >  
         {
@@ -43,7 +43,6 @@ if(aprovarReturn === true){
             }
         </li>
         </>
-        // </div>
         )
 }
 else{

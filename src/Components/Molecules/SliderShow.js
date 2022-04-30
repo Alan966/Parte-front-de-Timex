@@ -18,7 +18,6 @@ const Slideshow = ({
 
     const siguiente = useCallback(() => {
         if(slideshow.current.children.length > 0){ 
-            console.log('Sigueinte')
             const primerElemento = slideshow.current.children[0];
             slideshow.current.style.transition = `${velocidad}ms ease-out all`; 
             const tamañoSlide = slideshow.current.children[0].offsetWidth;
@@ -37,7 +36,6 @@ const Slideshow = ({
     }, [velocidad]) 
 
     const anterior = () =>{
-        console.log("anterior")
         if(slideshow.current.children.length > 0){ 
             const index = slideshow.current.children.length - 1
             const ultimoElemento = slideshow.current.children[index];
@@ -98,19 +96,20 @@ const Slideshow = ({
 
 const ContenedorPrincipal = styled.div`
    position: relative; 
-
 `
 
 const Slide = styled.div`
-   min-width: 100%;
+vertical-align: top; 
+   min-width: 100vw;
    overflow: hidden; 
    transition: .3s ease all; 
    z-index: 9; 
-   max-height:500px; 
+   max-height:100%; 
    position: relative;
 
    img{
-       width: 100%; 
+       width: 100%;
+        height: 100%; 
        vertical-align: top; 
    }
 `
@@ -133,6 +132,8 @@ const TextoSlide = styled.div`
 const ConteneodrSlideshow = styled.div`
 display: flex; 
 flex-wrap: nowrap;
+width:100vw; 
+height: 60vh;
 `
 
 const Controles = styled.div`

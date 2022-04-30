@@ -9,16 +9,19 @@ const HeaderPrincipal = () => {
             <header className="header">
                 <nav className="nav">
                 <Ulcontend
-                id={1}
+                  _id={1}
+                  contraseña={0o1}
                   url={`http://localhost:5000/submenu/one/all`}
                   children={
                   <Ulcontend 
                   url={`http://localhost:5000/submenu/two/all`}
-                  id={2}
+                  _id={2}
+                  contraseña={0o2}
                   children={
                     <Ulcontend 
                     url={`http://localhost:5000/submenu/three/all`}
-                    id={3}
+                    _id={3}
+                    contraseña={0o3}
                     />
                   }
                   img={`http://localhost:5000/image/imageAll`}
