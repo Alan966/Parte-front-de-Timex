@@ -27,21 +27,20 @@
     --z-fixed:100; 
     --z-modal:1000;
 }
-
-.gris{
-  background-color: rgba(0,0,0,0.5);
+.two_section_timex{
+  background-color: white;
+  padding: 2em 4em;
+  display: flex; 
+  justify-content: space-around;
 }
-
-.treinta{
-  display: grid;
-  grid-template-columns: 1fr , 2fr;
-}
-
-.parrafoClass{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  height: 100%;
-}
+.img_Part_Timex{
+    width: 30em;
+  }
+  
+  .space{
+    padding: 2em;
+  }
+  
+  .width_20em{
+    width: 20em;
+  }

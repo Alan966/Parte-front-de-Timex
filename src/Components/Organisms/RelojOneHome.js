@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react"
 import { get } from "axios"
 import CardReloj from "../Atoms/CardReloj";
 import Carousel from "react-elastic-carousel"
-
+import "../../ComponentsCss/Organims/RelojOneHome.css";
 
 const RelojOneHome = ({ url }) => {
 
@@ -41,28 +41,33 @@ const RelojOneHome = ({ url }) => {
 
 
     return(
-           <div className="contenedor" id="carouselExampleSlidesOnly" data-ride="carousel" >
+           <div 
+           className="contenedor" 
+           id="carouselExampleSlidesOnly" 
+           data-ride="carousel" >
                 < Carousel 
                 brackPoints={breakPoints} 
                 className="contend_relojes" 
                 >
                 <div className="contend-1" id="section_1">
-                    {
-                        a.current.length > 0 ? 
-                        a.current.map(({_id, name, description}) => {
-                            return(
-                                <CardReloj 
-                                _id={_id} 
-                                name={name}
-                                description={description} 
-                                /> 
-                            )
-                        })
-                            :
-                        null 
-                    }
+                {
+                    a.current.length > 0 ? 
+                    a.current.map(({_id, name, description}) => {
+                        return(
+                            <CardReloj 
+                            _id={_id} 
+                            name={name}
+                            description={description} 
+                            /> 
+                        )
+                    })
+                        :
+                    null 
+                }
                 </div>
-                <div className="contend-2" id="section_2">
+                <div 
+                className="contend-2" 
+                id="section_2">
                    {
                         b.current.length > 0? 
                         b.current.map(({_id, name, description}) => {
@@ -78,7 +83,8 @@ const RelojOneHome = ({ url }) => {
                         null 
                     }
                 </div>
-                <div className="contend-3" id="section_3">
+                <div className="contend-3" 
+                id="section_3">
                 {
                         c.current.length > 0? 
                         c.current.map(({_id, name, description}) => {

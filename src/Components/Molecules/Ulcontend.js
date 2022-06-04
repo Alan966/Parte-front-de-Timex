@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef  } from 'react';
 import Li_Element from '../Atoms/Li_element';
+import Form from './Form';
+import "../../ComponentsCss/Moleculas/Ulcontend.css";
 
 const Ulcontend = ({ url, children, _id, img, contraseña })  =>  {
 
@@ -28,6 +30,11 @@ const Ulcontend = ({ url, children, _id, img, contraseña })  =>  {
 
 return(
     <ul key={contraseña} className={`menu menu-${_id}`}ref={useref}>
+        <div className='contend_header_title'>
+            <h2 className='timex_title_hamburguer'>TIMEX</h2>
+            <p className='legend_timex_header'>MY TIMEX</p>
+        </div>
+            <Form/>
         {
             ulcontend ?
             ulcontend.map(item => { 

@@ -1,10 +1,9 @@
-/* Importacion de fuentes */
-
 :root{
     /* Colors */
     --turkey-color:#00ACB6; 
     --white-color: #FFFFFF; 
     --gray-low-color: #D1D1D4;
+    --color-gris-claro:#c3c3c3;
     --color-oscurito:#141618;
     --color-header:#bbb8b8;
     /* Fuentes para la Pagina */
@@ -27,21 +26,31 @@
     --z-fixed:100; 
     --z-modal:1000;
 }
-
-.gris{
-  background-color: rgba(0,0,0,0.5);
+.input_buscar{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width:99%;
+    padding: 1em 0 1em ;
+    display: block;
+    border-radius: 14px;
 }
-
-.treinta{
-  display: grid;
-  grid-template-columns: 1fr , 2fr;
+.container:focus-within >
+.input_buscar:required:focus{
+    background: var(--color-gris-claro);
+    width: 99%;
 }
-
-.parrafoClass{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  height: 100%;
+.container{
+    position: relative;
+}
+.label_buscar::after{
+    content: '';
+    width: 1.5em;
+    height: 1.5em;
+    position: relative;
+    background: url("../../img/icons/busqueda(2).png");
+    display: block;
+    /* background-color: red; */
+    top: .5em;
+    left: -2em;
 }

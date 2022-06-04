@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import CardPie from "../Atoms/cardPie"
+import "../../ComponentsCss/Moleculas/PieTimex.css";
 
 const PieTimex = () => {
 

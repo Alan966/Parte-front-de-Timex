@@ -28,20 +28,26 @@
     --z-modal:1000;
 }
 
-.gris{
-  background-color: rgba(0,0,0,0.5);
+main{
+    overflow: hidden;
 }
-
-.treinta{
-  display: grid;
-  grid-template-columns: 1fr , 2fr;
+.img_sliderShow{
+    width: 100vw;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+    width: 100vw;
 }
-
-.parrafoClass{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  height: 100%;
+@media screen and (min-width: 768px){
+    .img_sliderShow{
+        height: 60vh;
+    }
 }
+.main_slider{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    width: 99vw;
+  }

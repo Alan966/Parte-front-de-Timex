@@ -1,0 +1,198 @@
+/* Importacion de fuentes */
+
+:root{
+    /* Colors */
+    --turkey-color:#00ACB6; 
+    --white-color: #FFFFFF; 
+    --gray-low-color: #D1D1D4;
+    --color-oscurito:#141618;
+    --color-header:#bbb8b8;
+    /* Fuentes para la Pagina */
+    --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Raleway', sans-serif;
+    /* Tamaños de letra */
+    --font-small: 12px;
+    --font-medium: 14px;
+    --font-large: 18px;
+    --font-big: 26px;
+    --font-bigbig: 36px;
+
+    /* Medidas */
+    --header-menu-hamburguer:2em;
+
+    /* Variables de apilamiento */
+    --z-back: -10; 
+    --z-normal: 1; 
+    --z-tooltip:10; 
+    --z-fixed:100; 
+    --z-modal:1000;
+}
+
+.contend_email_pagar{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F6F6;
+    display: flex;
+    justify-content: space-around;
+}  
+.contend_facebook::after{
+    content: " ";
+    position: absolute;
+    background-image: url('../../img/icons/facebook.png');
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.contend_twitter::after{
+    content: " "; 
+    position: absolute; 
+    background-image: url('../../img/icons/twitter.png');
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+  .contend_pinteres::after{
+    content: " ";
+    position: absolute;
+    background-image: url('../../img/icons/pinterest.png');
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.contend_instagram::after{
+    content: " "; 
+    position: absolute;
+    background-image: url('../../img/icons/instagram.png');
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.contend_youtube::after{
+    content: " "; 
+    position: absolute;
+    background-image: url('../../img/icons/youtube.png');
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.visa_card::after{
+    content: " ";
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    background-image: url('../../img/icons/tarjetas/visa.png'); 
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+  
+.americanexpress::after{
+    content: " ";
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    background-image: url('../../img/icons/tarjetas/americanexpress.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.discover::after{
+    content: " ";
+    position: absolute;
+    background-image: url('../../img/icons/tarjetas/discover.png');
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.jcb::after{
+    content: " ";
+    position: absolute;
+    background-image: url('../../img/icons/tarjetas/jcb.png');
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.maestro::after{
+    content: " ";
+    position: absolute;
+    background-image: url('../../img/icons/tarjetas/maestro.png');
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.mastercard::after{
+    content: " ";
+    position: absolute;
+    background-image: url('../../img/icons/tarjetas/mastercard.png');
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.pay::after{
+    content: " ";
+    position: absolute;
+    background-image: url('../../img/icons/tarjetas/pay.png');
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.paypal::after{
+    content: " ";
+    position: absolute;
+    background-image: url('../../img/icons/tarjetas/paypal.png');
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.contend_mexixo::after{
+    content: " ";
+    position: absolute;
+    background-image: url('../../img/icons/banderas/mexico.png');
+    width: 1.5em;
+    height: 1.5em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.contend_logos_tarjetas{
+    display:flex; 
+    justify-content: space-around;
+    position: relative;
+    top: 5em;
+    width: 100%;
+    padding: 0.5em 0;
+}
+.title_stay_connected{
+    font-family:var(--title-font);
+    text-align: center;
+    font-size: var(--font-large);
+}
+.stay_connected{
+    width: 25em;
+    position: relative;
+    top: -3em;
+}
+.description_parrafo{
+    position: relative;
+    top: 4em;
+    font-family: var(--body-font);
+    font-size: var(--font-medium);
+}
+.contend_logos{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    position: relative;
+    padding: 0.5em 0 ;
+  }
+    

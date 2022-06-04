@@ -124,8 +124,12 @@ const TextoSlide = styled.div`
    bottom:0;
 
    @media screen and (max-width: 700px){
-       position: relative; 
-       background: #000;
+       position: absolute; 
+       display:flex; 
+       width:100vw;
+       justify-content: center;
+       align-items: center;
+       background: "rgba(0,0,0,0.5)";
    }
 `
 

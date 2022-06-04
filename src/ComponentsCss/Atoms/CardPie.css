@@ -27,21 +27,22 @@
     --z-fixed:100; 
     --z-modal:1000;
 }
-
-.gris{
-  background-color: rgba(0,0,0,0.5);
-}
-
-.treinta{
-  display: grid;
-  grid-template-columns: 1fr , 2fr;
-}
-
-.parrafoClass{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  height: 100%;
-}
+.card_pie{
+    border-right: 1px solid rgb(190, 184, 184);
+    padding:0  2em;
+  }
+  
+  .title_card_pie{
+    font-family: var(--title-font);
+    font-size: var(--font-medium);
+    padding: 2em;
+  }
+  
+  .subtitle_card{
+    font-family:var(--body-font);
+    font-size: var(--font-medium);
+  }
+  .subsubtitle{
+    padding: 5px;
+    color: #000;
+  }

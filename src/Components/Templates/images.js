@@ -8,6 +8,7 @@ import imgHomeTwo from "../../img/Imagenes/img_home_two.jpeg"
 import wordIMg from "../../img/Imagenes/wordtimex.png"
 import celibriti from "../../img/Imagenes/celebriti.jpeg"
 import facebook from "../../img/icons/facebook.png"
+import shoppingCard32 from "../../img/icons/shopping-card-32.png"
 
 export default
     {
@@ -20,5 +21,6 @@ export default
         "imgHomeTwo": imgHomeTwo, 
         "wordIMg": wordIMg, 
         "celibriti": celibriti, 
-        "facebook": facebook
+        "facebook": facebook, 
+        "shoppingCard32": shoppingCard32
     }

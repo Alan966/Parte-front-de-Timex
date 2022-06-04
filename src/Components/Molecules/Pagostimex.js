@@ -1,5 +1,5 @@
 import FormularioEmail from "../Atoms/Formularioemail";
-
+import "../../ComponentsCss/Moleculas/PagosTimex.css";
 const Pagostimex = () => {
     return(
         <div className="contend_email_pagar">

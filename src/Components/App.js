@@ -5,11 +5,13 @@ import {
 } from "react-router-dom"
 import Header from "./Templates/Header"; 
 import Home from "./Pages/Home";
-
+import "../ComponentsCss/Templates/App.css"
+import AdOne from "./Molecules/AdOne";
 
 function App() {
   return (
     <div className="body">
+    <AdOne/>
       <BrowserRouter>
         <Header/>
       <Routes>

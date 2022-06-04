@@ -1,0 +1,111 @@
+/* Importacion de fuentes */
+
+:root{
+    /* Colors */
+    --turkey-color:#00ACB6; 
+    --white-color: #FFFFFF; 
+    --gray-low-color: #D1D1D4;
+    --color-oscurito:#141618;
+    --color-header:#bbb8b8;
+    /* Fuentes para la Pagina */
+    --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Raleway', sans-serif;
+    /* Tamaños de letra */
+    --font-small: 12px;
+    --font-medium: 14px;
+    --font-large: 18px;
+    --font-big: 26px;
+    --font-bigbig: 36px;
+
+    /* Medidas */
+    --header-menu-hamburguer:2em;
+
+    /* Variables de apilamiento */
+    --z-back: -10; 
+    --z-normal: 1; 
+    --z-tooltip:10; 
+    --z-fixed:100; 
+    --z-modal:1000;
+}
+
+.section_search{
+    display: none;
+    width: 100vw;
+  }
+  
+  @media screen and (min-width: 756px) {
+    .section_search{
+      background: var(--gray-low-color);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+.contend_timex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timex_h2{
+    font-family: var(--body-font);
+    background-color: var(--white-color);
+    padding: 5px 10px;
+    font-size: var(--font-large);
+    font-weight: 600;
+}
+.contend_search{
+    display:grid; 
+    grid-template-columns: 2fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.text_search{
+    height: 100%;
+    width: 100%;
+}
+.container {
+    position: relative ;
+}
+.container:focus-within label {
+    display: none;
+}
+.img_shopping_two{
+    width: 2em;
+    height: 2em;
+  }
+.search::after{
+    content: ' ';
+    display: block;
+    position: relative;
+    top: -14px;
+    left: -26px;
+    margin-left: 0.25rem;
+    background-image: url("../../img/icons/search.png");
+    width: 1em;
+    height: 1em;
+    background-size: contain;
+}
+.container label{
+    position: absolute;
+    left: 0.25rem;
+    top: 0.25rem;
+    margin-left: 2em;
+    font-size: var(--font-medium);
+}
+.img_user{
+    width: 1em;
+    height: 1em;
+}
+.img_shopping{
+    width: 1em;
+    height: 1em;
+}
+.contend_images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: red 2px solid;
+    border-right: red 2px solid;
+    margin: 0 0.5em;
+}

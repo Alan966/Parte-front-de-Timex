@@ -1,0 +1,68 @@
+/* Importacion de fuentes */
+
+:root{
+    /* Colors */
+    --turkey-color:#00ACB6; 
+    --white-color: #FFFFFF; 
+    --gray-low-color: #D1D1D4;
+    --color-oscurito:#141618;
+    --color-header:#bbb8b8;
+    /* Fuentes para la Pagina */
+    --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Raleway', sans-serif;
+    /* Tamaños de letra */
+    --font-small: 12px;
+    --font-medium: 14px;
+    --font-large: 18px;
+    --font-big: 26px;
+    --font-bigbig: 36px;
+
+    /* Medidas */
+    --header-menu-hamburguer:2em;
+
+    /* Variables de apilamiento */
+    --z-back: -10; 
+    --z-normal: 1; 
+    --z-tooltip:10; 
+    --z-fixed:100; 
+    --z-modal:1000;
+}
+
+.card_formulario{
+    width: 25em;
+  }
+.contendformulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title_formulario{
+    font-family: var(--title-font);
+    font-size: var(--font-large);
+    padding:  0.5em;
+  }
+  .description_formulario{
+    font-family: var(--body-font); 
+    font-size: var(--font-medium);
+    padding: 0.5em;
+  }
+  .input_formulario{
+    width: 87%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3em;
+    margin: 0.5em;
+  }
+  .button_sign_up{
+   width: 90%;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8em;
+    margin: 0.5em; 
+    background-color: #000;
+    color: white;
+    font-family: var(--title-font);
+  }
+  

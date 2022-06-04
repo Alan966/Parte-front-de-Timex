@@ -27,21 +27,28 @@
     --z-fixed:100; 
     --z-modal:1000;
 }
-
-.gris{
-  background-color: rgba(0,0,0,0.5);
+.wordEcology_one::after{
+    content: '';
+    display: block;
+    margin-left: 0.25em;
+    width: 4.5em;
+    height: 4.5em;
+    background-image: url('../../img/icons/word.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+.Word_Ecology{
+    display: grid; 
+    grid-template-columns: 1fr 2fr 1fr;
+    background:#C3C2BC;
+    padding: 1em;
+  }
+.center_conter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.treinta{
-  display: grid;
-  grid-template-columns: 1fr , 2fr;
-}
-
-.parrafoClass{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  height: 100%;
-}
+.button_shop{
+    background-color: #000;
+    color: white;
+  }

@@ -1,5 +1,4 @@
-import images from "../Templates/images";
-
+import "../../ComponentsCss/Moleculas/Adone.css";
 const AdOne = () => {
     return(
         <div className="contend_one_ad">

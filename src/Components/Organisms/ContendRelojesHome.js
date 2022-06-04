@@ -1,3 +1,5 @@
+import "../../ComponentsCss/Organims/ContendRelojes.css";
+
 const ContendRelojesHome = ({children }) => {
 
 return(

@@ -27,21 +27,29 @@
     --z-fixed:100; 
     --z-modal:1000;
 }
-
-.gris{
-  background-color: rgba(0,0,0,0.5);
-}
-
-.treinta{
-  display: grid;
-  grid-template-columns: 1fr , 2fr;
-}
-
-.parrafoClass{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  height: 100%;
-}
+.relojTimex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 5px;  */
+    width: 18em;
+  }
+  .img_timex_one{
+    width: 14em;
+  }
+  
+  .description{
+    font-family: var(--title-font);
+    font-size: var(--font-medium);
+    color:#AFAFB0;
+    padding: 5px 0; 
+  }
+  
+.button_add_to_bag{
+    padding: 0.7em 5em;
+    background-color: white;
+    color: black;
+    font-family: var(--title-font);
+    font-size: var(--font-medium);
+  }

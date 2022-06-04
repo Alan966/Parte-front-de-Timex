@@ -28,20 +28,24 @@
     --z-modal:1000;
 }
 
-.gris{
-  background-color: rgba(0,0,0,0.5);
-}
 
-.treinta{
-  display: grid;
-  grid-template-columns: 1fr , 2fr;
+.contend_one_ad{
+    background-color: var(--turkey-color);
+    color: var(--white-color);
+    font-family: var(--title-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-size: var(--font-small);
+    position: relative;
+    width: 100vw;
 }
-
-.parrafoClass{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  height: 100%;
+.contend_img_ads{
+    background: url('../../img/icons/worldwide.png');
+    width:2.0rem; 
+    height:2.0rem;
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
 }

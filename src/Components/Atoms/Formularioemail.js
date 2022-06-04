@@ -1,9 +1,14 @@
+import "../../ComponentsCss/Atoms/Formularioemail.css";
 const FormularioEmail = ({ name, type, description }) => {
 return(
     <div className="card_formulario">
         <form action="#">
-            <h2 className="title_formulario">{ name }</h2>
-            <p className="description_formulario"> { description }</p>
+            <h2 className="title_formulario">
+                { name }
+            </h2>
+            <p className="description_formulario"> 
+            { description }
+            </p>
             <fieldset className="contendformulario">
                 <div >
                     <input 

@@ -1,5 +1,5 @@
+import "../../ComponentsCss/Moleculas/ToMomWithLove.css";
 const ToMonWithLove = () => {
-
     return(
     <div className="section_to_mom">
         <div className="to_mom_with">

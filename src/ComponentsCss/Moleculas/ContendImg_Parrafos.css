@@ -28,20 +28,13 @@
     --z-modal:1000;
 }
 
-.gris{
-  background-color: rgba(0,0,0,0.5);
+.title_contend_img{
+  font-size: var(--font-big);
+  font-family: var(--title-font);
+  padding: 1em;
 }
-
-.treinta{
-  display: grid;
-  grid-template-columns: 1fr , 2fr;
-}
-
-.parrafoClass{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  height: 100%;
+.parrafo{
+  font-family: var(--body-font);
+  font-weight: 600;
+  padding: 0 1em 1em;
 }

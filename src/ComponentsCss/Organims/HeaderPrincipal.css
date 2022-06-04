@@ -1,0 +1,121 @@
+/* Importacion de fuentes */
+
+:root{
+    /* Colors */
+    --turkey-color:#00ACB6; 
+    --white-color: #FFFFFF; 
+    --gray-low-color: #D1D1D4;
+    --color-oscurito:#141618;
+    --color-header:#bbb8b8;
+    /* Fuentes para la Pagina */
+    --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Raleway', sans-serif;
+    /* Tamaños de letra */
+    --font-small: 12px;
+    --font-medium: 14px;
+    --font-large: 18px;
+    --font-big: 26px;
+    --font-bigbig: 36px;
+
+    /* Medidas */
+    --header-menu-hamburguer:2em;
+
+    /* Variables de apilamiento */
+    --z-back: -10; 
+    --z-normal: 1; 
+    --z-tooltip:10; 
+    --z-fixed:100; 
+    --z-modal:1000;
+}
+/* Menu Hamburguesa */
+.hamburguer-button{
+  width: var(--header-menu-hamburguer);
+  height: var(--header-menu-hamburguer);
+  position: relative; 
+  cursor: pointer;
+  margin: .4em;
+  transition: transform 0.25s;
+}
+.hamburguer-button:before, 
+.hamburguer-button:after{
+  content: ''; 
+  display: block;
+}
+.hamburguer-button::before, 
+.hamburguer-button:after, 
+.line{
+  width: 100%;
+  height: 3px; 
+  background: black; 
+  position: absolute;
+  transition: all 0.25s;
+}
+.hamburguer-button::before{
+  top: 0; 
+}
+.line{
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hamburguer-button::after{
+  bottom: 0;
+}
+.hamburguer-button.active{
+  transform: rotate(180deg);
+}
+.hamburguer-button.active .line{
+  display: none;
+}
+.hamburguer-button.active::before{
+  top:50%; 
+  transform: translateY(-50%) rotate(45deg);
+}
+.hamburguer-button.active::after{
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg); 
+}
+
+.header_principal{
+  width: 100vw;
+  display: flex;
+  justify-content: space-between; 
+  z-index:100;
+  background-color: #FFFFFF;
+  /* Hacerlo fixed */
+  height: 3em;
+}
+@media screen and (min-width: 768px){
+  .header_principal{
+    width: 99vw;
+  }
+}
+  
+.contend_one{
+  font-size: var(--font-big);
+  margin: 0.5em;
+  font-family: var(--body-font);
+  font-weight: 800;
+}
+
+.header{
+  display: none;
+    position: fixed; 
+    width:70vw;
+    height: 100vh; 
+    background-color: var(--color-header);
+    top: 0;
+    left: 0;
+    color: white;
+    transition: right .3s;
+    z-index: var(--z-fixed);
+}
+.desplace_70vw{
+  position: relative;
+  right: -70vw;
+}
+.header_active{
+  display: block;
+}
+.contend_shop{
+  margin: .5em;
+}

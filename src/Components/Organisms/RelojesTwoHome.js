@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { get } from "axios"
 import CardRelojesTwo from "../Atoms/CardRelojesTwo";
+import "../../ComponentsCss/Organims/RelojesTwoHome.css";
 
 const RelojesTwoHome = ({url, _id}) => {
 

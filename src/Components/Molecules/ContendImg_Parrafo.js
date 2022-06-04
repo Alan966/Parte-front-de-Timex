@@ -1,6 +1,12 @@
 import { useEffect, useRef } from "react"
 import styled from "styled-components"
-const ContendImg_Parrafo = ({title, img, parrafo, treinta, parrafoClass, logo}) => {
+import "../../ComponentsCss/Moleculas/ContendImg_Parrafos.css";
+const ContendImg_Parrafo = ({title, 
+    img, 
+    parrafo, 
+    treinta, 
+    parrafoClass, 
+    logo}) => {
 
     const ref = useRef(null)
 
@@ -12,16 +18,24 @@ const ContendImg_Parrafo = ({title, img, parrafo, treinta, parrafoClass, logo}) 
     },[ref.current, img])
 
 return(
-    <ContenedorImg className={`contend_Img_parrafo ${treinta}`} ref={ref} >
-        <ContendParrafo className={`contend_parrafo_one ${parrafoClass}`}>
+    <ContenedorImg className={`contend_Img_parrafo 
+    ${treinta}`} ref={ref} >
+        <ContendParrafo className={`contend_parrafo_one 
+        ${parrafoClass}`}>
             {
                 logo ? 
                 <img src={logo} alt="logo" /> : 
                 null
             }
-            <h2 className="title_contend_img">{title}</h2>
-            <p className="parrafo">{parrafo}</p>
-            <button className="button button_shop">SHOP NOW</button>
+            <h2 className="title_contend_img">
+                {title}
+            </h2>
+            <p className="parrafo">
+                {parrafo}
+            </p>
+            <button className="button button_shop">
+                SHOP NOW
+            </button>
         </ContendParrafo>
     </ContenedorImg>
 )}

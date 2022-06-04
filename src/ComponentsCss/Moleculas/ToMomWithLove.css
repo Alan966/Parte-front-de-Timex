@@ -1,0 +1,84 @@
+/* Importacion de fuentes */
+
+:root{
+    /* Colors */
+    --turkey-color:#00ACB6; 
+    --white-color: #FFFFFF; 
+    --gray-low-color: #D1D1D4;
+    --color-oscurito:#141618;
+    --color-header:#bbb8b8;
+    /* Fuentes para la Pagina */
+    --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Raleway', sans-serif;
+    /* Tamaños de letra */
+    --font-small: 12px;
+    --font-medium: 14px;
+    --font-large: 18px;
+    --font-big: 26px;
+    --font-bigbig: 36px;
+
+    /* Medidas */
+    --header-menu-hamburguer:2em;
+
+    /* Variables de apilamiento */
+    --z-back: -10; 
+    --z-normal: 1; 
+    --z-tooltip:10; 
+    --z-fixed:100; 
+    --z-modal:1000;
+}
+
+.section_to_mom{
+    background: #D33D63;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin: 3em 0;
+  }
+  .to_mom_with{
+    text-align: center; 
+    font-size: var(--font-big);
+    display: flex;
+    justify-content: center;
+    font-family: var(--title-font);
+    font-weight: 800;
+  }
+  .to_mom_with_two{
+    text-align: center; 
+    font-size: var(--font-large);
+    display: flex;
+    justify-content: center;
+    font-family:var(--body-font);
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .to_mom_with_three{
+    text-align: center; 
+    font-size: var(--font-large);
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+  }
+  .button{
+    background: white;
+    color: black;
+    border: 1px solid black;
+    width: 10em;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  

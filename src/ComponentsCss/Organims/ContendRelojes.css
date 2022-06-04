@@ -28,20 +28,11 @@
     --z-modal:1000;
 }
 
-.gris{
-  background-color: rgba(0,0,0,0.5);
-}
-
-.treinta{
-  display: grid;
-  grid-template-columns: 1fr , 2fr;
-}
-
-.parrafoClass{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  height: 100%;
-}
+.title_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--title-font);
+    font-size: var(--font-large);
+  }
+  

@@ -1,3 +1,4 @@
+import "../../ComponentsCss/Atoms/CardReloj.css";
 let x = 0 
 const CardReloj = ({_id, name, description}) => {
 
@@ -7,9 +8,13 @@ const CardReloj = ({_id, name, description}) => {
  }
 
 return(
-    <div key={_id} className={`relojTimex card_${sumar()} img`}>
+    <div key={_id} className={`relojTimex 
+    card_${sumar()} 
+    img`}>
         <div>
-            <img className="img_timex_one" src={`http://localhost:5000/relojesTimexOne/photo/${_id}`} alt={name} />
+            <img className="img_timex_one" 
+    src={`http://localhost:5000/relojesTimexOne/photo/${_id}`} 
+    alt={name} />
         </div>
         <div className="description">
             <p>

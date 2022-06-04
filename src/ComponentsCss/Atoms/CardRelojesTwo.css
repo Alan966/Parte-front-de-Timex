@@ -27,21 +27,39 @@
     --z-fixed:100; 
     --z-modal:1000;
 }
-
-.gris{
-  background-color: rgba(0,0,0,0.5);
-}
-
-.treinta{
-  display: grid;
-  grid-template-columns: 1fr , 2fr;
-}
-
-.parrafoClass{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  height: 100%;
-}
+.card_relojes_two{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .contend_img_reloj{
+    position: relative;
+    height: 100%;
+    width:  19em;
+  }
+  .img_card_reloj{
+    width: 19em;
+    transition: all 500ms ease-out;
+  }
+  .capa{
+    position: absolute; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+  
+  }
+  .capa:hover{
+    background-color: rgba(0,0,0,0.6);
+    transition: all 500ms ease-out;
+  }
+  .contend_title{
+    padding: 1em;
+  }
+  
+  .title_rolex{
+    font-family: var(--title-font);
+    font-size: var(--font-large);
+  }
