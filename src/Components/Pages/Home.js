@@ -10,6 +10,7 @@ import RelojesTwoHome from "../Organisms/RelojesTwoHome"
 import SectionIMg from "../Atoms/section_img"
 import PieTimex from "../Molecules/PieTimex"
 import Pagostimex from "../Molecules/Pagostimex"
+import SectionImages from "../Organisms/Section_Images"
 
 const Home = () => {
     return(
@@ -24,22 +25,16 @@ const Home = () => {
                 children={<RelojOneHome />}
             />
             <ContendImg_Parrafo 
-            title={"ANTICIPATE ADVENTURE"} 
-            img={images.imgHome} 
-            parrafo={"Expedition goes the distance when you take it on your next adventure.This sturdy watch is built witch a 41mm stainless-steel case and is water resistant to 100 meters"}
+            numero={3}
+            title={"RETRO AND REFINED"}
+            parrafo={"Our Q Timex watches get a new feature for spring. You can now wear your iconic Q Timex in a black synthetic rubber strap.First released in the 1970s our original Q Timex gave the people a modern watch with quartz technology"}
             /> 
             <RelojesTwoHome 
-            url={'http://localhost:5000/relojesTimexTwo/all'}
-            _id={0o1}
+            url={'http://localhost:5000/home/all'}
             />
-             <ContendImg_Parrafo 
-            title={"TAKE THE NEXT STEP"} 
-            img={images.imgHomeTwo} 
-            parrafo={"Guided by our commitment to preserving Earth's wild spaces, our sustainable watch collections prioritize eco-friendly practices and product longevity to help build a better planet."}
-            treinta={'treinta'}
-            parrafoClass={'parrafoClass'}
-            logo={images.wordIMg}
-            /> 
+            <SectionImages 
+            url={"http://localhost:5000/home/all"}
+            />
             <SectionIMg 
             img={images.celibriti} 
             title={'CELEBRATING 50 YEARS OF QUARTZ'}

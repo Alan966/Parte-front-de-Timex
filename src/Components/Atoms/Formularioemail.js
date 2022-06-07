@@ -2,7 +2,7 @@ import "../../ComponentsCss/Atoms/Formularioemail.css";
 const FormularioEmail = ({ name, type, description }) => {
 return(
     <div className="card_formulario">
-        <form action="#">
+        <form action="/">
             <h2 className="title_formulario">
                 { name }
             </h2>

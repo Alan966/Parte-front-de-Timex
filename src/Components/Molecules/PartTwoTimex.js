@@ -1,38 +1,30 @@
-import img1 from '../../img/Imagenes/timexCoffe.webp';
-import img2 from '../../img/Imagenes/timexHierro.webp'
 import "../../ComponentsCss/Moleculas/PartTwoTimex.css";
+import useAxios from "../Atoms/getAxios";
+import CardImgHome from "../Atoms/CardImgHome";
+
+let x = 1
 const PartTwoTimex = () => {
+ 
+    const [data, error] = useAxios("http://localhost:5000/home/all");
+
 return(
     <section className='two_section_timex'>
         <div>
-            <div>
-                <img className='img_Part_Timex' 
-                src={img1} />
-            </div>
-            <div className=" center_conter space">
-                <a>
-                    <div className="button 
-                    button_shop width_20em">
-                        SHOP MENS BEST SELLERS
-                    </div>
-                </a>
-            </div>
+        { 
+             data!= null ? 
+             data.slice(1,3).map(({_id, name}) => {
+                 return(
+                     <CardImgHome 
+                     _id={_id} 
+                     name={name}
+                     />
+                 )
+             })
+             : 
+             null
+        }
         </div>
-        <div>
-            <div>
-                <img className='img_Part_Timex' 
-                src={img2} />
-            </div>
-            <div className=" center_conter space">
-                <a>
-                    <div 
-                    className="button button_shop 
-                    width_20em">
-                        SHOP WOMENS BEST SELLERS
-                    </div>
-                </a>
-            </div>
-        </div>
+        <div></div>
     </section>
 )
 }

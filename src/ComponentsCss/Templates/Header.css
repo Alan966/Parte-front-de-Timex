@@ -1,5 +1,4 @@
 /* Importacion de fuentes */
-
 :root{
     /* Colors */
     --turkey-color:#00ACB6; 
@@ -9,13 +8,13 @@
     --color-header:#bbb8b8;
     /* Fuentes para la Pagina */
     --title-font: 'Open Sans', sans-serif;
-    --body-font: 'Raleway', sans-serif;
+    --body-font: 'Ubuntu', sans-serif;
     /* Tamaños de letra */
-    --font-small: 12px;
-    --font-medium: 14px;
-    --font-large: 18px;
-    --font-big: 26px;
-    --font-bigbig: 36px;
+    --font-small: .6em;
+    --font-medium:.8em;
+    --font-large: 1em;
+    --font-big: 1.2em;
+    --font-bigbig: 1.4em;
 
     /* Medidas */
     --header-menu-hamburguer:2em;
@@ -27,6 +26,7 @@
     --z-fixed:100; 
     --z-modal:1000;
 }
+
 .contend_header{
     /* Statik */
     position: sticky;

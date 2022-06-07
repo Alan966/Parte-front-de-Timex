@@ -1,4 +1,5 @@
 /* Importacion de fuentes */
+
 :root{
     /* Colors */
     --turkey-color:#00ACB6; 
@@ -15,10 +16,10 @@
     --font-large: 1em;
     --font-big: 1.2em;
     --font-bigbig: 1.4em;
-
+  
     /* Medidas */
     --header-menu-hamburguer:2em;
-
+  
     /* Variables de apilamiento */
     --z-back: -10; 
     --z-normal: 1; 
@@ -26,24 +27,44 @@
     --z-fixed:100; 
     --z-modal:1000;
 }
-
-.contend_one_ad{
-    background-color: var(--turkey-color);
-    color: var(--white-color);
-    font-family: var(--title-font);
+.contend_Img{
+    margin: 2em;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5px;
-    font-size: var(--font-medium);
-    position: relative;
-    width: 100vw;
 }
-.contend_img_ads{
-    background: url('../../img/icons/worldwide.png');
-    width:2.0rem; 
-    height:2.0rem;
-    padding: 5px;
-    background-repeat: no-repeat;
-    background-position: center;
+
+.img_card_home{
+    width: 100vw; 
+    height: 100%;
+}
+.contendButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15em;
+    height: 3em;
+    background: #000000;
+    border-radius: 4px;
+    margin: 2em;
+}
+.ShopNow{
+    background-color: #000000;
+    border-radius: 4px;
+    padding: 0 .5em;
+    width: 6em;
+    height: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    font-size: var(--font-large);
+    font-weight: 800;
+}
+.Large{
+    width: 100% !important;
+    padding: 0 !important;
 }

@@ -1,0 +1,93 @@
+/* Importacion de fuentes */
+
+:root{
+    /* Colors */
+    --turkey-color:#00ACB6; 
+    --white-color: #FFFFFF; 
+    --gray-low-color: #D1D1D4;
+    --color-oscurito:#141618;
+    --color-header:#bbb8b8;
+    /* Fuentes para la Pagina */
+    --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Raleway', sans-serif;
+    /* Tamaños de letra */
+    --font-small: 12px;
+    --font-medium: 14px;
+    --font-large: 18px;
+    --font-big: 26px;
+    --font-bigbig: 36px;
+
+    /* Medidas */
+    --header-menu-hamburguer:2em;
+
+    /* Variables de apilamiento */
+    --z-back: -10; 
+    --z-normal: 1; 
+    --z-tooltip:10; 
+    --z-fixed:100; 
+    --z-modal:1000;
+}
+.contendImages{
+    width: 100vw;
+    background: #141618;
+    position: relative;
+}
+.img_section_img{
+    width:100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.contend_one_section{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.contend_header{
+    color: white;
+    display: flex;
+    font-family: var(--title-font);
+    font-size: var(--font-large);
+    text-align: center;
+    position: relative;
+    top: -52em;
+}
+.contend_header > h1{
+    margin: 0 0.5em;
+}
+.contend_header > h3{
+    margin : 0 0.5em;
+    color: red;
+    font-family: var(--body-font);
+
+}
+.contend_parrafo{
+    color:white; 
+    font-family:var(--title-font);
+    font-size: var(--font-medium);
+    position: relative;
+    top: -49em;
+    left: -10em;
+}
+.button_add_to_bag{
+    padding: 0.7em 5em;
+    background-color: white;
+    color: black;
+    font-family: var(--title-font);
+    font-size: var(--font-medium);
+}
+.keep_time{
+    color: white;
+    font-family: var(--title-font); 
+    font-size: var(--font-large);
+    position: relative;
+    top: -35em;
+}
+.keep_time p .demension{
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    color: red;
+}

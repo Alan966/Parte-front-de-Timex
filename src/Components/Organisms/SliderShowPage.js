@@ -10,14 +10,13 @@ const SliderShowPage = ({ _id })=> {
         fetch('http://localhost:5000/slider/slidershow')
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             if(document.documentElement.clientWidth > 768){
             setGuardarImg(data.slice(0,3));
             }else{
                 setGuardarImg(data.slice(3,6));
             }
         })
-    },[guardaImg])
+    },[guardaImg, document.documentElement.clientWidth])
 
 return(
 <main className="main_slider" key={_id}>
@@ -52,6 +51,9 @@ return(
                 null
         }
     </Slideshow>
+    <div className="ShopNow">
+        <a href="#">Shop Now</a>
+    </div>
 </main>
 );
 }

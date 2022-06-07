@@ -1,83 +1,81 @@
 /* Importacion de fuentes */
 
 :root{
-    /* Colors */
-    --turkey-color:#00ACB6; 
-    --white-color: #FFFFFF; 
-    --gray-low-color: #D1D1D4;
-    --color-oscurito:#141618;
-    --color-header:#bbb8b8;
-    /* Fuentes para la Pagina */
-    --title-font: 'Open Sans', sans-serif;
-    --body-font: 'Raleway', sans-serif;
-    /* Tamaños de letra */
-    --font-small: 12px;
-    --font-medium: 14px;
-    --font-large: 18px;
-    --font-big: 26px;
-    --font-bigbig: 36px;
+  /* Colors */
+  --turkey-color:#00ACB6; 
+  --white-color: #FFFFFF; 
+  --gray-low-color: #D1D1D4;
+  --color-oscurito:#141618;
+  --color-header:#bbb8b8;
+  /* Fuentes para la Pagina */
+  --title-font: 'Open Sans', sans-serif;
+  --body-font: 'Ubuntu', sans-serif;
+  /* Tamaños de letra */
+  --font-small: .6em;
+  --font-medium:.8em;
+  --font-large: 1em;
+  --font-big: 1.2em;
+  --font-bigbig: 1.4em;
 
-    /* Medidas */
-    --header-menu-hamburguer:2em;
+  /* Medidas */
+  --header-menu-hamburguer:2em;
 
-    /* Variables de apilamiento */
-    --z-back: -10; 
-    --z-normal: 1; 
-    --z-tooltip:10; 
-    --z-fixed:100; 
-    --z-modal:1000;
+  /* Variables de apilamiento */
+  --z-back: -10; 
+  --z-normal: 1; 
+  --z-tooltip:10; 
+  --z-fixed:100; 
+  --z-modal:1000;
 }
 
+
 .section_to_mom{
-    background: #D33D63;
-    color: white;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: justify;
     justify-content: center;
     align-items: center;
-    padding: 1em;
-    margin: 3em 0;
   }
-  .to_mom_with{
-    text-align: center; 
-    font-size: var(--font-big);
-    display: flex;
-    justify-content: center;
-    font-family: var(--title-font);
-    font-weight: 800;
-  }
-  .to_mom_with_two{
-    text-align: center; 
-    font-size: var(--font-large);
-    display: flex;
-    justify-content: center;
-    font-family:var(--body-font);
-    font-weight: 600;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .to_mom_with_three{
-    text-align: center; 
-    font-size: var(--font-large);
-    color: white;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    font-weight: 600;
-  }
-  .button{
-    background: white;
-    color: black;
-    border: 1px solid black;
+.img_father{
+    width: 100vw;
+    height: 100%;
+}
+.contend_legend_father{
+  margin: 1em 3em 2em 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title_father{
+  font-family: var(--title-font);
+  font-weight: 800;
+  font-size: var(--font-big);
+  margin: .5em;
+}
+.parrafo_father{
+  font-family: var(--body-font);
+  font-size: var(--font-large);
+  font-weight: 800;
+  text-align: center;
+  margin: .5em;
+}
+.ShopNow{
+  background-color: #000000;
+  border-radius: 4px;
+  padding: 0.5em;
+  width: 6em;
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  font-size: var(--font-large);
+  font-weight: 800;
+}
+.ShopNow.blue{
+    background-color: #516fa0;
     width: 10em;
-    height: 2em;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  
   a{
     text-decoration: none;
   }

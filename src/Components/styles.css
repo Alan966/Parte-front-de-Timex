@@ -28,20 +28,24 @@
     --z-modal:1000;
 }
 
-.gris{
-  background-color: rgba(0,0,0,0.5);
+.ShopNow{
+    background-color: #000000;
+    border-radius: 4px;
+    padding: 0.5em;
+    width: 6em;
+    height: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    font-size: var(--font-medium);
+    font-weight: 800;
 }
-
-.treinta{
-  display: grid;
-  grid-template-columns: 1fr , 2fr;
-}
-
-.parrafoClass{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  height: 100%;
-}
+.button_add_to_bag{
+    padding: 0.7em 5em;
+    background-color: white;
+    color: black;
+    font-family: var(--title-font);
+    font-size: var(--font-medium);
+  }

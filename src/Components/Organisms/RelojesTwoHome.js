@@ -3,7 +3,7 @@ import { get } from "axios"
 import CardRelojesTwo from "../Atoms/CardRelojesTwo";
 import "../../ComponentsCss/Organims/RelojesTwoHome.css";
 
-const RelojesTwoHome = ({url, _id}) => {
+const RelojesTwoHome = ({url}) => {
 
 
     const [guardarData, setGuardarData] = useState(null);
@@ -20,14 +20,14 @@ const RelojesTwoHome = ({url, _id}) => {
 
 
     return(
-        <div className="contend_two_relojes" key={_id}>
+        <div className="contend_two_relojes">
             {
                 guardarData?
-                guardarData.map(({name , _id }) => {
+                guardarData.slice(4,7).map(({ _id, description}) => {
                     return(
                         <CardRelojesTwo 
                         _id={_id} 
-                        name={name}
+                        description={description}
                         />
                     )
                 })

@@ -9,13 +9,13 @@
     --color-header:#bbb8b8;
     /* Fuentes para la Pagina */
     --title-font: 'Open Sans', sans-serif;
-    --body-font: 'Raleway', sans-serif;
+    --body-font: 'Ubuntu', sans-serif;
     /* Tamaños de letra */
-    --font-small: 12px;
-    --font-medium: 14px;
-    --font-large: 18px;
-    --font-big: 26px;
-    --font-bigbig: 36px;
+    --font-small: .6em;
+    --font-medium:.8em;
+    --font-large: 1em;
+    --font-big: 1.2em;
+    --font-bigbig: 1.4em;
 
     /* Medidas */
     --header-menu-hamburguer:2em;
@@ -30,6 +30,9 @@
 
 main{
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .img_sliderShow{
     width: 100vw;
@@ -50,4 +53,22 @@ main{
     border: 0;
     margin: 0;
     width: 99vw;
-  }
+}
+
+.ShopNow{
+    background-color: #000000;
+    border-radius: 4px;
+    padding: 0.5em;
+    width: 6em;
+    height: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    font-size: var(--font-large);
+    font-weight: 800;
+}
+.ShopNow > a{
+    color:white;
+}

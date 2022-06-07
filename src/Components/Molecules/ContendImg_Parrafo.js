@@ -1,60 +1,56 @@
 import { useEffect, useRef } from "react"
 import styled from "styled-components"
 import "../../ComponentsCss/Moleculas/ContendImg_Parrafos.css";
-const ContendImg_Parrafo = ({title, 
-    img, 
-    parrafo, 
-    treinta, 
-    parrafoClass, 
-    logo}) => {
+import useAxios from "../Atoms/getAxios"
 
-    const ref = useRef(null)
+const ContendImg_Parrafo = ({numero, title, parrafo}) => {
 
-    useEffect(() => {
-        if(ref.current !== null){
-            ref.current.style.backgroundImage = `url(${img})`
+    const [data , error] = useAxios("http://localhost:5000/home/all")
+    
+    let date = null 
 
-        }
-    },[ref.current, img])
-
+    if(data) date = data[numero]
+    
 return(
-    <ContenedorImg className={`contend_Img_parrafo 
-    ${treinta}`} ref={ref} >
-        <ContendParrafo className={`contend_parrafo_one 
-        ${parrafoClass}`}>
+    <ContenedorImg>
+        <ContenedorImages>
             {
-                logo ? 
-                <img src={logo} alt="logo" /> : 
-                null
+                date && 
+                    <img 
+                    src={`http://localhost:5000/home/photo/${date._id}`} 
+                    alt={date.name}
+                    className="img_parrafo"
+                    />
             }
-            <h2 className="title_contend_img">
-                {title}
-            </h2>
-            <p className="parrafo">
-                {parrafo}
-            </p>
-            <button className="button button_shop">
-                SHOP NOW
-            </button>
-        </ContendParrafo>
+            <iframe 
+            className="video_parrafo"
+            src="https://www.youtube.com/embed/ex8IQpUAhbg" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </ContenedorImages>
+        <div className="contend_second_section">
+            <h2 className="title_second">{title}</h2>
+            <p className="parrafo_second">{parrafo}</p>
+            <div className=" center_conter">
+                <a>
+                    <div className="ShopNow">
+                        <a href="#">SHOP NOW</a>
+                    </div>
+                </a>
+            </div>
+        </div>
     </ContenedorImg>
 )}
 
 const ContenedorImg = styled.div`
     width: 100vw;
-    height: 90vh;
-    background-size: cover;
-    background-position: center;
-    display: grid; 
-    grid-template-columns: 1fr 2fr;
-    `
-const ContendParrafo = styled.div`
-   display:flex;
-    flex-direction: column; 
-   justify-content: center;
+`
+const ContenedorImages = styled.div`
+    display: grid;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    grid-template-columns: 1fr 3fr;
 `
 
 export default ContendImg_Parrafo

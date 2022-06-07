@@ -12,8 +12,8 @@ const WordEcology = () => {
             </div>
             <div className=" center_conter">
                 <a>
-                    <div className="button button_shop">
-                        SHOP NOW
+                    <div className="ShopNow">
+                        <a href="#">SHOP NOW</a>
                     </div>
                 </a>
             </div>
