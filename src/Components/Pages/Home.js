@@ -11,18 +11,21 @@ import SectionIMg from "../Atoms/section_img"
 import PieTimex from "../Molecules/PieTimex"
 import Pagostimex from "../Molecules/Pagostimex"
 import SectionImages from "../Organisms/Section_Images"
+import ContendPieTimex from "../Organisms/ContendPieTimex"
 
 const Home = () => {
     return(
         <section>
-            <SliderShowPage 
-            _id={1}
-            />
+            <SliderShowPage />
             <ToMonWithLove />
             <WordEcology />
             <PartTwoTimex />
             <ContendRelojesHome 
-                children={<RelojOneHome />}
+                id={1}
+                children={<RelojOneHome 
+                    url={'http://localhost:5000/relojesTimexOne/all'}
+                    id={1}
+                />}
             />
             <ContendImg_Parrafo 
             numero={3}
@@ -32,14 +35,13 @@ const Home = () => {
             <RelojesTwoHome 
             url={'http://localhost:5000/home/all'}
             />
-            <SectionImages 
-            url={"http://localhost:5000/home/all"}
+            <SectionImages  
             />
             <SectionIMg 
-            img={images.celibriti} 
+            img={images.celebritiImg} 
             title={'CELEBRATING 50 YEARS OF QUARTZ'}
             />
-            <PieTimex />
+            <ContendPieTimex />
             <Pagostimex />
         </section>
     )

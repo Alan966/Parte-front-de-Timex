@@ -4,19 +4,15 @@ const SectionIMg = ({ img, title}) => {
         <section className="section_img">
             <img className="img_the_section" 
             src={img} alt={title} />
+            <div className="contend_center">
             <h2 className="title_img_section">
-            {
+                {
                title
-            }</h2>
-            <div className="to_mom_with_three">
-                <a href="#">
-                    <div className="
-                    button 
-                    button_section_white 
-                    watch_video">
-                        WATCH VIDEO
-                    </div>
-                </a>
+                }
+            </h2>
+            </div>
+            <div className="Watch_video_button">
+                <a href="https://www.youtube.com/watch?v=ex8IQpUAhbg">WATCH VIDEO</a>
             </div>
         </section>
     )

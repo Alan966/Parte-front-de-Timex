@@ -29,40 +29,47 @@
 }
 
 .card_formulario{
-    width: 25em;
-  }
-.contendformulario{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  width: 100vw;
+  margin: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .title_formulario{
-    font-family: var(--title-font);
-    font-size: var(--font-large);
-    padding:  0.5em;
-  }
-  .description_formulario{
-    font-family: var(--body-font); 
-    font-size: var(--font-medium);
-    padding: 0.5em;
-  }
-  .input_formulario{
-    width: 87%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.3em;
-    margin: 0.5em;
-  }
-  .button_sign_up{
-   width: 90%;
-   display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.8em;
-    margin: 0.5em; 
-    background-color: #000;
-    color: white;
-    font-family: var(--title-font);
-  }
+  font-family: var(--title-font);
+  font-size: var(--font-large);
+  margin: 1em;
+  text-align: center;
+}
+.description_formulario{
+  font-family: var(--body-font); 
+  font-size: var(--font-medium);
+  padding: 0.5em;
+}
+.contendformulario{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input_formulario{
+  width: 87%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3em;
+  margin: 0.5em;
+}
+.button_sign_up{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8em;
+  margin: 0.5em; 
+  background-color: #000;
+  color: white;
+  font-family: var(--title-font);
+}
   

@@ -1,4 +1,4 @@
-import Ulcontend from "../Molecules/Ulcontend";
+import UlcontendOne from "../Molecules/UlcontendOne";
 import images from "../Templates/images";
 import "../../ComponentsCss/Organims/HeaderPrincipal.css";
 import { useRef } from "react";
@@ -24,26 +24,13 @@ const HeaderPrincipal = () => {
             </div>
             <header className="header" ref={refTwo}>
                 <nav className="nav">
-                    <Ulcontend
-                        _id={1}
-                        contraseña={0o1}
-                        url={`http://localhost:5000/submenu/one/all`}
-                        children={
-                    <Ulcontend 
-                        url={`http://localhost:5000/submenu/two/all`}
-                        _id={2}
-                        contraseña={0o2}
-                        children={
-                    <Ulcontend 
-                        url={`http://localhost:5000/submenu/three/all`}
-                        _id={3}
-                        contraseña={0o3}
-                        />
-                        }
-                            img={`http://localhost:5000/image/imageAll`}
-                        />
-                        }
-                     />
+                    <UlcontendOne 
+                    _id={1} 
+                    key={1} 
+                    url={`http://localhost:5000/submenu/one/all`} 
+                    urlTwo={`http://localhost:5000/submenu/two/all`}
+                    urlThree={`http://localhost:5000/submenu/three/all`}
+                    />
                 </nav> 
             </header> 
             <div className="contend_shop">

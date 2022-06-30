@@ -1,12 +1,13 @@
 import "../../ComponentsCss/Atoms/CardImgHome.css";
 
-const CardImgHome = ({_id, name}) => {
+const CardImgHome = ({accesible, name}, props) => {
+
 
     return(
-        <div className="contend_Img">
+        <div className="contend_Img" key={props.key}>
             <img 
             className="img_card_home"
-            src={`http://localhost:5000/home/photo/${_id}`} 
+            src={`http://localhost:5000/home/photo/${accesible}`} 
             alt="reloj for Woman or Men" />
             <div className="contendButton">
                 {

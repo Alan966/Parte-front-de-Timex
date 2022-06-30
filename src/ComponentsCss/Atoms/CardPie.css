@@ -27,22 +27,15 @@
   --z-fixed:100; 
   --z-modal:1000;
 }
-.card_pie{
-    border-right: 1px solid rgb(190, 184, 184);
-    padding:0  2em;
-  }
-  
-  .title_card_pie{
-    font-family: var(--title-font);
-    font-size: var(--font-medium);
-    padding: 2em;
-  }
-  
-  .subtitle_card{
-    font-family:var(--body-font);
-    font-size: var(--font-medium);
-  }
-  .subsubtitle{
-    padding: 5px;
-    color: #000;
-  }
+
+.subtitle_card{
+  font-family:var(--body-font);
+  font-size: var(--font-medium);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subsubtitle{
+  padding: 5px;
+  color: #000;
+}

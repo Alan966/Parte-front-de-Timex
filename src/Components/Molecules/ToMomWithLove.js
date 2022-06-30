@@ -11,7 +11,7 @@ const ToMonWithLove = () => {
             if(document.documentElement.clientWidth > 768 && e){
                 setData(e.data[0]);
             }else if( document.documentElement.clientWidth < 768 && e){
-                setData(e.data[data.length - 1]);
+                setData(e.data[7]);
             }
         })
         .catch(e => {

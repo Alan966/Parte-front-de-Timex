@@ -13,9 +13,10 @@ return(
         { 
              data!= null ? 
              data.slice(1,3).map(({_id, name}) => {
-                 return(
+                return(
                      <CardImgHome 
-                     _id={_id} 
+                     key={_id}
+                     accesible={_id} 
                      name={name}
                      />
                  )

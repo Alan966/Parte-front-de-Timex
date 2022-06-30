@@ -9,6 +9,7 @@ import wordIMg from "../../img/Imagenes/wordtimex.png"
 import celibriti from "../../img/Imagenes/celebriti.jpeg"
 import facebook from "../../img/icons/facebook.png"
 import shoppingCard32 from "../../img/icons/shopping-card-32.png"
+import celebritiImg from "../../img/Imagenes/celebritiImg.jpeg"
 
 export default
     {
@@ -22,5 +23,6 @@ export default
         "wordIMg": wordIMg, 
         "celibriti": celibriti, 
         "facebook": facebook, 
-        "shoppingCard32": shoppingCard32
+        "shoppingCard32": shoppingCard32, 
+        "celebritiImg": celebritiImg
     }

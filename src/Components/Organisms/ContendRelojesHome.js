@@ -1,6 +1,6 @@
 import "../../ComponentsCss/Organims/ContendRelojes.css";
 
-const ContendRelojesHome = ({children }) => {
+const ContendRelojesHome = ({children}) => {
 
 return(
     <div className="contenedor_Slice">

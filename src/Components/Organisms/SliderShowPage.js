@@ -3,7 +3,7 @@ import {Slideshow, Slide, TextoSlide} from "../Molecules/SliderShow"
 import styled from "styled-components"
 import "../../ComponentsCss/Organims/SliderShowPage.css";
 
-const SliderShowPage = ({ _id })=> {
+const SliderShowPage = ()=> {
 
     const [guardaImg, setGuardarImg] = useState(null);
     useEffect(() => {
@@ -19,7 +19,7 @@ const SliderShowPage = ({ _id })=> {
     },[guardaImg, document.documentElement.clientWidth])
 
 return(
-<main className="main_slider" key={_id}>
+<main className="main_slider">
     <Slideshow 
     controles={true} 
     autoplay={true} 
@@ -29,7 +29,7 @@ return(
             guardaImg ? 
             guardaImg.map(({_id, description, name}) => {
                     return(
-                    <Slide>
+                    <Slide key={_id}>
                         <a href="/hola.com">
                     <img 
                         className="img_sliderShow" 
@@ -48,7 +48,7 @@ return(
                     )
                 })
                 : 
-                null
+            <h1>Cargandoo...</h1>
         }
     </Slideshow>
     <div className="ShopNow">

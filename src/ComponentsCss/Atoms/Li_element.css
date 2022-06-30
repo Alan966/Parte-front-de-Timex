@@ -29,28 +29,44 @@
 }
 
 .item-2{
-    min-height: 7em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .link-2{
-    height: 100%;
-    position: relative;
-    top: 50%;
-  }
-  
-  .item{
-    border: 1px solid var(--color-header);
-    padding: 1.5em 2em;
-    margin: 0;
-    font-size: var(--font-medium);
-    justify-content: start;
-    align-items: center;
-    display: flex;
-    font-family: var(--title-font)
-  }
-  .link{
-    color: black;
-  }
-  
+  min-height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item{
+  border: 1px solid var(--color-header);
+  padding: 1.5em 2em;
+  margin: 0;
+  font-size: var(--font-medium);
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  font-family: var(--title-font)
+}
+.link{
+  color: black;
+}
+
+.line_one{
+  width: 1.2em;
+  height: 1.2em;
+  position: relative;
+  cursor: pointer;
+}
+.line_one::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%; 
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.line_one::after{
+  background-image: url("../../img/icons/right-arrow.png");
+}
+.line_one.active::after{
+  background-image: url("../../img/icons/arrow-down-sign-to-navigate.png");
+}  
+

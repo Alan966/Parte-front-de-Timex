@@ -11,11 +11,9 @@ const WordEcology = () => {
                     SHOP OUR MOST EARTH FRIENDLY WATCHES</p>
             </div>
             <div className=" center_conter">
-                <a>
                     <div className="ShopNow">
-                        <a href="#">SHOP NOW</a>
+                        <a href="/">SHOP NOW</a>
                     </div>
-                </a>
             </div>
         </div>
     )

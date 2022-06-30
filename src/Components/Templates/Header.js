@@ -5,7 +5,7 @@ import "../../ComponentsCss/Templates/Header.css"
 
 const Header = () => {
 return(
-    <div className="contend_header">
+    <div className="contend_header_header">
         <Buscador/>    
         <HeaderPrincipal  />
     </div>

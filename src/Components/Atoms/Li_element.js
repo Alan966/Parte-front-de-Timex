@@ -1,72 +1,55 @@
-import  { useState,  useEffect } from "react"
-import ComponentImg from "../Molecules/ComponentImg";
+import  {useRef } from "react"
 import "../../ComponentsCss/Atoms/Li_element.css";
+import UlContendSecond from "../Molecules/UlContendSecond";
 
 const Li_Element  = ({
     _id, 
     name,
-    children, 
-    categoryOne, 
-    categoryTwo , 
-    grandFather, 
-    padre, 
-    img }) => {
+    grandFather,
+    urlTwo,
+    urlThree
+}) => {
 
-    const [aprovarReturn, SetaprovarReturn ] = useState(null);
+    const ref= useRef()
+    const twoRef = useRef()
+    const threeRef = useRef()
 
-
-useEffect(()  => {
-        if(grandFather === 1){
-            retonarPrimerosHijos()
-        }else if((categoryOne && padre ) 
-        || (categoryTwo && padre)){
-            let comparador = 
-            padre.parentNode.getAttribute('data')
-            if((comparador === categoryTwo) 
-            || (categoryOne === comparador)){
-                retonarPrimerosHijos()
-            }
-        }
-},[ grandFather, 
-    padre, 
-    categoryTwo , 
-    categoryOne, 
-    img ])
-
-
-const retonarPrimerosHijos = () =>{
-    SetaprovarReturn(true)
+const ponerActive = () => {
+    ref.current.classList.toggle('active')
+    twoRef.current.classList.toggle('active')
+    const padre = twoRef.current.parentElement
+    padre.classList.toggle('active')
+    threeRef.current.classList.toggle('active')
 }
 
-if(aprovarReturn === true){
+
     return(
-        <li key={_id} className={`item 
-        item-${grandFather}`} 
-        data={_id} >  
-        {
-            grandFather === 2 ?
-            <ComponentImg 
-            name={name}
-            img={img}
-            />
-             : 
-             null
-        }
-            <a href="#" className={`link 
-            link-${grandFather}`}>
-            { name }</a>
-            {
-                children ? 
-                children : 
-                null
-            }
+        <>
+        <li className={`item item-${grandFather}`} 
+        data={_id} 
+        ref={twoRef}
+        >  
+            <a href={`/${name}`} className={`link 
+                link-${grandFather}`}>
+                { name }
+            </a>
+                <div className="line_one" onClick={ponerActive} ref={ref}></div>
         </li>
+        <div className="contenedor_two_sub" ref={threeRef}>
+        {
+                urlTwo ? 
+                <UlContendSecond 
+                    urlTwo={urlTwo}
+                    identifier={2}
+                    comparativo={name}
+                    urlThree={urlThree}
+                /> 
+                : 
+                null
+        }
+        </div>
+        </>
         )
 }
-else{
-
-    return null
-
-}}
 
 export default Li_Element

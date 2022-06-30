@@ -1,7 +1,7 @@
 import "../../ComponentsCss/Atoms/CardRelojesTwo.css";
 const CardRelojesTwo = ({ _id, description}) => {
 return(
-    <div key={_id.toString()} 
+    <div key={_id} 
     className="card_relojes_two" >
         <div className="contend_img_reloj">
             <img className="img_card_reloj" 
@@ -16,11 +16,9 @@ return(
             }</h1>
         </div>
         <div className=" center_conter">
-                <a>
-                    <div className="ShopNow">
-                        <a href="#">SHOP NOW</a>
-                    </div>
-                </a>
+                <div className="ShopNow">
+                    <a href="#">SHOP NOW</a>
+                </div>
         </div>
     </div>
 )

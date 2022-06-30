@@ -1,46 +1,35 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+import useAxios from "../Atoms/getAxios";
 import CardPie from "../Atoms/cardPie"
 import "../../ComponentsCss/Moleculas/PieTimex.css";
 
-const PieTimex = () => {
-
-    const [pie , setPie] = useState(null)
-
-    useEffect(() => {
-        axios.get('http://localhost:5000/pie/all')
-        .then(e => {
-            setPie(e.data)
-        })
-        .catch(e => {
-            console.log(e)
-        })
-    },[pie])
-    
+const PieTimex = (props) => {
+    const [data, error] = useAxios(`http://localhost:5000/pieSecond/all`)
 
     return(
-        <div className="pie_card">
-            <div>
-                <h1 className="pie_timex_title"> TIMEX </h1>
-            </div>
-            <div className="section_cards">
-                {
-                    pie ? 
-                    pie.map(e => {
-                        return(
-                            <CardPie 
-                            url={'http://localhost:5000/pieSecond/all'}
-                            _id={e._id}
-                            name={e.name}
-                            />
-                        )
-                    })
-                    : 
-                    null
-                }
-            </div>
+    <div className="card_pie">
+        <h1 className="title_card_pie">
+            {props.name}
+        </h1>
+        <div>
+            {
+                data? 
+                data.map(({_id, name, pie}) => {
+                    return(
+                <CardPie 
+                   KeyTwo={props.accesible}
+                   key={_id}
+                   name={name}
+                    pie={pie}
+                   />
+                    )
+                })
+                : 
+                null
+                                
+            }
         </div>
-    )
+    </div>
+)
 }
 
 export default PieTimex

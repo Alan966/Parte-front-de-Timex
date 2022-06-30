@@ -1,24 +1,9 @@
-import useAxios from "../Atoms/getAxios"
 import "../../ComponentsCss/Organims/SectionImages.css";
-
-const SectionImages = ({url}) => {
-const [data, error] = useAxios(url)
-
+const SectionImages = () => {
     
     return(
         <div className="contendImages">
-            {
-                data.slice(7,9).map(({_id, name}) => {
-                    return(
-                        <img 
-                        src={`http://localhost:5000/home/photo/${_id}`} 
-                        alt={name} 
-                        className="img_section_img"
-                        />
-                    )
-                })
-            }
-            <div className="contend_one_section">
+            <div className="contend_one_section background_one">
                 <div className="contend_header">
                     <h1>TIMEX</h1> |
                     <h3>
@@ -36,9 +21,9 @@ const [data, error] = useAxios(url)
                     <p>KEEP TIME IN ANY <span className="demension">DEMENSION</span></p>
                 </div>
             </div>
-            <div>
+            <div className="contend_two_section background_two">
                 <div>
-                    <p>
+                    <p className="parrafo_one_section">
                     Hailing a parallel universe, authentic Stranger <br />
                     Things graphics creep across our Timex T80 x <br />
                     Stranger Things watch and the otherworldly styles of <br />
@@ -46,7 +31,7 @@ const [data, error] = useAxios(url)
                     </p>
                 </div>
                 <div>
-                    <p>
+                    <p className="Our_indiglo">
                         Our INDIGLO backlight permeates the shadows with <br />
                         an ominous hidden image, and our two digital <br />
                         watches, which made their first debut around the <br />
@@ -57,7 +42,7 @@ const [data, error] = useAxios(url)
                         3.The reason ? Only time will tell.
                     </p>
                 </div>
-                <div>
+                <div className="contend_buttons">
                     <a href="#">
                         <button className="button_add_to_bag">
                             SHOP NOW

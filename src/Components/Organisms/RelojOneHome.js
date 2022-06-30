@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState } from "react"
 import { get } from "axios"
 import CardReloj from "../Atoms/CardReloj";
 import Carousel from "react-elastic-carousel"
@@ -9,7 +9,7 @@ const RelojOneHome = ({ url }) => {
     const [relojOne, setRelojOne] = useState(null)
 
     useEffect(() => {
-        get('http://localhost:5000/relojesTimexOne/all')
+        get(url)
         .then(resp => {
             setRelojOne(resp.data)
         })
@@ -17,46 +17,29 @@ const RelojOneHome = ({ url }) => {
             console.log(error)
         })
 
-
     },[url, relojOne])
 
 
-
-    const breakPoints = [
-        {width:1, itemsToShow: 1}, 
-        {width: 550, itemsToShow: 2}, 
-        {width: 768, itemsToShow: 3}, 
-        {width: 1200, itemsToShow: 4},
-    ]
-
-
     return(
-           <div 
-           className="contenedor" 
-           id="carouselExampleSlidesOnly" 
-           data-ride="carousel" >
-                < Carousel 
-                brackPoints={breakPoints} 
-                className="contend_relojes" 
+            < Carousel   
+                itemsToShow={1}
                 >
                 {
                     relojOne? 
-                    relojOne.map(({_id, name, description}) => {
+                    relojOne.map( item => {
                         return(
                             <CardReloj 
-                            _id={_id} 
-                            name={name}
-                            description={description} 
+                            key={item._id}
+                            _id={item._id} 
+                            name={item.name}
+                            description={item.description} 
                             /> 
                         )
                     })
                         :
-                    null 
+                    <h1>Cargando...</h1>
                 }
-            </Carousel>
-           </div>
-       
-            
+            </Carousel>     
     )
 }
 export default RelojOneHome

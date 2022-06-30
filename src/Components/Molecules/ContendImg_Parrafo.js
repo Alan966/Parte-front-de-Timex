@@ -26,18 +26,16 @@ return(
             className="video_parrafo"
             src="https://www.youtube.com/embed/ex8IQpUAhbg" 
             title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            frameBorder="0" 
+            allowFullScreen="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </ContenedorImages>
         <div className="contend_second_section">
             <h2 className="title_second">{title}</h2>
             <p className="parrafo_second">{parrafo}</p>
             <div className=" center_conter">
-                <a>
                     <div className="ShopNow">
                         <a href="#">SHOP NOW</a>
                     </div>
-                </a>
             </div>
         </div>
     </ContenedorImg>

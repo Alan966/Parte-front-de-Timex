@@ -30,14 +30,17 @@
 
 
 .contend_email_pagar{
-    height: 90vh;
+    width: 100vw;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    align-content: center;
     background-color: #F6F6F6;
-    display: flex;
-    justify-content: space-around;
-}  
+    justify-content: space-between;
+} 
+.contend_formulario{
+    width: 100vw;
+}
 .contend_facebook::after{
     content: " ";
     position: absolute;
@@ -156,7 +159,39 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
-.contend_mexixo::after{
+.contend_logos_tarjetas{
+    display:flex; 
+    justify-content: space-around;
+    position: relative;
+    left: -1.5em;
+    width: 100vw;
+    height: 20vh;
+}
+.title_stay_connected{
+    font-family:var(--title-font);
+    text-align: center;
+    font-size: var(--font-large);
+}
+.stay_connected{
+    width: 100vw;
+    padding: 0 2em;
+    display: block;
+}
+.contend_logos{
+    display: flex;
+    justify-content: space-between;
+    width: 85vw;
+    height: 3em;
+    position: relative;
+    padding: 0.5em 0 ;
+}
+.description_parrafo{
+    display: block;
+    padding: 1em;
+    font-family: var(--body-font);
+    font-size: var(--font-large);
+}
+.contend_mexico::before{
     content: " ";
     position: absolute;
     background-image: url('../../img/icons/banderas/mexico.png');
@@ -165,35 +200,17 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
-.contend_logos_tarjetas{
-    display:flex; 
-    justify-content: space-around;
-    position: relative;
-    top: 5em;
-    width: 100%;
-    padding: 0.5em 0;
+.contend_mexico{
+    display:inline-block; 
+    width: 1.5em;
+    height: 1.5em;
 }
-.title_stay_connected{
-    font-family:var(--title-font);
-    text-align: center;
+.contend_three h3{
     font-size: var(--font-large);
+    font-family: var(--title-font);
 }
-.stay_connected{
-    width: 25em;
-    position: relative;
-    top: -3em;
-}
-.description_parrafo{
-    position: relative;
-    top: 4em;
-    font-family: var(--body-font);
+.contend_three p{
+    padding: .5em .5em 1em .5em;
     font-size: var(--font-medium);
+    font-family: var(--body-font);
 }
-.contend_logos{
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    position: relative;
-    padding: 0.5em 0 ;
-  }
-    

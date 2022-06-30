@@ -1,6 +1,6 @@
 import "../../ComponentsCss/Atoms/CardReloj.css";
 let x = 0 
-const CardReloj = ({_id, name, description}) => {
+const CardReloj = ({key, name, _id, description}) => {
 
  const sumar = () => {
      x++ 
@@ -8,7 +8,7 @@ const CardReloj = ({_id, name, description}) => {
  }
 
 return(
-    <div key={_id} className={`relojTimex 
+    <div key={key} className={`relojTimex 
     card_${sumar()} 
     img`}>
         <div>
