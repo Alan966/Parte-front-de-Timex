@@ -13,7 +13,7 @@ const SliderShowPage = ()=> {
             if(document.documentElement.clientWidth > 768){
             setGuardarImg(data.slice(0,3));
             }else{
-                setGuardarImg(data.slice(3,6));
+                setGuardarImg(data.slice(4,7));
             }
         })
     },[guardaImg, document.documentElement.clientWidth])

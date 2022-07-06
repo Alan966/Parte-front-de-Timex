@@ -13,7 +13,7 @@ const UlContendSecond = ({urlTwo,
             {
                 data ? 
                 data.map(({submenuone, name, _id }) => {
-                    if(submenuone.name === comparativo){
+                    if(submenuone ? submenuone.name === comparativo: null){
                         return(
                             <Li_Element_Second 
                                 key={_id}

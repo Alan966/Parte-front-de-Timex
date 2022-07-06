@@ -1,5 +1,5 @@
 import useAxios from "../Atoms/getAxios";
-import Li_Element_End from "../Atoms/Li_Element_End";
+import LiElementEnd from "../Atoms/LiElementEnd";
 const UlContendEnd = ({
     urlThree,
     identifier, 
@@ -9,28 +9,36 @@ const UlContendEnd = ({
 }) => {
 
     const [data, error] = useAxios(urlThree)
+      if(error){
+        console.log(error)
+      }
 
     return(
         <ul className={`submenu submenu-${identifier}`} >
         {
             data ?
             data.map(({_id, name, submenutwo}) => {
-                    if(submenutwo._id === comparativo){
+                    if(submenutwo ? submenutwo.name === comparce: null){ 
                         return(
-                            <Li_Element_End 
+                            <LiElementEnd 
                             name={name}
                             grandFather={identifier}
                             _id={_id}
+                            key={_id}
                             comparceOne={comparceOne}
                             comparce={comparce}
                             />
                         )
+                    }else{
+                        return null && console.log("no se encontro nada")
                     }
             }) 
             : 
-            null
+            null && console.log("no se encontro nada Broooow") 
         }
     </ul>
     )
 }
 export default UlContendEnd;
+
+

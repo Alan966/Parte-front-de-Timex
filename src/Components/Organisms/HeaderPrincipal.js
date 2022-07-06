@@ -34,7 +34,7 @@ const HeaderPrincipal = () => {
                 </nav> 
             </header> 
             <div className="contend_shop">
-                    <img src={images.shoppingCard32} className="img_shopping_two" />
+                    <img src={images.shoppingCard32} className="img_shopping_two" alt="imgshoppingtwo" />
             </div>
         </div>
     )
