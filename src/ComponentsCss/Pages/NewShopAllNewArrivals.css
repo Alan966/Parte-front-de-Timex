@@ -1,0 +1,92 @@
+/* Importacion de fuentes */
+body{
+    font-size: 16px;
+  }
+:root{
+    /* Colors */
+    --turkey-color:#00ACB6; 
+    --white-color: #FFFFFF; 
+    --gray-low-color: #D1D1D4;
+    --color-oscurito:#141618;
+    --color-header:#bbb8b8;
+    /* Fuentes para la Pagina */
+    --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Ubuntu', sans-serif;
+    /* Tamaños de letra */
+    --font-small: .6em;
+    --font-medium:.8em;
+    --font-large: 1em;
+    --font-big: 1.2em;
+    --font-bigbig: 1.4em;
+
+    /* Medidas */
+    --header-menu-hamburguer:2em;
+
+    /* Variables de apilamiento */
+    --z-back: -10; 
+    --z-normal: 1; 
+    --z-tooltip:10; 
+    --z-fixed:100; 
+    --z-modal:1000;
+}
+.ContenedorDeRelojes{
+    display: flex;
+}
+.url{
+    color: var(--gray-low-color);
+    font-size: var(--font-large);
+    font-family: var(--body-font);
+    justify-self: flex-start;
+    min-width: 100vw;
+    padding: 1rem;
+    padding-left: 1rem;
+    /* background-color: red; */
+    margin-left:1rem;
+}
+.title_relojes{
+    color: black;
+    font-family: var(--title-font);
+    justify-self: flex-start;
+    min-width: 100vw;
+    padding: 1em;
+}
+
+.sugerencia{
+
+}
+.react-autosuggest_suggestions-container--opne{
+    display: block;
+    position: absolute;
+    top: 31px;
+    width: 500px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size:16px; 
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    z-index: 2;
+    max-height: 300px;
+    overflow: auto;
+    margin-top: 16px;
+    left: 0;
+    right: 0;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.react-autosuggest-suggestions-list{
+    list-style: none;
+    margin-bottom: 0px;
+    padding-left:0px;
+    cursor: pointer;
+}
+
+.react-autosuggest__input{
+    width: 500px;
+}
+
+.react-autosuggest_suggestion--highlighted{
+    background-color: #ddd;
+}

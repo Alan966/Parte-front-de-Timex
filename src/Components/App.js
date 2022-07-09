@@ -19,7 +19,11 @@ function App() {
        </>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/new" element={<NewShopAllNewArrivals />} />
+        <Route path="/NEW" element={<NewShopAllNewArrivals 
+            direccion={"/NEW"}
+            relojes={'http://localhost:5000/relojestotalroute/all'}
+            name={'NEW'}
+        />} />
       </Routes>
       </BrowserRouter>
       <a href="https://www.flaticon.com/free-icons/world" title="world icons">World icons created by Freepik - Flaticon</a>

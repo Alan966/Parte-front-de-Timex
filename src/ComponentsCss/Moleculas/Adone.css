@@ -1,4 +1,8 @@
 /* Importacion de fuentes */
+body{
+    font-size: 16px;
+  }
+  
 :root{
     /* Colors */
     --turkey-color:#00ACB6; 

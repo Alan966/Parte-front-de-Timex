@@ -2,7 +2,6 @@
 body{
     font-size: 16px;
   }
-  
 :root{
     /* Colors */
     --turkey-color:#00ACB6; 
@@ -30,11 +29,21 @@ body{
     --z-fixed:100; 
     --z-modal:1000;
 }
-
-.contend_header_header{
-    /* Statik */
-    /* position: sticky; */
-    top:0;
-    z-index: 100;
-    display: block;
+.contend_relojes{
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    background: yellow;
+}
+.contend_new{
+    outline: #bbb8b8 1px solid;
+    border-radius: 50% 50%;
+    position: absolute;
+    padding: 2em;
+    opacity: 0.75;
+}
+.contend_new > p{
+    color: #777272;
+    font-size: var(--font-large);
+    font-family: var(--body-font);
 }

@@ -1,32 +1,32 @@
-/* Importacion de fuentes */
+/* Importacion de fuentes
 
 :root{
     /* Colors */
-    --turkey-color:#00ACB6; 
+    /* --turkey-color:#00ACB6; 
     --white-color: #FFFFFF; 
     --gray-low-color: #D1D1D4;
     --color-oscurito:#141618;
-    --color-header:#bbb8b8;
+    --color-header:#bbb8b8; */
     /* Fuentes para la Pagina */
-    --title-font: 'Open Sans', sans-serif;
-    --body-font: 'Raleway', sans-serif;
+    /* --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Raleway', sans-serif; */
     /* Tamaños de letra */
-    --font-small: 12px;
+    /* --font-small: 12px;
     --font-medium: 14px;
     --font-large: 18px;
     --font-big: 26px;
-    --font-bigbig: 36px;
+    --font-bigbig: 36px; */
 
     /* Medidas */
-    --header-menu-hamburguer:2em;
+    /* --header-menu-hamburguer:2em; */
 
     /* Variables de apilamiento */
-    --z-back: -10; 
+    /* --z-back: -10; 
     --z-normal: 1; 
     --z-tooltip:10; 
     --z-fixed:100; 
     --z-modal:1000;
-}
+} 
 
 .ShopNow{
     background-color: #000000;
@@ -48,4 +48,5 @@
     color: black;
     font-family: var(--title-font);
     font-size: var(--font-medium);
-  }
+  } 
+  */

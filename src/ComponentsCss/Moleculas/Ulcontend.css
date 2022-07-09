@@ -1,4 +1,7 @@
 Importacion de fuentes
+body{
+  font-size: 16px;
+}
 
 :root{
     /* Colors */
