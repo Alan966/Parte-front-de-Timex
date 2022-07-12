@@ -28,11 +28,12 @@ body{
     --z-tooltip:10; 
     --z-fixed:100; 
     --z-modal:1000;
-}
+ }
+ 
 .App {
     position: relative;
     text-align: center;
-    padding-top: 16px;
+    padding-top: 10px;
   }
   
   .App-logo {
@@ -55,6 +56,7 @@ body{
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    padding: 2em;
   }
   
   .App-link {
@@ -71,7 +73,7 @@ body{
   }
   
   .sugerencia{
-    padding: 5px;
+    padding: 10px;
   }
   
   
@@ -83,7 +85,7 @@ body{
     background-color: #fff;
     font-family: var(--title-font);
     font-size: var(--font-medium);
-    z-index: 2;
+    z-index: 20;
     max-height: 300px;
     overflow: auto;
     left: 0;
@@ -101,10 +103,20 @@ body{
   
   .react-autosuggest__input{
     width: 90vw;
+    border: 1px solid black;
+    padding: 1em;
     font-size: var(--font-medium);
-    margin-bottom: 2em;
   }
   
   .react-autosuggest__suggestion--highlighted {
     background-color: #ddd;
+  }
+  .button{
+    color: white;
+    text-decoration: none;
+    font-family: var(--body-font);
+  }
+  .button-relojes{
+    margin: 2em;
+    background-color: var(--turkey-color)  !important;
   }

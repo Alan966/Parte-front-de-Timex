@@ -1,6 +1,8 @@
 import "../../ComponentsCss/Moleculas/ToMomWithLove.css";
 import { get } from "axios"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+
 const ToMonWithLove = () => {
 
     const [data, setData] = useState(null);
@@ -33,9 +35,9 @@ const ToMonWithLove = () => {
                he'll wear and love
            </p>
            <div className="ShopNow blue">
-               <a href="#">
+               <Link to="#">
                    SHOP FOR DAD
-               </a>
+               </Link>
            </div>
        </div>
     </div>    

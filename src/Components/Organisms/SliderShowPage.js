@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import {Slideshow, Slide, TextoSlide} from "../Molecules/SliderShow"
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 import "../../ComponentsCss/Organims/SliderShowPage.css";
 
 const SliderShowPage = ()=> {
@@ -30,12 +31,12 @@ return(
             guardaImg.map(({_id, description, name}) => {
                     return(
                     <Slide key={_id}>
-                        <a href="/hola.com">
+                        <Link to="/hola.com">
                     <img 
                         className="img_sliderShow" 
                         src={`http://localhost:5000/slider/photo/${_id}`} 
                         alt={name} />
-                        </a>
+                        </Link>
                         <TextoSlide colorFondo="rgba(0,0,0, 0.6)"
                          colorTexto="#fff">
                         <p >
@@ -52,7 +53,7 @@ return(
         }
     </Slideshow>
     <div className="ShopNow">
-        <a href="#">Shop Now</a>
+        <Link to="#">Shop Now</Link>
     </div>
 </main>
 );

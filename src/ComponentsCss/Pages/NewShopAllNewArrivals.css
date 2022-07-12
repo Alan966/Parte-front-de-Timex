@@ -90,3 +90,7 @@ body{
 .react-autosuggest_suggestion--highlighted{
     background-color: #ddd;
 }
+.contend_relojes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

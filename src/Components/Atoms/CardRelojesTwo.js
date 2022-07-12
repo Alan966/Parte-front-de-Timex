@@ -1,4 +1,6 @@
 import "../../ComponentsCss/Atoms/CardRelojesTwo.css";
+import { Link } from "react-router-dom"
+
 const CardRelojesTwo = ({ _id, description}) => {
 return(
     <div key={_id} 
@@ -17,7 +19,7 @@ return(
         </div>
         <div className=" center_conter">
                 <div className="ShopNow">
-                    <a href="#">SHOP NOW</a>
+                    <Link to="#">SHOP NOW</Link>
                 </div>
         </div>
     </div>

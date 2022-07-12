@@ -32,13 +32,15 @@ body{
 }
 
 .subtitle_card{
-  font-family:var(--body-font);
-  font-size: var(--font-medium);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .subsubtitle{
-  padding: 5px;
   color: #000;
+}
+.a_sub{
+  text-decoration: none;
+  font-size: var(--font-large);
+  font-family: var(--title-font);
 }

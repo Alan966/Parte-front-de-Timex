@@ -176,20 +176,20 @@ body{
     font-size: var(--font-large);
 }
 .stay_connected{
-    width: 100vw;
-    padding: 0 2em;
+    width:100vw;
     display: block;
 }
 .contend_logos{
     display: flex;
-    justify-content: space-between;
-    width: 85vw;
+    justify-content: space-around;
+    width: 99vw;
     height: 3em;
     position: relative;
     padding: 0.5em 0 ;
 }
 .description_parrafo{
     display: block;
+    padding: 0 2em;
     padding: 1em;
     font-family: var(--body-font);
     font-size: var(--font-large);

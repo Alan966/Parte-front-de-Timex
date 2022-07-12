@@ -36,8 +36,9 @@ body{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 20vh;
+    height: 30vh;
     padding: 3em 0;
+    margin: 1em 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -63,11 +64,10 @@ body{
     color: white;
     position: relative;
     font-family: var(--title-font);
-    font-size: var(--font-medium);
+    font-size: var(--font-large);
     width: 12em;
     margin:0  1em;
     text-align: center;
-    
 }
 .Watch_video_button{
   width:100%; 
@@ -82,4 +82,6 @@ body{
   border: 1px solid var(--white-color);
   color: white;
   padding: .3em;
+  font-size: var(--font-medium);
+  text-decoration: none;
 }

@@ -1,0 +1,133 @@
+/* Importacion de fuentes */
+body{
+    font-size: 16px;
+  }
+  
+  :root{
+    /* Colors */
+    --turkey-color:#00ACB6; 
+    --white-color: #FFFFFF; 
+    --gray-low-color: #D1D1D4;
+    --color-oscurito:#141618;
+    --color-header:#bbb8b8;
+    /* Fuentes para la Pagina */
+    --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Ubuntu', sans-serif;
+    /* Tamaños de letra */
+    --font-small: .6em;
+    --font-medium:.8em;
+    --font-large: 1em;
+    --font-big: 1.2em;
+    --font-bigbig: 1.4em;
+  
+    /* Medidas */
+    --header-menu-hamburguer:2em;
+  
+    /* Variables de apilamiento */
+    --z-back: -10; 
+    --z-normal: 1; 
+    --z-tooltip:10; 
+    --z-fixed:100; 
+    --z-modal:1000;
+  }
+  
+
+
+.modile{
+    position: fixed;
+    width: 100%;
+    height:100%; 
+    background:rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.25s;
+    pointer-events: none;
+}
+
+.modile.active{
+    z-index: 10;
+    opacity:1; 
+    pointer-events: initial;
+} 
+
+.content_modile{
+    position: absolute;
+    text-align: center;
+    left: 47%;
+    top: 5em;
+    border-radius: 4em;
+    transform: translate(-50%, -50%);
+    width: 90%; 
+    max-width: 90%;
+    background: white; 
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+.content_modile h1{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.content_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contend_img_view img{
+    width: 2.5em;
+    height: 1.5em;
+}
+.contend_imgBandera img{
+    width: 6em;
+    height:4em;
+}
+.x{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.x::after{
+    content:'';
+    display: block;
+    /* background-color: red; */
+    background-image: url(../../img/Imagenes/boton-eliminar.png);
+    width: 2em;
+    height: 2em;
+    background-size: contain;
+}
+
+.modile h1{
+    font-size: var(--font-large);
+    font-family: var(--title-font);
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 1em 1em 0;
+}
+.contend_imgBandera p{
+    font-size: var(--font-medium);
+    margin : 0.5em;
+}
+.content_content a{
+    text-decoration: none;
+    color: black;
+}
+.contend_we_are p{
+    font-size: var(--font-large);
+    font-family: var(--title-font);
+}
+.contend_img_view{
+    display: flex;
+    justify-content: flex-start;     
+    margin: 0 0.5em;
+    gap: 1em;
+}
+.contend_img_view p{
+    font-size: var(--font-medium);
+}
+.activeMidal{
+    margin: 1em;
+    font-size: var(--font-large);
+    background-color: var(--turkey-color);
+    color: var(--white-color);
+    border:1px solid var(--gray-low-color);
+    border-radius: 0.3rem;
+}

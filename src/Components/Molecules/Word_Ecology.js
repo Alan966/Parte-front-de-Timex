@@ -1,4 +1,5 @@
 import "../../ComponentsCss/Moleculas/Word_Ecology.css";
+import { Link } from "react-router-dom"
 
 const WordEcology = () => {
     return(
@@ -12,7 +13,7 @@ const WordEcology = () => {
             </div>
             <div className=" center_conter">
                     <div className="ShopNow">
-                        <a href="/">SHOP NOW</a>
+                        <Link to="/">SHOP NOW</Link>
                     </div>
             </div>
         </div>

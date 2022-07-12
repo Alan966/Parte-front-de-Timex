@@ -1,7 +1,7 @@
 
 import { useRef } from "react";
 import UlContendEnd from "../Molecules/UlContendEnd";
-
+import { Link } from "react-router-dom"
 
 const Li_Element_Second = ({
     _id,
@@ -23,11 +23,11 @@ const Li_Element_Second = ({
     return(
         <>
         <li className={`item item-${grandFather}`} >
-            <a href={`/${comparativo}/${name}`} className={`link link-${_id}`}>
+            <Link to={`/${comparativo}/${name}`} className={`link link-${_id}`}>
                 {
                     name
                 }
-            </a>
+            </Link>
             <div className="line_one" onClick={ponerActive} ref={ref}></div>
         </li>
         <div className="contenedor_three_sub" ref={twoRef}>

@@ -10,28 +10,35 @@ export default class CardRelojPrincipal extends Component {
             id: this.props.id,
             price: this.props.price,
             name: this.props.name,
-            submenuone: this.props.submenuone,
+            description: this.props.description,
             submenutwo: this.props.submenutwo
         }
     }
     render(){
         return(
-            <Link to={`/${this.state.submenuone}/${this.state.submenutwo}/${this.state.name}}`}>
             <div className="contend_relojes">
+            <Link 
+            className="link-card"
+            id={this.state.description} 
+            to={`/${this.state.name}/${this.state.submenutwo}/${this.state.description}}`}>
                 <div className="contend_new">
+                    <div className="background_new"></div>
                     <p>New</p>
                 </div>
                 <img 
-            src={`http://localhost:5000/relojestotalroute/photo/${this.state.id}`} 
-                alt={this.state.name} />
+                src={`http://localhost:5000/relojestotalroute/photo/${this.state.id}`} 
+                alt={this.state.description} />
                 <h2 className="prueva">
-                    {this.state.name}
+                    {this.state.description}
                 </h2>
-                <p>
+                <p
+                data-price="Mex$ "
+                className="price">
                     {this.state.price}
                 </p>
+                </Link>
             </div>
-            </Link>
+
         )
     }
 

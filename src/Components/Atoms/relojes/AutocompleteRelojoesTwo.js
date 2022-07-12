@@ -3,7 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { get } from "axios";
 import { useEffect, useState } from "react";
 import Autosuggest from "react-autosuggest";
+import { Outlet } from "react-router-dom";
 const AutocompleteRelojes = ({url, nombre}) => {
+
 
 
    const [data, setData] = useState([]);
@@ -83,7 +85,7 @@ const AutocompleteRelojes = ({url, nombre}) => {
     const obtenerData = () => {
         get(url)
         .then(response => {
-            const data = response.data.filter(p => p.name == nombre && p.principal == "true")
+            const data = response.data.filter(p => p.submenu == nombre && p.principal == "true")
             setRelojes(data);
             setData(data)
         })
@@ -123,6 +125,7 @@ const AutocompleteRelojes = ({url, nombre}) => {
                         </a>
                     }
                 </div>
+                <Outlet />
         </div>
     )
 }

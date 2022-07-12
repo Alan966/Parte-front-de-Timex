@@ -3,9 +3,9 @@ import useAxios from "../Atoms/getAxios";
 import CardImgHome from "../Atoms/CardImgHome";
 
 let x = 1
-const PartTwoTimex = () => {
+const PartTwoTimex = ({url}) => {
  
-    const [data, error] = useAxios("http://localhost:5000/home/all");
+    const [data, error] = useAxios(url);
 
 return(
     <section className='two_section_timex'>

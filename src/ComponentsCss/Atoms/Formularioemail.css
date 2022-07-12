@@ -42,12 +42,13 @@ body{
 .title_formulario{
   font-family: var(--title-font);
   font-size: var(--font-large);
+  font-weight: 600;
   margin: 1em;
   text-align: center;
 }
 .description_formulario{
   font-family: var(--body-font); 
-  font-size: var(--font-medium);
+  font-size: var(--font-large);
   padding: 0.5em;
 }
 .contendformulario{
@@ -57,7 +58,7 @@ body{
 }
 
 .input_formulario{
-  width: 87%;
+  width: 90vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +66,7 @@ body{
   margin: 0.5em;
 }
 .button_sign_up{
-  width: 90%;
+  width: 90vw;
   display: flex;
   justify-content: center;
   align-items: center;

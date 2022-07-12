@@ -34,7 +34,8 @@ return(
                 }
                 </div>
             </fieldset>
-            <input className="button_sign_up" type="submit" value={"SIGN UP"} />
+            <input className="button_sign_up" 
+            type="submit" value={"SIGN UP"} />
         </form>
     </div>
 )

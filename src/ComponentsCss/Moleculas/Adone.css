@@ -51,3 +51,8 @@ body{
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.title_free_shipping{
+    font-size: var(--font-large);
+    margin: 1em 2em;
+}

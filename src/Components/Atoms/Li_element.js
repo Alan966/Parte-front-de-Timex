@@ -1,6 +1,7 @@
 import  {useRef } from "react"
 import "../../ComponentsCss/Atoms/Li_element.css";
 import UlContendSecond from "../Molecules/UlContendSecond";
+import { Link } from "react-router-dom"
 
 const Li_Element  = ({
     _id, 
@@ -29,10 +30,10 @@ const ponerActive = () => {
         data={_id} 
         ref={twoRef}
         >  
-            <a href={`/${name}`} className={`link 
+            <Link to={`/${name}`} className={`link 
                 link-${grandFather}`}>
                 { name }
-            </a>
+            </Link>
                 <div className="line_one" onClick={ponerActive} ref={ref}></div>
         </li>
         <div className="contenedor_two_sub" ref={threeRef}>

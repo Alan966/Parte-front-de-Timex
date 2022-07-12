@@ -95,12 +95,14 @@ const Slideshow = ({
 
 
 const ContenedorPrincipal = styled.div`
-   position: relative; 
+   position: relative;
+   height: 50vh; 
 `
 
 const Slide = styled.div`
 vertical-align: top; 
    min-width: 100vw;
+   height: 50vh; 
    overflow: hidden; 
    transition: .3s ease all; 
    z-index: 9; 

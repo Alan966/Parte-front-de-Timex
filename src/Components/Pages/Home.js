@@ -12,14 +12,19 @@ import PieTimex from "../Molecules/PieTimex"
 import Pagostimex from "../Molecules/Pagostimex"
 import SectionImages from "../Organisms/Section_Images"
 import ContendPieTimex from "../Organisms/ContendPieTimex"
+import Modal from "../Atoms/modal"
 
 const Home = () => {
     return(
+        <>
+        <Modal/>
         <section>
             <SliderShowPage />
             <ToMonWithLove />
             <WordEcology />
-            <PartTwoTimex />
+            <PartTwoTimex 
+            url={"http://localhost:5000/home/all"}
+            />
             <ContendRelojesHome 
                 id={1}
                 children={<RelojOneHome 
@@ -44,6 +49,7 @@ const Home = () => {
             <ContendPieTimex />
             <Pagostimex />
         </section>
+        </>
     )
 }
 export default Home

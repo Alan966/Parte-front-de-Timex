@@ -1,20 +1,17 @@
 import { Component } from "react"
-import "../../ComponentsCss/Pages/NewShopAllNewArrivals.css"
+import "../../../ComponentsCss/Pages/NewShopAllNewArrivals.css"
 import { get } from "axios"
-import CardRelojPrincipal from "../Atoms/relojes/cardReloj";
-import BuscadorRelojes from "../Molecules/relojes/BuscadorRelojes";
+import CardRelojPrincipal from "../../Atoms/relojes/cardReloj";
+import BuscadorRelojes from "../../Molecules/relojes/BuscadorRelojes";
 export  default class NewShopAllNewArrivals extends Component{
     constructor (props){
         super(props); 
         this.state = { 
             direccion: this.props.direccion, 
-            name: this.props.name
+            name: this.props.name,
+            saber: []
         }
         this.relojes = (this.props.relojes)
-
-        this.estado = {
-            data: []
-        }
     }
 
     UNSAFE_componentWillMount(){
@@ -23,31 +20,35 @@ export  default class NewShopAllNewArrivals extends Component{
             this.setState({
                 data: response.data
             })
+           
         })
     }
 
 
     render(){
+
+
         return(
             <main className="ContenedorDeRelojes">
                 <h1 className="url">{this.state.direccion}</h1>
                 <h2 className="title_relojes">{ this.state.name}</h2>
                 <BuscadorRelojes
                    url={this.relojes}
+                   nombre={this.state.name}
                  />
-                <div>
+                <div className="contend_relojes">
                     {
                         this.state.data ? 
-                        this.state.data.map(item => {
-                            if(item && item.name === "NEW" ){
+                        this.state.data.slice(0,this.state.contadorcontador).map(item => {
+                            if(item && item.name === this.props.name ){
                                 if(item && item.principal === "true"){
                                     return(
                                         <CardRelojPrincipal 
                                          key={item._id}
                                          id={item._id}
                                          price={item.price}
-                                         name={item.description}
-                                         submenuone={item.name}
+                                         description={item.description}
+                                         name={item.name}
                                          submenutwo={item.submenutwo}
                                         />
                                     )
@@ -57,7 +58,7 @@ export  default class NewShopAllNewArrivals extends Component{
                             } 
                         })
                         : 
-                        <h1>Cargando......</h1>
+                        <h1>Cargando...</h1>
                     }
                 </div>
             </main>

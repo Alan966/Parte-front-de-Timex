@@ -42,7 +42,7 @@ body{
     .title_card_pie{
       font-family: var(--title-font);
       font-size: var(--font-large);
-      padding: 2em;
+      padding: 1em;
     }
     
     

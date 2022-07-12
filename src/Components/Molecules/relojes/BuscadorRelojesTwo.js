@@ -1,7 +1,7 @@
 import { Component } from "react";
-import AutocompleteRelojes from "../../Atoms/relojes/AutocompleteRelojes";
+import AutocompleteRelojesTwo from "../../Atoms/relojes/AutocompleteRelojoesTwo";
 
- class BuscadorRelojes extends Component {
+ class BuscadorRelojesTwo extends Component {
     constructor(props){
         super(props);
         this.state ={
@@ -15,7 +15,7 @@ import AutocompleteRelojes from "../../Atoms/relojes/AutocompleteRelojes";
         return(
             <div>
                 <form>
-                    <AutocompleteRelojes 
+                    <AutocompleteRelojesTwo
                     url={this.state.relojes}
                     nombre={this.state.nombre}
                     />
@@ -25,4 +25,4 @@ import AutocompleteRelojes from "../../Atoms/relojes/AutocompleteRelojes";
     }
 }
 
-export default BuscadorRelojes;
+export default BuscadorRelojesTwo;

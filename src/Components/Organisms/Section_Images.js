@@ -1,4 +1,6 @@
 import "../../ComponentsCss/Organims/SectionImages.css";
+import { Link } from "react-router-dom"
+
 const SectionImages = () => {
     
     return(
@@ -43,16 +45,16 @@ const SectionImages = () => {
                     </p>
                 </div>
                 <div className="contend_buttons">
-                    <a href="#">
+                    <Link to="#">
                         <button className="button_add_to_bag">
                             SHOP NOW
                         </button>
-                    </a>
-                    <a href="#">
+                    </Link>
+                    <Link to="#">
                         <button className="button_add_to_bag">
                             LEARN MORE
                         </button>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

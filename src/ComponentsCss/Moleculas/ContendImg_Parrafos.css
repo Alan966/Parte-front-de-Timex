@@ -59,9 +59,9 @@ body{
 .ShopNow{
 background-color: #000000;
 border-radius: 4px;
-padding: 0.5em;
-width: 6em;
-height: 2em;
+padding: 1em;
+min-width: 8em;
+min-height: 3em;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -71,8 +71,9 @@ font-family: var(--title-font);
 font-size: var(--font-medium);
 font-weight: 800;
 }
-.ShopNow{
+.ShopNow a{
 color: white;
+text-decoration: none;
 }
 .contend_second_section{
   display: flex; 

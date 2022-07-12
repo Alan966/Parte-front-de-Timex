@@ -1,4 +1,5 @@
 import "../../ComponentsCss/Atoms/CardImgHome.css";
+import { Link } from "react-router-dom"
 
 const CardImgHome = ({accesible, name}, props) => {
 
@@ -12,9 +13,9 @@ const CardImgHome = ({accesible, name}, props) => {
             <div className="contendButton">
                 {
                     name == "b-Part-Two"? 
-                    <a className="ShopNow Large" href="#">SHOP MENS BEST SELLERS</a> 
+                    <Link className="ShopNow Large" to="#">SHOP MENS BEST SELLERS</Link> 
                     :
-                    <a className="ShopNow Large" href="#">SHOP WOMENS BEST SELLERS</a> 
+                    <Link className="ShopNow Large" to="#">SHOP WOMENS BEST SELLERS</Link> 
                 }
             </div>
         </div>

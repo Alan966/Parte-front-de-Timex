@@ -1,5 +1,4 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import "../../ComponentsCss/Atoms/CardPie.css";
 
 const CardPie = ({KeyTwo, name, pie }) => {
@@ -7,12 +6,12 @@ const CardPie = ({KeyTwo, name, pie }) => {
     if(KeyTwo === pie._id){
         return(
             <div className="subtitle_card">
-            <a href={`/${name}`}>
-                    <h2 
+            <Link to={`/${name}`} className="a_sub">
+                    <p 
                     className="subsubtitle">
                         { name }
-                    </h2>
-                </a>
+                    </p>
+                </Link>
             </div>
             )
     }else{

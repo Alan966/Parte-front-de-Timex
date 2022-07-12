@@ -1,4 +1,5 @@
 import "../../ComponentsCss/Atoms/CardReloj.css";
+import { Link } from "react-router-dom"
 let x = 0 
 const CardReloj = ({key, name, _id, description}) => {
 
@@ -24,11 +25,11 @@ return(
             </p>
         </div>
         <div>
-            <a href="#">
+            <Link to="#">
                 <button className="button_add_to_bag">
                     ADD TO BAG
                 </button>
-            </a>
+            </Link>
         </div>
     </div>
 )}

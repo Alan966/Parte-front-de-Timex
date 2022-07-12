@@ -10,6 +10,9 @@ import celibriti from "../../img/Imagenes/celebriti.jpeg"
 import facebook from "../../img/icons/facebook.png"
 import shoppingCard32 from "../../img/icons/shopping-card-32.png"
 import celebritiImg from "../../img/Imagenes/celebritiImg.jpeg"
+import banderaMexicana from "../../img/Imagenes/labanderamaschingona.png"
+import banderagringa from "../../img/Imagenes/banderagringa.png"
+import botonEliminar from "../../img/Imagenes/boton-eliminar.png"; 
 
 export default
     {
@@ -24,5 +27,8 @@ export default
         "celibriti": celibriti, 
         "facebook": facebook, 
         "shoppingCard32": shoppingCard32, 
-        "celebritiImg": celebritiImg
+        "celebritiImg": celebritiImg, 
+        "banderaMexicana": banderaMexicana,
+        "banderagringa": banderagringa, 
+        "botonEliminar": botonEliminar
     }

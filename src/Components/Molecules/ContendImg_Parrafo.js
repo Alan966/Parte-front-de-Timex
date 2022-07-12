@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react"
 import styled from "styled-components"
 import "../../ComponentsCss/Moleculas/ContendImg_Parrafos.css";
 import useAxios from "../Atoms/getAxios"
+import { Link } from "react-router-dom"
 
 const ContendImg_Parrafo = ({numero, title, parrafo}) => {
 
@@ -34,7 +34,7 @@ return(
             <p className="parrafo_second">{parrafo}</p>
             <div className=" center_conter">
                     <div className="ShopNow">
-                        <a href="#">SHOP NOW</a>
+                        <Link to="/NEW">SHOP NOW</Link>
                     </div>
             </div>
         </div>

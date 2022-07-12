@@ -39,9 +39,9 @@ body{
 }
     
 .pie_timex_title{
-    font-size:var(--font-bigbig);
+    font-size:var(--font-big);
     font-family:var(--title-font);
-    padding: 1em;
+    padding: 2em;
 }
     
 .section_cards{
