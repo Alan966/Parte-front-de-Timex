@@ -1,0 +1,116 @@
+/* Importacion de fuentes */
+body{
+    font-size: 16px;
+  }
+:root{
+    /* Colors */
+    --turkey-color:#00ACB6; 
+    --white-color: #FFFFFF; 
+    --gray-low-color: #D1D1D4;
+    --color-oscurito:#141618;
+    --color-header:#bbb8b8;
+    /* Fuentes para la Pagina */
+    --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Ubuntu', sans-serif;
+    /* Tamaños de letra */
+    --font-small: .6em;
+    --font-medium:.8em;
+    --font-large: 1em;
+    --font-big: 1.2em;
+    --font-bigbig: 1.4em;
+
+    /* Medidas */
+    --header-menu-hamburguer:2em;
+
+    /* Variables de apilamiento */
+    --z-back: -10; 
+    --z-normal: 1; 
+    --z-tooltip:10; 
+    --z-fixed:100; 
+    --z-modal:1000;
+}
+main.main_error{
+    position: relative;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+}
+main.main_error img[alt="error 404"]{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    object-fit: cover;
+    filter: invert(0%);
+    filter:grayscale(70%) sepia(60%) drop-shadow(2px 2px 5px red);
+}
+.contendImages_error_404{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+.center{
+    align-items: center;
+}
+div .Error404{
+    position: absolute;
+    color: red;
+    z-index: 10;
+    margin: 1em;
+    font-size:var(--font-big);
+    border: 2px solid red;
+    padding: 0.5rem;
+    background-color: #FFFFFF;
+}
+img[alt="LLevame de regreso"]{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 95vw;
+    margin: 0.2em;
+    object-fit: cover;
+}
+.filter_one{
+    filter: hue-rotate(0);
+    animation: hue 3s linear infinite;
+}
+
+@keyframes hue{
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+.Error404 a{
+    text-decoration: none;
+    color: red;
+    background-color: #FFFFFF;
+    font-family: var(--body-font);
+    font-size: var(--font-big);
+}
+img[alt="bobcantando" ]{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    object-fit: cover;
+}
+.filter_two{
+    filter: brightness(40%) saturate(200%) contrast(150%);
+    animation: brightness 3s linear infinite alternate;
+
+}
+@keyframes brightness{
+    to{
+        filter: brightness(150%);
+    }
+}
+
+@keyframes blur{
+    to{
+        filter: blur(5px);
+    }
+}
+

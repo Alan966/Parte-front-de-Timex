@@ -1,46 +1,44 @@
-import { Component } from "react"
 import "../../../ComponentsCss/Pages/NewShopAllNewArrivals.css"
-import { get } from "axios"
 import CardRelojPrincipal from "../../Atoms/relojes/cardReloj";
 import BuscadorRelojes from "../../Molecules/relojes/BuscadorRelojes";
-export  default class NewShopAllNewArrivals extends Component{
-    constructor (props){
-        super(props); 
-        this.state = { 
-            direccion: this.props.direccion, 
-            name: this.props.name,
-            saber: []
-        }
-        this.relojes = (this.props.relojes)
-    }
+import { useEffect, useState } from "react";
+import { get } from "axios"
+import { Outlet } from "react-router-dom";
 
-    UNSAFE_componentWillMount(){
-        get(this.relojes)
+export default function NewShopAllNewArrivals ({
+    direccion, 
+    name, 
+    relojes
+}){
+
+    console.log(<Outlet />)
+        
+           const [data,setData]  = useState();
+
+
+    useEffect(() =>{
+        get(relojes)
         .then(response => {
-            this.setState({
-                data: response.data
-            })
-           
+            setData(response.data)
         })
-    }
-
-
-    render(){
-
+        .catch(err =>{
+            console.log(`Ocurrio un error el error es ${err}`)
+        })
+    },[])
 
         return(
             <main className="ContenedorDeRelojes">
-                <h1 className="url">{this.state.direccion}</h1>
-                <h2 className="title_relojes">{ this.state.name}</h2>
+                <h1 className="url">{direccion}</h1>
+                <h2 className="title_relojes">{ name}</h2>
                 <BuscadorRelojes
-                   url={this.relojes}
-                   nombre={this.state.name}
+                   url={relojes}
+                   nombre={name}
                  />
                 <div className="contend_relojes">
                     {
-                        this.state.data ? 
-                        this.state.data.slice(0,this.state.contadorcontador).map(item => {
-                            if(item && item.name === this.props.name ){
+                        data ? 
+                        data.map(item => {
+                            if(item && item.name === name ){
                                 if(item && item.principal === "true"){
                                     return(
                                         <CardRelojPrincipal 
@@ -63,5 +61,4 @@ export  default class NewShopAllNewArrivals extends Component{
                 </div>
             </main>
         )
-    }
 }

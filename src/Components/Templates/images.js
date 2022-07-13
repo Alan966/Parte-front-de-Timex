@@ -13,6 +13,9 @@ import celebritiImg from "../../img/Imagenes/celebritiImg.jpeg"
 import banderaMexicana from "../../img/Imagenes/labanderamaschingona.png"
 import banderagringa from "../../img/Imagenes/banderagringa.png"
 import botonEliminar from "../../img/Imagenes/boton-eliminar.png"; 
+import error404 from "../../img/Imagenes/error404.jpg";
+import Deregreso from "../../img/Imagenes/Deregreso.jpg";
+import bobesponja from "../../img/Imagenes/bob-esponja.jpg";
 
 export default
     {
@@ -30,5 +33,8 @@ export default
         "celebritiImg": celebritiImg, 
         "banderaMexicana": banderaMexicana,
         "banderagringa": banderagringa, 
-        "botonEliminar": botonEliminar
+        "botonEliminar": botonEliminar, 
+        "error404": error404, 
+        "Deregreso": Deregreso,
+        "bobesponja": bobesponja
     }
