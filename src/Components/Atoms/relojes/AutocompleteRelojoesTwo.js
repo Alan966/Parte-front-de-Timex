@@ -85,7 +85,8 @@ const AutocompleteRelojes = ({url, nombre}) => {
     const obtenerData = () => {
         get(url)
         .then(response => {
-            const data = response.data.filter(p => p.submenu == nombre && p.principal == "true")
+            console.log(response.data)
+            const data = response.data.filter(p => p.submenu == nombre || p.name == nombre  && p.principal == "true")
             setRelojes(data);
             setData(data)
         })
