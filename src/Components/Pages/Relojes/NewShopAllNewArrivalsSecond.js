@@ -31,8 +31,7 @@ export default function NewShopAllNewArrivalsTwo ({
                 <h1 className="url">{direccion + '/' + id}</h1>
                 <h2 className="title_relojes">{ name}</h2>
                 <BuscadorRelojesTwo
-                   url={relojes}
-                   nombre={id}
+                   urlOne={relojes}
                  />
                 <div className="contend_relojes">
                 {

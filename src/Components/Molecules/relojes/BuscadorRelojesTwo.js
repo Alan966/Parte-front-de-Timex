@@ -1,28 +1,26 @@
-import { Component } from "react";
 import AutocompleteRelojesTwo from "../../Atoms/relojes/AutocompleteRelojoesTwo";
+import { useParams } from "react-router-dom";
+ const  BuscadorRelojesTwo =({
+    urlOne,
+    nombre
+ }) => {
 
- class BuscadorRelojesTwo extends Component {
-    constructor(props){
-        super(props);
-        this.state ={
-            relojes : this.props.url,
-            nombre: this.props.nombre
+    const { id , url } = useParams()
+    console.log(id, url)
 
-        }
-    }
+    let variable = nombre ? nombre : url !== undefined ? url : id
 
-    render(){
+
         return(
             <div>
                 <form>
                     <AutocompleteRelojesTwo
-                    url={this.state.relojes}
-                    nombre={this.state.nombre}
+                    url={urlOne}
+                    id={variable}
                     />
                 </form>
             </div>
         )
-    }
 }
 
 export default BuscadorRelojesTwo;

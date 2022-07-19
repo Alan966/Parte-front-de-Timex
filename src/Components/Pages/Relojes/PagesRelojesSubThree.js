@@ -29,8 +29,7 @@ const PagesRelojesSubThree = ({
         <h1 className="url">{ `${direccion}/${id}/${url !== undefined ? url : ""}`}</h1>
         <h2 className="title_relojes">{ `${name}/${id}/${url !== undefined ? url : ""}` }</h2>
         <BuscadorRelojesTwo
-           url={relojes}
-           nombre={url !== undefined ? id : url}
+           urlOne={relojes}
          />
         <div className="contend_relojes">
        {
