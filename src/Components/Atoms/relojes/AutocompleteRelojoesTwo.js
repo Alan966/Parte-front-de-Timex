@@ -88,13 +88,11 @@ const AutocompleteRelojes = ({url, id}) => {
         // let varible = Array.isArray(data)
         // varible  === true ?
         // data.length > 0  &&
-        // data.filter(response => {
+        // const date =  data.filter(response => {
         //     console.log(response)
-           
-        // })
         // : 
         // console.log('Hay un error '+ data)
-        console.log(data)
+        // console.log(data)
     }
 
     useEffect(()=>{
