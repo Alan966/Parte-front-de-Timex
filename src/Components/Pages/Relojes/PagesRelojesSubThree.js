@@ -22,7 +22,8 @@ const PagesRelojesSubThree = ({
         })
     })
 
-    const { id, url } = useParams()
+    const { id, url } = useParams() 
+
 
     return(
         <main className="ContenedorDeRelojes">
@@ -33,7 +34,7 @@ const PagesRelojesSubThree = ({
          />
         <div className="contend_relojes">
        {
-           url === undefined ? 
+           url === undefined ||url === undefined && id === "WOMENS" ?
             data && 
             data.map(e => {
                 if(id === e.submenu){
@@ -50,12 +51,28 @@ const PagesRelojesSubThree = ({
                         )
                     }
 
-                }else{
+                }else if( id === "WOMENS"){
+                    if(e.submenu === "WOMENS NEW ARRIVALS"){
+                        if(e.principal === "true"){
+                            return(
+                                <CardRelojPrincipal 
+                                key={e._id}
+                                id={e._id}
+                                price={e.price}
+                                name={e.name}
+                                description={e.description}
+                                submenutwo={e.submenu}
+                                />
+                            )
+                        }
+                    }
+                }
+                else{
                     return null
                 }
             })
             : 
-            data && 
+            data  && 
             data.map(e => {
                 if(url === e.submenutwo){
                     if(e.principal === "true"){
@@ -70,8 +87,37 @@ const PagesRelojesSubThree = ({
                             />
                         )
                     }
-                }else{
-                    return null
+                }else if(url === "Bracelet Watches"){
+                    if(e.submenutwo === "Automatic Watches"){
+                        if(e.principal === "true"){
+                            return(
+                                <CardRelojPrincipal 
+                                key={e._id}
+                                id={e._id}
+                                price={e.price}
+                                name={e.name}
+                                description={e.description}
+                                submenutwo={e.submenutwo}
+                                />
+                            )
+                        }
+                    }
+                }
+                else if(url === "Crystal Watches"){
+                    if(e.submenutwo === "Timex X Peanuts"){
+                        if(e.principal === "true"){
+                            return(
+                                <CardRelojPrincipal 
+                                key={e._id}
+                                id={e._id}
+                                price={e.price}
+                                name={e.name}
+                                description={e.description}
+                                submenutwo={e.submenutwo}
+                                />
+                            )
+                        }
+                    }
                 }
             })
        }

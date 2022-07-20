@@ -24,6 +24,10 @@ export default function NewShopAllNewArrivalsTwo ({
         .catch(err =>{
             console.log(`Ocurrio un error el error es ${err}`)
         })
+
+        return () => {
+            setData([])
+        }
     },[])
   
         return(

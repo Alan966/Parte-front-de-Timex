@@ -1,13 +1,14 @@
 import "../../../ComponentsCss/Atoms/relojes/AutocompleteRelojes.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { get } from "axios";
 import { useEffect, useState } from "react";
 import Autosuggest from "react-autosuggest";
+import useAxios from "../getAxios";
+
 const AutocompleteRelojes = ({url, id}) => {
 
     console.log(id)
 
-   const [data, setData] = useState([]);
+   const [date, setData] = useState([]);
    const [relojes, setRelojes] = useState([])
    const[value, setValue] = useState("")
    const [relojSelecionado, setRelojSelecionado] = useState()
@@ -22,7 +23,7 @@ const AutocompleteRelojes = ({url, id}) => {
         const inputValue = value.trim().toLowerCase();
         const inputLenght= inputValue.length;
 
-        let filtrado = data.filter((reloj) => {
+        let filtrado = date.filter((reloj) => {
             let textoCompleto= reloj.description;
 
             if(textoCompleto.toLowerCase() 
@@ -67,8 +68,7 @@ const AutocompleteRelojes = ({url, id}) => {
 
     const eventoEnter = (e) => {
         if(e.key == "Enter"){
-            let relojactual = data.filter(p => p.description == e.target.value.trim())
-
+            let relojactual = date.filter(p => p.description == e.target.value.trim())
             let reloj = {
                 id: relojactual[0]._id, 
                 description: relojactual[0].description,
@@ -81,20 +81,29 @@ const AutocompleteRelojes = ({url, id}) => {
         }
     } 
 
-    const obtenerData = () => {
-        get(url)
-        .then(response => {
-            const data = response.data.filter(p => (p.submenu === id || p.name === id || p.submenutwo === id)  && p.principal == "true")
-            setRelojes(data);
-            setData(data)
-        })
-        .catch(err => {
-            console.log('Ocurrio un error'+ err)
-        })
+    const [ data, error ] = useAxios(url)
+
+    const getData = (data) => {
+        // console.log(data)
+        // let varible = Array.isArray(data)
+        // varible  === true ?
+        // data.length > 0  &&
+        // data.filter(response => {
+        //     console.log(response)
+           
+        // })
+        // : 
+        // console.log('Hay un error '+ data)
+        console.log(data)
     }
 
     useEffect(()=>{
-        obtenerData()
+        getData(data ? data : error)
+        return () => {
+            setData([])
+            setRelojes([])
+            console.log('Se Elimino')
+        }
     },[id])
 
 
