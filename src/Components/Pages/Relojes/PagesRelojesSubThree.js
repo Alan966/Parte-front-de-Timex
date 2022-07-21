@@ -1,8 +1,8 @@
 import BuscadorRelojesTwo from "../../Molecules/relojes/BuscadorRelojesTwo";
 import {  useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { get } from "axios";
 import CardRelojPrincipal from "../../Atoms/relojes/cardReloj";
+import useAxios from "../../Atoms/getAxios";
 
 const PagesRelojesSubThree = ({
     direccion, 
@@ -10,17 +10,15 @@ const PagesRelojesSubThree = ({
     relojes
 }) => {
 
-    const [data , setData] = useState();
+    const [info , setInfo] = useState();
+    const [data, error ] = useAxios(relojes)
 
     useEffect(() => {
-        get(relojes)
-        .then(e => {
-            setData(e.data)
-        })
-        .catch(e => {
-            console.log(`Ocurrio un error el error es ${e}`)
-        })
-    })
+        setInfo(data)
+        return () => {
+            setInfo([])
+        }
+    }, [data])
 
     const { id, url } = useParams() 
 
@@ -35,8 +33,8 @@ const PagesRelojesSubThree = ({
         <div className="contend_relojes">
        {
            url === undefined ||url === undefined && id === "WOMENS" ?
-            data && 
-            data.map(e => {
+            info && 
+            info.map(e => {
                 if(id === e.submenu){
                     if(e.principal === "true"){
                         return(
@@ -72,8 +70,8 @@ const PagesRelojesSubThree = ({
                 }
             })
             : 
-            data  && 
-            data.map(e => {
+            info  && 
+            info.map(e => {
                 if(url === e.submenutwo){
                     if(e.principal === "true"){
                         return(

@@ -2,29 +2,25 @@ import "../../../ComponentsCss/Pages/NewShopAllNewArrivals.css"
 import CardRelojPrincipal from "../../Atoms/relojes/cardReloj";
 import BuscadorRelojesTwo from "../../Molecules/relojes/BuscadorRelojesTwo";
 import { useEffect, useState } from "react";
-import { get } from "axios"
+import useAxios from "../../Atoms/getAxios";
 
 export default function NewShopAllNewArrivalsTwo ({
     direccion, 
     name, 
     relojes
 }){
-        
-           const [data,setData]  = useState();
+
+          const [info, setInfo] = useState();
+
+           const [ data, error ] = useAxios(relojes)
 
 
     useEffect(() =>{
-        get(relojes)
-        .then(response => {
-            setData(response.data)
-                })
-        .catch(err =>{
-            console.log(`Ocurrio un error el error es ${err}`)
-        })
+        setInfo(data ? data.filter(n => n.name === name) : [])
         return () => {
-            setData([])
+            setInfo([])
         }
-    },[])
+    },[data, name])
   
         return(
             <main className="ContenedorDeRelojes">
@@ -36,10 +32,9 @@ export default function NewShopAllNewArrivalsTwo ({
                  />
                 <div className="contend_relojes">
                 {
-                    data 
+                    info 
                     &&
-                    
-                    data.map(reloj => {
+                    info.slice(0,400).map(reloj => {
                 if( name === reloj.name ){
                     if(reloj.principal === "true"){
                         return(

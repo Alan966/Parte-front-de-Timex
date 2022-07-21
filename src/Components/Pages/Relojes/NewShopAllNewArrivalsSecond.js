@@ -2,8 +2,9 @@ import "../../../ComponentsCss/Pages/NewShopAllNewArrivals.css"
 import CardRelojPrincipal from "../../Atoms/relojes/cardReloj";
 import BuscadorRelojesTwo from "../../Molecules/relojes/BuscadorRelojesTwo";
 import { useEffect, useState } from "react";
-import { get } from "axios"
 import {  useParams } from "react-router-dom";
+import useAxios from "../../Atoms/getAxios";
+
 
 export default function NewShopAllNewArrivalsTwo ({
     direccion, 
@@ -12,23 +13,19 @@ export default function NewShopAllNewArrivalsTwo ({
 }){
 
          let { id } = useParams()
+
+         const [info, setInfo] = useState();
         
-           const [data,setData]  = useState();
+           const [data , error ] = useAxios(relojes) 
 
 
     useEffect(() =>{
-        get(relojes)
-        .then(response => {
-            setData(response.data)
-        })
-        .catch(err =>{
-            console.log(`Ocurrio un error el error es ${err}`)
-        })
+        setInfo(data)
 
         return () => {
-            setData([])
+            setInfo([])
         }
-    },[])
+    },[data])
   
         return(
             <main className="ContenedorDeRelojes">
@@ -39,10 +36,10 @@ export default function NewShopAllNewArrivalsTwo ({
                  />
                 <div className="contend_relojes">
                 {
-                    data 
+                    info 
                     &&
                     
-                    data.map(reloj => {
+                    info.map(reloj => {
                 if( id === reloj.submenu ){
                     if(reloj.principal === "true"){
                         return(

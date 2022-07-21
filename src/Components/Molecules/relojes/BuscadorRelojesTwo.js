@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom";
  }) => {
 
     const { id , url } = useParams()
-    console.log(id, url)
 
     let variable = nombre ? nombre : url !== undefined ? url : id
 

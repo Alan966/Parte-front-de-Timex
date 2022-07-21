@@ -4,9 +4,7 @@ import { useEffect, useState } from "react";
 import Autosuggest from "react-autosuggest";
 import useAxios from "../getAxios";
 
-const AutocompleteRelojes = ({url, id}) => {
-
-    console.log(id)
+const AutocompleteRelojes = ({url, id})=> {
 
    const [date, setData] = useState([]);
    const [relojes, setRelojes] = useState([])
@@ -84,25 +82,46 @@ const AutocompleteRelojes = ({url, id}) => {
     const [ data, error ] = useAxios(url)
 
     const getData = (data) => {
-        // console.log(data)
-        // let varible = Array.isArray(data)
-        // varible  === true ?
-        // data.length > 0  &&
-        // const date =  data.filter(response => {
-        //     console.log(response)
-        // : 
-        // console.log('Hay un error '+ data)
-        // console.log(data)
+        let variable = data.length > 0
+        if(variable === true){
+            if(id !== "COMING SOON" && id !== "SHOP NEW ARRIVALS" && id !== "WOMENS" && id !== "Bracelet Watches" && id !== "Crystal Watches" && id !== "NEW" && id !== "WATCHES" ){
+                setRelojes( data.filter(e => (e.submenu === id || e.submenutwo === id || e.name === id) && e.principal === "true")) 
+                setData(data.filter(e => (e.submenu === id || e.submenutwo === id || e.name === id) && e.principal === "true")) 
+            }else if(id === "NEW" || id === "WATCHES"){
+                const date = data.filter(e =>  e.name === id)
+                const date2 = date.slice(0,400)
+                const date3 = date2.filter(e => e.principal === "true" && e.name === id)
+                setRelojes( date3) 
+                setData(date3) 
+            }else if( id === "WOMENS"){
+                setRelojes( data.filter(e => e.submenu === "WOMENS NEW ARRIVALS"  && e.principal === "true")) 
+                setData(data.filter(e => e.submenu === "WOMENS NEW ARRIVALS"  && e.principal === "true")) 
+
+            }else if(id === "Bracelet Watches"){
+                setRelojes( data.filter(e => e.submenutwo === "Automatic Watches"  && e.principal === "true")) 
+                setData(data.filter(e => e.submenutwo === "Automatic Watches"  && e.principal === "true")) 
+
+            }else if(id === "Crystal Watches"){
+                setRelojes( data.filter(e => e.submenutwo === "Timex X Peanuts"  && e.principal === "true")) 
+                setData(data.filter(e => e.submenutwo === "Timex X Peanuts"  && e.principal === "true")) 
+            }
+            else{
+                setRelojes( data.filter(e => e.submenu === "MENS NEW ARRIVALS"  && e.principal === "true")) 
+                setData(data.filter(e => e.submenu === "MENS NEW ARRIVALS"  && e.principal === "true")) 
+            }
+        }else{
+            return null
+        }
+
     }
 
     useEffect(()=>{
-        getData(data ? data : error)
+        getData(data ? data: [])
         return () => {
             setData([])
             setRelojes([])
-            console.log('Se Elimino')
         }
-    },[id])
+    },[id, data])
 
 
 

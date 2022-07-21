@@ -11,6 +11,7 @@ import NewShopAllNewArrivalsTwo from "./Pages/Relojes/NewShopAllNewArrivalsSecon
 import Error404 from "./Pages/Error404";
 import PagesRelojesSubThree from "./Pages/Relojes/PagesRelojesSubThree";
 import NewShopAllNewArrivalsStatic from "./Pages/Relojes/NewShopAllNewArrivalsStatic";
+import PagesSeconds from "./Pages/PagesContinuoPages/PagesSeconds";
 function App() {
   return (
     <div className="body">
@@ -47,6 +48,35 @@ function App() {
             relojes={'http://localhost:5000/relojestotalroute/all'}
             name={'WATCHES'}
         />}></Route>
+
+
+        {/* SMARTWATCHES */}
+        <Route path="/SMARTWATCHES" element={<PagesSeconds 
+           direccion={"/SMARTWATCHES"}
+           relojes={'http://localhost:5000/relojestotalroute/all'}
+           name={'SMARTWATCHES'}
+        />}></Route>
+        <Route path="/SMARTWATCHES/:id" element={<h1>Holaaaaaaa 2</h1>}></Route>
+        <Route path="/SMARTWATCHES/:id/:url" element={<h1>Holaaaaaaa 3</h1>}></Route>
+        {/* CO_LABS */}
+        <Route path="/CO_LABS" element={<PagesSeconds 
+            direccion={"/CO_LABS"}
+            relojes={'http://localhost:5000/relojestotalroute/all'}
+            name={'CO_LABS'}
+        />}></Route>
+        <Route path="/CO_LABS/:id" element={<h1>Holaaaaaaa 2</h1>}></Route>
+        <Route path="/CO_LABS/:id/:url" element={<h1>Holaaaaaaa 3</h1>}></Route>
+        {/* BEST SELLERS */}
+        <Route path="/BEST%20SELLERS" element={<PagesSeconds 
+            direccion={"/BEST SELLERS"}
+            relojes={'http://localhost:5000/relojestotalroute/all'}
+            name={'BEST SELLERS'}
+        />}></Route>
+        {/* BLOG */}
+        <Route path="/BLOG" element={ <h1>Blog</h1>}></Route>
+        <Route path="/BLOG/:id" element={<h1>Holaaaaaaa 2</h1>}></Route>
+        <Route path="/BLOG/:id/:url" element={<h1>Holaaaaaaa 3</h1>}></Route>
+        {/* COMING SOON */}
         <Route path="*" element={<Error404 />}></Route>
       </Routes>
       </BrowserRouter>
