@@ -30,7 +30,7 @@ export default function NewShopAllNewArrivalsTwo ({
                    urlOne={relojes}
                    nombre={name}
                  />
-                <div className="contend_relojes">
+                <div className="contend_relojes_margin">
                 {
                     info 
                     &&

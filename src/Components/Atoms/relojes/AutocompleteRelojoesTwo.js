@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
 import Autosuggest from "react-autosuggest";
 import useAxios from "../getAxios";
+import { useCallback } from "react";
 
 const AutocompleteRelojes = ({url, id})=> {
 
@@ -19,7 +20,7 @@ const AutocompleteRelojes = ({url, id})=> {
 
     const filtrarRelojes = (value) => {
         const inputValue = value.trim().toLowerCase();
-        const inputLenght= inputValue.length;
+        const inputLenght =  inputValue.length;
 
         let filtrado = date.filter((reloj) => {
             let textoCompleto= reloj.description;
@@ -65,8 +66,8 @@ const AutocompleteRelojes = ({url, id})=> {
     }
 
     const eventoEnter = (e) => {
-        if(e.key == "Enter"){
-            let relojactual = date.filter(p => p.description == e.target.value.trim())
+        if(e.key === "Enter"){
+            let relojactual = date.filter(p => p.description === e.target.value.trim())
             let reloj = {
                 id: relojactual[0]._id, 
                 description: relojactual[0].description,
@@ -81,7 +82,12 @@ const AutocompleteRelojes = ({url, id})=> {
 
     const [ data, error ] = useAxios(url)
 
-    const getData = (data) => {
+
+    if(error){
+        console.log(error)
+    }
+
+    const getData = useCallback((data) => {
         let variable = data.length > 0
         if(variable === true){
             if(id !== "COMING SOON" && id !== "SHOP NEW ARRIVALS" && id !== "WOMENS" && id !== "Bracelet Watches" && id !== "Crystal Watches" && id !== "NEW" && id !== "WATCHES" ){
@@ -113,15 +119,16 @@ const AutocompleteRelojes = ({url, id})=> {
             return null
         }
 
-    }
+    },[id])
 
     useEffect(()=>{
         getData(data ? data: [])
         return () => {
             setData([])
             setRelojes([])
+            getData([])
         }
-    },[id, data])
+    },[id, data, getData])
 
 
 
@@ -145,9 +152,9 @@ const AutocompleteRelojes = ({url, id})=> {
                         Ver Reloj
                         </a>
                         : 
-                        <a className="button" to="/">
+                        <div className="button">
                         Ver Reloj
-                        </a>
+                        </div>
                     }
                 </div>
         </div>

@@ -1,3 +1,5 @@
+import AutocompleteRelojesThree from "../../Atoms/relojes/AutocompleteRelojesThree";
+
 const BuscadorRelojesThree = ({
     urlOne, nombre
 }) => {
@@ -5,7 +7,10 @@ const BuscadorRelojesThree = ({
     return(
         <div>
             <form>
-                
+                <AutocompleteRelojesThree 
+                url={urlOne} 
+                name={nombre}
+                />
             </form>
         </div>
     )

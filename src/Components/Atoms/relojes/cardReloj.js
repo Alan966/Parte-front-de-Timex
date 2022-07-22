@@ -20,7 +20,7 @@ export default class CardRelojPrincipal extends Component {
             <Link 
             className="link-card"
             id={this.state.description} 
-            to={`/${this.state.name}/${this.state.submenutwo}/${this.state.description}}`}>
+            to={`/${this.state.name}/${this.state.submenutwo}/${this.state.description}`}>
                 <div className="contend_new">
                     <div className="background_new"></div>
                     <p>New</p>

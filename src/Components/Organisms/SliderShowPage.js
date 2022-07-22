@@ -17,6 +17,8 @@ const SliderShowPage = ()=> {
                 setGuardarImg(data.slice(4,7));
             }
         })
+
+ 
     },[guardaImg, document.documentElement.clientWidth])
 
 return(

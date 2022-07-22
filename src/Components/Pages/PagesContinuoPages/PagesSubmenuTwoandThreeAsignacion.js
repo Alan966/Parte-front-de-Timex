@@ -1,58 +1,65 @@
-import useAxios from "../../Atoms/getAxios";
-import "../../../ComponentsCss/Pages/NewShopAllNewArrivals.css"
+
 import { useEffect, useState } from "react";
-import CardRelojPrincipal from "../../Atoms/relojes/cardReloj";
+import { useParams } from "react-router-dom";
+import useAxios from "../../Atoms/getAxios";
 import BuscadorRelojesThree from "../../Molecules/relojes/BuscadorRelojesThree";
+import CardRelojPrincipal from "../../Atoms/relojes/cardReloj";
 
-
-const PagesSeconds = ({
+const PagesSubmenuTwoandThreeAsignacion = ({
     direccion, 
-    relojes, 
-    name
+    name, 
+    relojes
 }) => {
 
+    const { id, url } = useParams();
 
-    const [info , setInfo] = useState();
+    const ComparacionInformacion = (id, url) => {
+        if(url === undefined){
+            if(id === "TIMEX X SPACE INVADERS"){
+                return  "Timex T80"
+            }else if(id ==="TIMEX X THE JAMES BRAND" ){
+                return "Timex X The James Brand"
+        }
+    }else if( url !== undefined){
+        if(url === "Learn More"){
+            return "Timex T80"
+        }else if(url === "Shop Now"){
+            return "Expedition"
+        }else if(url === "Sign Up"){
+            return "Timex X The James Brand"
+        }
+    }}
+
     const [data, error] = useAxios(relojes)
+    const [info, setInfo] = useState();
+
+
     if(error){
         console.log(error)
     }
 
-    const compararInformacion = () => {
-        if(name === "SMARTWATCHES"){
-            return "Digital Watches"
-            // tercer nivel
-        }else if(name === "CO_LABS"){
-            return "SHOP BY COLLECTION"
-            // segundo niver
-        }else if(name === "BEST SELLERS"){
-            return "BEST SELLERS"
-            // segundo nivel
-        }
-    }
-
-    let nombre = compararInformacion()
+    let nombre = ComparacionInformacion(id, url)
 
     useEffect(() => {
         setInfo(data)
         return () => {
             setInfo([])
         }
-    },[name, data])
+    },[data, id, url])
 
-return(
+    return(
         <main className="ContenedorDeRelojes">
-            <h1 className="url">{direccion }</h1>
-            <h2 className="title_relojes">{ direccion}</h2>
+        <h1 className="url">{ `${direccion}/${id}/${url !== undefined ? url : ""}`}</h1>
+        <h2 className="title_relojes">{ `${name}/${id}/${url !== undefined ? url : ""}` }</h2>
             <BuscadorRelojesThree 
             urlOne={relojes}
             nombre={nombre}
             />
             <div className="contend_relojes">
                 {
-                    info && name === "SMARTWATCHES"  ? 
+                    info && url === undefined  ? 
                     info.map(e => {
-                        if(e.submenutwo === nombre){
+                        if(e.submenu === nombre){
                             if(e.principal === "true"){
                                 return(
                                     <CardRelojPrincipal 
@@ -70,9 +77,9 @@ return(
                         }
                     })
                     : 
-                    info && (name === "CO_LABS" || name === "BEST SELLERS")?
+                    info && url !== undefined?
                     info.map(e => {
-                        if(e.submenu === nombre){
+                        if(e.submenutwo === nombre){
                             if(e.principal === "true"){
                                 return(
                                     <CardRelojPrincipal 
@@ -94,6 +101,6 @@ return(
             </div>
         </main>
 )
-}
 
-export default PagesSeconds;
+}
+export default PagesSubmenuTwoandThreeAsignacion;

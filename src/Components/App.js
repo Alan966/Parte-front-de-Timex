@@ -12,6 +12,8 @@ import Error404 from "./Pages/Error404";
 import PagesRelojesSubThree from "./Pages/Relojes/PagesRelojesSubThree";
 import NewShopAllNewArrivalsStatic from "./Pages/Relojes/NewShopAllNewArrivalsStatic";
 import PagesSeconds from "./Pages/PagesContinuoPages/PagesSeconds";
+import PagesSubmenuTwoandThreeAsignacion from "./Pages/PagesContinuoPages/PagesSubmenuTwoandThreeAsignacion";
+import CardRelojesComprar from "./Pages/Relojes/CardRelojesComprar";
 function App() {
   return (
     <div className="body">
@@ -31,8 +33,10 @@ function App() {
             element={< NewShopAllNewArrivalsTwo
             direccion={"/NEW"}
             relojes={'http://localhost:5000/relojestotalroute/all'}
-        />}>
-        </Route>
+        />}></Route>
+        <Route path="New/:id/:url" element={ <CardRelojesComprar 
+        relojes={'http://localhost:5000/relojestotalroute/all'}
+        /> }></Route>
         <Route path="WATCHES" element={<NewShopAllNewArrivalsStatic 
         direccion={"/WATCHES"}
         relojes={'http://localhost:5000/relojestotalroute/all'}
@@ -57,15 +61,28 @@ function App() {
            name={'SMARTWATCHES'}
         />}></Route>
         <Route path="/SMARTWATCHES/:id" element={<h1>Holaaaaaaa 2</h1>}></Route>
-        <Route path="/SMARTWATCHES/:id/:url" element={<h1>Holaaaaaaa 3</h1>}></Route>
+        <Route path="/SMARTWATCHES/:id/:url" element={<PagesSubmenuTwoandThreeAsignacion 
+        direccion={"/SMARTWATCHES"}
+        relojes={'http://localhost:5000/relojestotalroute/all'}
+        name={'SMARTWATCHES'}
+        />}></Route>
+        
         {/* CO_LABS */}
         <Route path="/CO_LABS" element={<PagesSeconds 
             direccion={"/CO_LABS"}
             relojes={'http://localhost:5000/relojestotalroute/all'}
             name={'CO_LABS'}
         />}></Route>
-        <Route path="/CO_LABS/:id" element={<h1>Holaaaaaaa 2</h1>}></Route>
-        <Route path="/CO_LABS/:id/:url" element={<h1>Holaaaaaaa 3</h1>}></Route>
+        <Route path="/CO_LABS/:id" element={<PagesSubmenuTwoandThreeAsignacion 
+            direccion={"/CO_LABS"}
+            relojes={'http://localhost:5000/relojestotalroute/all'}
+            name={'CO_LABS'}
+        />}></Route>
+        <Route path="/CO_LABS/:id/:url" element={<PagesSubmenuTwoandThreeAsignacion 
+            direccion={"/CO_LABS"}
+            relojes={'http://localhost:5000/relojestotalroute/all'}
+            name={'CO_LABS'}
+        />}></Route>
         {/* BEST SELLERS */}
         <Route path="/BEST%20SELLERS" element={<PagesSeconds 
             direccion={"/BEST SELLERS"}
