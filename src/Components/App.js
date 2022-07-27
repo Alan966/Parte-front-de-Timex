@@ -14,6 +14,9 @@ import NewShopAllNewArrivalsStatic from "./Pages/Relojes/NewShopAllNewArrivalsSt
 import PagesSeconds from "./Pages/PagesContinuoPages/PagesSeconds";
 import PagesSubmenuTwoandThreeAsignacion from "./Pages/PagesContinuoPages/PagesSubmenuTwoandThreeAsignacion";
 import CardRelojesComprar from "./Pages/Relojes/CardRelojesComprar";
+import Pagostimex from "./Molecules/Pagostimex";
+import SMARTWATCHES from "./Pages/SmartWatches/SmartWatches";
+
 function App() {
   return (
     <div className="body">
@@ -60,7 +63,7 @@ function App() {
            relojes={'http://localhost:5000/relojestotalroute/all'}
            name={'SMARTWATCHES'}
         />}></Route>
-        <Route path="/SMARTWATCHES/:id" element={<h1>Holaaaaaaa 2</h1>}></Route>
+        <Route path="/SMARTWATCHES/:id" element={<SMARTWATCHES />}></Route>
         <Route path="/SMARTWATCHES/:id/:url" element={<PagesSubmenuTwoandThreeAsignacion 
         direccion={"/SMARTWATCHES"}
         relojes={'http://localhost:5000/relojestotalroute/all'}
@@ -96,6 +99,7 @@ function App() {
         {/* COMING SOON */}
         <Route path="*" element={<Error404 />}></Route>
       </Routes>
+      <Pagostimex />
       </BrowserRouter>
       <a href="https://www.flaticon.com/free-icons/world" 
       title="world icons">World icons created by Freepik - Flaticon</a>

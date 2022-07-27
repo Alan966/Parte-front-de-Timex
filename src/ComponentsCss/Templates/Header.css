@@ -33,7 +33,7 @@ body{
 
 .contend_header_header{
     /* Statik */
-    /* position: sticky; */
+    position: sticky;
     top:0;
     z-index: 100;
     display: block;

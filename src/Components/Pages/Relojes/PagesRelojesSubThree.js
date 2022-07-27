@@ -3,6 +3,7 @@ import {  useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import CardRelojPrincipal from "../../Atoms/relojes/cardReloj";
 import useAxios from "../../Atoms/getAxios";
+import "../../../ComponentsCss/Pages/NewShopAllNewArrivals.css"
 
 const PagesRelojesSubThree = ({
     direccion, 
@@ -30,7 +31,7 @@ const PagesRelojesSubThree = ({
         <BuscadorRelojesTwo
            urlOne={relojes}
          />
-        <div className="contend_relojes">
+        <div className="contend_relojes contend">
        {
            url === undefined ||url === undefined && id === "WOMENS" ?
             info && 

@@ -1,0 +1,87 @@
+/* Importacion de fuentes */
+body{
+    font-size: 16px;
+  }
+  
+:root{
+    /* Colors */
+    --turkey-color:#00ACB6; 
+    --white-color: #FFFFFF; 
+    --gray-low-color: #D1D1D4;
+    --color-oscurito:#141618;
+    --color-header:#bbb8b8;
+    --color-relojes_gris :#F3F3F3;
+    /* Fuentes para la Pagina */
+    --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Ubuntu', sans-serif;
+    /* Tamaños de letra */
+    --font-small: .6em;
+    --font-medium:.8em;
+    --font-large: 1em;
+    --font-big: 1.2em;
+    --font-bigbig: 1.4em;
+
+    /* Medidas */
+    --header-menu-hamburguer:2em;
+
+    /* Variables de apilamiento */
+    --z-back: -10; 
+    --z-normal: 1; 
+    --z-tooltip:10; 
+    --z-fixed:100; 
+    --z-modal:1000;
+}
+
+.contend_img{
+    background-color: var(--color-relojes_gris);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img.img_reloj_card{
+    height: 50vh;
+    position: relative;
+    z-index: 10;
+}
+.validar_price{
+    text-align: center;
+    font-size:var(--font-large);
+    font-family: var(--title-font);
+    font-weight: 600;
+}
+
+.contend_new{
+    position: relative;
+    width: 94vw;
+    display: flex;
+    /* background-color: red; */
+    justify-content: flex-end;
+}
+.validaror{
+    justify-content: flex-end !important;
+}
+.background_new{
+    outline: #bbb8b8 1px solid;
+    border-radius: 60%;
+    position: absolute;
+    padding: 2.5em;
+    opacity: 0.75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    /* opacity: 0.2; */
+    pointer-events: all;
+    z-index: 20;
+}
+.contend_new > p{
+    position: absolute;
+    padding: 1.5em;
+    z-index: 20;
+    color: #000000;
+    font-weight: 600;
+    color:var(--color-header);
+    font-size: var(--font-large);
+    font-family: var(--body-font);
+}

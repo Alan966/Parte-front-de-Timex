@@ -40,6 +40,8 @@ body{
 .img_father{
     width: 100vw;
     height: 100%;
+    position: relative;
+    z-index: -10;
 }
 .contend_legend_father{
   margin: 1em 3em 2em 3em;

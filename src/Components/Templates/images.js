@@ -16,6 +16,31 @@ import botonEliminar from "../../img/Imagenes/boton-eliminar.png";
 import error404 from "../../img/Imagenes/error404.jpg";
 import Deregreso from "../../img/Imagenes/Deregreso.jpg";
 import bobesponja from "../../img/Imagenes/bob-esponja.jpg";
+import star from "../../img/icons/star.png"
+import rating from "../../img/icons/rating.png"
+import heart from "../../img/icons/heart.png"
+import raisehand from "../../img/icons/raise-hand.png"
+import worldTime from "../../img/icons/world-time.png"
+import speedTest from "../../img/icons/speed-test.png"
+import handWatch from "../../img/icons/hand-watch.png"
+import waterWaves from "../../img/icons/water-waves.png"
+import ciclo from "../../img/icons/ciclo.png"
+import document from "../../img/icons/document.png"
+import facebookCard from "../../img/icons/facebook-card.png"
+import TwitterCard from "../../img/icons/twitter-card.png"
+import TouchScreen from "../../img/SmartWatches/movil/touch-screen.png"
+import WallClock from "../../img/SmartWatches/movil/wall-clock.png"
+import LowBattery from "../../img/SmartWatches/movil/low-battery.png"
+import Running from "../../img/SmartWatches/movil/running.png"
+import WaterDrop from "../../img/SmartWatches/movil/water-drop.png"
+import Message from "../../img/SmartWatches/movil/message.png"
+import FootPrints from "../../img/SmartWatches/movil/footprints.png"
+import Muscle from "../../img/SmartWatches/movil/muscle.png"
+import SectionFour from "../../img/SmartWatches/movil/section_Four.jpeg"
+import AntiguoWatchBlack from "../../img/SmartWatches/movil/AntiguowatchBlack/AntiguoWatchBlack.jpeg"
+import SmartWachBack from "../../img/SmartWatches/movil/SmartwachBlack/smart-black.jpeg"
+
+
 
 export default
     {
@@ -36,5 +61,29 @@ export default
         "botonEliminar": botonEliminar, 
         "error404": error404, 
         "Deregreso": Deregreso,
-        "bobesponja": bobesponja
+        "bobesponja": bobesponja, 
+        "star": star,
+        "rating": rating, 
+        "heart": heart, 
+        "raisehand": raisehand, 
+        "worldTime": worldTime, 
+        "speedTest": speedTest, 
+        "handWatch": handWatch, 
+        "waterWaves": waterWaves, 
+        "ciclo": ciclo, 
+        "document": document, 
+        "facebookCard": facebookCard, 
+        "TwitterCard": TwitterCard, 
+        "TouchScreen": TouchScreen, 
+        "WallClock": WallClock,
+        "LowBattery": LowBattery, 
+        "Running": Running, 
+        "WaterDrop": WaterDrop, 
+        "Message": Message, 
+        "FootPrints": FootPrints, 
+        "Muscle": Muscle,
+        "SectionFour": SectionFour, 
+        "AntiguoWatchBlack": AntiguoWatchBlack,
+        "SmartWachBack": SmartWachBack
     }
+

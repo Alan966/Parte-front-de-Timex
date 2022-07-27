@@ -9,6 +9,8 @@ body{
     --gray-low-color: #D1D1D4;
     --color-oscurito:#141618;
     --color-header:#bbb8b8;
+    --color-relojes_gris :#F5F5F5;
+
     /* Fuentes para la Pagina */
     --title-font: 'Open Sans', sans-serif;
     --body-font: 'Ubuntu', sans-serif;
@@ -31,7 +33,7 @@ body{
 }
 .ContenedorDeRelojes{
     display: flex;
-    background-color: #f5f5f5
+    background-color: var(--color-relojes_gris);
 }
 .url{
     color: var(--gray-low-color);
@@ -92,6 +94,11 @@ body{
     background-color: #ddd;
 }
 .contend_relojes_margin{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #f5f5f5;
+}
+.contend_relojes.contend{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #f5f5f5;

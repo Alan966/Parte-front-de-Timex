@@ -177,7 +177,10 @@ body{
 }
 .stay_connected{
     width:100vw;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: -1em;
 }
 .contend_logos{
     display: flex;
@@ -185,7 +188,8 @@ body{
     width: 99vw;
     height: 3em;
     position: relative;
-    padding: 0.5em 0 ;
+    padding: 0;
+    left: -1em;
 }
 .description_parrafo{
     display: block;

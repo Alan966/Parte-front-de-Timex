@@ -1,30 +1,41 @@
-import { type } from "@testing-library/user-event/dist/type";
 import { useEffect, useState } from "react";
-import useAxios from "../../Atoms/getAxios";
+import "../../../ComponentsCss/Moleculas/relojes/ValidarimgOrVideo.css";
 
-const ValidarImgOrVideo = ({id, description}) => {
+const ValidarImgOrVideo = ({id, price}) => {
 
-    const [video, setVideo] = useState(null);
+    const [info, setInfo] = useState(null);
+    const [error, setError] = useState(null);
 
-    const [data, error] = useAxios(`http://localhost:5000/relojestotalroute/photo/${id}`)
+    const comprovar = () => {
+        const img = document.createElement("img");
+        img.setAttribute("src",`http://localhost:5000/relojestotalroute/photo/${id}`);
+        img.setAttribute("alt",id);
+        img.addEventListener('error', ()=> {
+            setError(id);
+        })
+        img.addEventListener('load', ()=> {
+            setInfo(id);
+        })
+    }
 
     useEffect(() => {
-        setVideo(data, error)
-    },[data, error])
-
-const desarollarVideo = (id) => {
-    console.log('Aqui va la logica ')
-}
+        comprovar();
+    },[info, error])
 
     return(
-        <div key={id}>
-            <h2>{description}</h2>
+        <div key={id} className="contend_img">
+            <div className="contend_new validaror">
+                    <div className="background_new"></div>
+                    <p>New</p>
+            </div>
             {
-                video ? 
-                desarollarVIdeo(video)
+                info ? 
+                <img className="img_reloj_card" src={`http://localhost:5000/relojestotalroute/photo/${id}`} alt={id} />
                 : 
-                null
+                error &&
+                <video src={`http://localhost:5000/relojestotalroute/photo/${id}`} controls  loop></video>
             }
+            <p className="validar_price">{`MEX$${price}.00`}</p>
         </div>)
 }
 export default ValidarImgOrVideo;

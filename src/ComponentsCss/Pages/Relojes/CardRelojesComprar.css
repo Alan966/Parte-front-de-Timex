@@ -1,0 +1,261 @@
+/* Importacion de fuentes */
+body{
+    font-size: 16px;
+  }
+  
+:root{
+    /* Colors */
+    --turkey-color:#00ACB6; 
+    --white-color: #FFFFFF; 
+    --gray-low-color: #D1D1D4;
+    --color-oscurito:#141618;
+    --color-header:#bbb8b8;
+    --color-relojes_gris :#F3F3F3;
+
+    /* Fuentes para la Pagina */
+    --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Ubuntu', sans-serif;
+    /* Tamaños de letra */
+    --font-small: .6em;
+    --font-medium:.8em;
+    --font-large: 1em;
+    --font-big: 1.2em;
+    --font-bigbig: 1.4em;
+
+    /* Medidas */
+    --header-menu-hamburguer:2em;
+
+    /* Variables de apilamiento */
+    --z-back: -10; 
+    --z-normal: 1; 
+    --z-tooltip:10; 
+    --z-fixed:100; 
+    --z-modal:1000;
+}
+
+.container{
+    position: relative;
+}
+.container:hover .tooltip{
+    display: block;
+    opacity: 1;
+    top: -2.75rem;
+}
+.tooltip{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    left: -0.5em;
+    transition: opacity 0.25s, top 0.25s;
+    opacity: 0.5;
+}
+.tooltip .content{
+    background: black; 
+    color: white;
+    padding: 0.5rem 0.75rem; 
+    border-radius: 0.25rem;
+    white-space: nowrap;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+    .carousel_gray{
+        background:var(--color-relojes_gris);
+    }
+.title_reloj{
+    font-size: var(--font-big);
+    text-align: center;
+    font-family:var(--title-font);
+    font-weight: 600;
+    margin: 0.5em;
+}
+.contend_start{
+    display: flex;
+    margin: 1em;
+    /* background-color: red; */
+    width: 100vw;
+    position: relative;
+    padding-left: 0;
+    margin-left: 0;
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: center; */
+}
+.contend_start img {
+    max-width: 15px;
+    max-height: 15px;
+}
+.add_to_widhlist{
+    display: flex;
+    gap: 0.5em;
+    /* background: red; */
+    display: flex;
+    height: var(--font-big);
+    justify-content: flex-start;
+    /* align-items: center; */
+    align-content: center;
+    margin: 0.5em;
+}
+.add_to_widhlist p{
+    font-size:var(--font-large);
+}
+.imgCorazon{
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.write_a_review{
+    font-size: var(--font-medium);
+    font-family: var(--title-font);
+    /* background-color: red; */
+}
+.contend_contend_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contendButton{
+    margin: 0.3em;
+}
+.ShopNow{
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 0 .5em;
+    width: 6em;
+    height: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 1em; */
+    font-size: var(--font-large);
+    font-weight: 800;
+    text-decoration: none;
+}
+.Large{
+    width: 100% !important;
+    padding: 0 !important;
+}
+.estimated_delivery{
+    /* background-color: red; */
+    font-size: var(--font-medium);
+    font-family: var(--title-font);
+}
+.link_mano{
+    color: #000000;
+}
+.contend_mano{
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: center; */
+    /* align-content: center; */
+    /* background: red; */
+    height: 2em;
+}
+.imgMano{
+    max-width: 19px;
+    max-height: 19px;
+}
+.contend_mano .link_mano{
+    font-size:var(--font-medium);
+    font-family: var(--title-font);
+}
+ul.contend_list{
+    /* background-color: #00ACB6; */
+    position: relative;
+    padding-left: 0;
+    margin: 0;
+}
+li.li_one{
+    padding: 0.5em;
+}
+ul.contend_list li{
+    list-style: none;
+    /* padding: .5em; */
+    border:  1px solid black;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    font-size: var(--font-medium);
+    font-weight: 600;
+    font-family: var(--title-font);
+}
+ul.contend_list li::after{
+    content: "";
+    display: block;
+    position: relative;
+    background-position: center;
+    width: 1em;
+    height: 1em;
+    /* background-color: white; */
+    background-image: url(../../../img/icons/arrow-down-sign-to-navigate.png);
+    /* background: red; */
+}
+ul.contend_list li.active::after{
+    background-image: url(../../../img/icons/arrowhead-up.png);
+    display: block;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    /* background-color: aqua; */
+    background-position: center;
+}
+ul.contend_list ul{
+    display: none;
+}
+ul.contend_list li.active ul{
+    display: block;
+}
+ul.contend_list li.active{
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+}
+ul.contend_list li.active ul {
+    position: block;
+    /* height: 20em; */
+    width: 100vw;
+    padding-left: 0;
+    /* background-color: #00ACB6; */
+}
+ul.contend_list li.active ul li::after{
+    background-image: none;
+}
+ul.contend_list li.active ul li{
+    display: flex;
+    /* background-color: red; */
+    margin-left: 0.5em;
+    border: none;
+    justify-content: flex-start;
+    gap: 0.5em;
+    font-size: var(--font-large);
+    font-family: var(--title-font);
+    font-weight: 300;
+}
+.img_features{
+    max-width: 20px;
+    max-height: 20px;
+}
+.contend_document{
+    /* background-color: rebeccapurple; */
+    display: flex;
+    margin: 0.5em;
+    justify-content: flex-start;
+}
+.contend_document p{
+ font-family: var(--title-font);
+ font-size:  var(--font-medium);
+}
+.img_redesSociales{
+    max-width: 30px;
+    max-height: 30px;
+    margin: 0.3em;
+}

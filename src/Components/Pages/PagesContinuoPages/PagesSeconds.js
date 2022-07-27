@@ -48,7 +48,7 @@ return(
             urlOne={relojes}
             nombre={nombre}
             />
-            <div className="contend_relojes">
+            <div className="contend_relojes contend">
                 {
                     info && name === "SMARTWATCHES"  ? 
                     info.map(e => {

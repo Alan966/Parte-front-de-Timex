@@ -36,10 +36,13 @@ body{
     justify-content: center;
     align-items: center;
     /* padding: 5px;  */
-    width: 18em;
+    width: 80vw;
   }
   .img_timex_one{
-    width: 14em;
+    width: 60vw;
+    height: 100%;
+    position: relative;
+    z-index: 0;
   }
   
   .description{

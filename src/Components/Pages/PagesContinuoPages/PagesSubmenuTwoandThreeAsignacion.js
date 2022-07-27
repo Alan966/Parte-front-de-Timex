@@ -14,9 +14,11 @@ const PagesSubmenuTwoandThreeAsignacion = ({
     const { id, url } = useParams();
 
     const ComparacionInformacion = (id, url) => {
-        if(url === undefined){
+        if(id && url === undefined){
+
             if(id === "TIMEX X SPACE INVADERS"){
-                return  "Timex T80"
+
+                return "Timex T80"
             }else if(id ==="TIMEX X THE JAMES BRAND" ){
                 return "Timex X The James Brand"
         }
@@ -26,7 +28,7 @@ const PagesSubmenuTwoandThreeAsignacion = ({
         }else if(url === "Shop Now"){
             return "Expedition"
         }else if(url === "Sign Up"){
-            return "Timex X The James Brand"
+            return "Expedition"
         }
     }}
 
@@ -55,29 +57,10 @@ const PagesSubmenuTwoandThreeAsignacion = ({
             urlOne={relojes}
             nombre={nombre}
             />
-            <div className="contend_relojes">
+            <div className="contend_relojes contend">
                 {
-                    info && url === undefined  ? 
-                    info.map(e => {
-                        if(e.submenu === nombre){
-                            if(e.principal === "true"){
-                                return(
-                                    <CardRelojPrincipal 
-                                    key={e._id}
-                                    id={e._id}
-                                    price={e.price}
-                                    name={e.name}
-                                    description={e.description}
-                                    submenutwo={e.submenutwo}
-                                    />
-                                )
-                            }else{
-                                return null
-                            }
-                        }
-                    })
-                    : 
-                    info && url !== undefined?
+                   
+                    info &&
                     info.map(e => {
                         if(e.submenutwo === nombre){
                             if(e.principal === "true"){
@@ -95,8 +78,7 @@ const PagesSubmenuTwoandThreeAsignacion = ({
                                 return null
                             }
                         }
-                    }):
-                    null
+                    })
                 }
             </div>
         </main>

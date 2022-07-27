@@ -30,11 +30,11 @@ export default function NewShopAllNewArrivalsTwo ({
         return(
             <main className="ContenedorDeRelojes">
                 <h1 className="url">{direccion + '/' + id}</h1>
-                <h2 className="title_relojes">{ name}</h2>
+                <h2 className="title_relojes">{id}</h2>
                 <BuscadorRelojesTwo
                    urlOne={relojes}
                  />
-                <div className="contend_relojes">
+                <div className="contend_relojes contend">
                 {
                     info 
                     &&

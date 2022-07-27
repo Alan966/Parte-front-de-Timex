@@ -8,8 +8,6 @@ import ContendImg_Parrafo from "../Molecules/ContendImg_Parrafo"
 import images from "../Templates/images"
 import RelojesTwoHome from "../Organisms/RelojesTwoHome"
 import SectionIMg from "../Atoms/section_img"
-import PieTimex from "../Molecules/PieTimex"
-import Pagostimex from "../Molecules/Pagostimex"
 import SectionImages from "../Organisms/Section_Images"
 import ContendPieTimex from "../Organisms/ContendPieTimex"
 import Modal from "../Atoms/modal"
@@ -47,7 +45,6 @@ const Home = () => {
             title={'CELEBRATING 50 YEARS OF QUARTZ'}
             />
             <ContendPieTimex />
-            <Pagostimex />
         </section>
         </>
     )

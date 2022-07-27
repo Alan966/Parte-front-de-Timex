@@ -1,0 +1,355 @@
+/* Importacion de fuentes */
+body{
+    font-size: 16px;
+  }
+  
+:root{
+    /* Colors */
+    --turkey-color:#00ACB6; 
+    --white-color: #FFFFFF; 
+    --gray-low-color: #D1D1D4;
+    --color-oscurito:#141618;
+    --color-header:#bbb8b8;
+    --color-relojes_gris :#F3F3F3;
+    --color_rosa_claro: #E4B9B3;
+    --color_rosa_oscuro: #C08A8A;
+    /* Fuentes para la Pagina */
+    --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Ubuntu', sans-serif;
+    /* Tamaños de letra */
+    --font-small: .6em;
+    --font-medium:.8em;
+    --font-large: 1em;
+    --font-big: 1.2em;
+    --font-bigbig: 1.4em;
+
+    /* Medidas */
+    --header-menu-hamburguer:2em;
+
+    /* Variables de apilamiento */
+    --z-back: -10; 
+    --z-normal: 1; 
+    --z-tooltip:10; 
+    --z-fixed:100; 
+    --z-modal:1000;
+}
+
+.main-METROPOLITAN{
+    background-image: url(../../../img/SmartWatches/movil/one-smart.png);
+    height: 80vh;
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-position: bottom;
+    background-color: var(--color-relojes_gris);
+}
+.title_smart{
+    margin: 1em;
+    text-align: center;
+    font-size: var(--font-bigbig);
+}
+.parrafo_all{
+    font-size: var(--font-medium);
+    text-align: center;
+    margin: 0 3em;
+}
+div.contend_contend_button div.contendButton{
+    width: 12em;
+    height: 2em;
+}
+a.ShopNow.Large.smartwatches{
+    font-size: var(--font-medium);
+}
+.contend_img{
+    display: block;
+    background-image: url(../../../img/SmartWatches/movil/two_smart.jpeg);
+    width: 95vw;
+    height: 50vh;
+    /* background-color: red; */
+    margin: 1em;
+    border: 2px solid black;
+    border-radius: 1em;
+    background-position: center;
+}
+.contend_img.active{
+    background-image: url(../../../img/SmartWatches/movil/two_smart_two.jpeg);
+}
+.contend_buttton_watches{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+.circle_circulo{
+    display: block;
+    background: linear-gradient( 135deg,var(--color_rosa_oscuro) 55%,var(--color_rosa_claro) 55%);
+    width: 2em;
+    height: 2em;
+    padding: 1em;
+    border: 1px solid var(--color-header);
+    margin: 1em;
+    border-radius: 60%;
+}
+.cuadro_cuadrado{
+    display: block;
+    background: linear-gradient( 135deg,var(--color_rosa_oscuro) 55%,var(--color_rosa_claro) 55%);
+    width: 2em;
+    height: 2em;
+    padding: 1em;
+    border: 1px solid var(--color-header);
+    margin: 1em;
+    border-radius: 3px;
+}
+.black{
+    background-image: url(../../../img/SmartWatches/movil/three_smart.jpeg);
+}
+.black.active{
+    background-image: url(../../../img/SmartWatches/movil/three_smart_three.jpeg);
+}
+.dark{
+    background: linear-gradient( 135deg, var(--color-header) 50%, #534232 55%);
+}
+section.section_three{
+    background-color: var(--gray-low-color);
+    width: 100vw;
+    /* height: 80vh; */
+}
+section.section_three h1{
+    font-size:var(--font-bigbig);
+    text-align: center;
+    font-family: var(--title-font);
+    padding: 1em;
+    background: linear-gradient( 155deg, white 50%, var(--gray-low-color) 50%);
+}
+.card_reglas {
+    background: yellow;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1em;
+    background: linear-gradient( 145deg, white 40%, var(--gray-low-color) 80%);
+    border-radius: 0.8em;
+}
+.card_reglas img{
+    width:2em; 
+    height:2em;
+}
+
+.card_reglas div h2{
+    font-size:var(--font-large);
+    font-family: var(--title-font);
+    font-weight: 600;
+    margin: 0 1em;
+}
+.card_reglas div p {
+    font-size:var(--font-medium);
+    font-family: var(--body-font);
+    margin: 0 1em;
+}
+
+.contendButtons{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 3em;
+}
+.contendButtons div{
+    margin: 1em;
+    /* background-color: #00ACB6; */
+}
+.section_contend_reglas{
+    height: 60vh
+}
+.contendCard_reglas.one{
+    display: block
+}
+.contendCard_reglas.two{
+    display: none;
+}
+.contendCard_reglas.one.active{
+    display: block;
+}
+.contendCard_reglas.two.active{
+    display: block;
+}
+.contendCard_reglas.one.desactive{
+    display: none;
+}
+.contendCard_reglas.two.desactive{
+    display: none;
+}
+div div.button-left{
+    content: "";
+    background-image: url(../../../img/SmartWatches/movil/left-arrow.png);
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div div.button-right{
+    content: "";
+    background-image: url(../../../img/SmartWatches/movil/right-chevron.png);
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.section_four{
+    width: 100vw;
+    height: 60vh;
+    background-color: #fafafa;
+    /* background: red; */
+}
+.section_four img{
+    width: 100vw;
+    /* height: 100vh; */
+}
+.section_four div h2{
+    font-size: var(--font-bigbig);
+    font-family: var(--title-font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #00ACB6; */
+    text-align: center;
+    /* font-weight: 600; */
+    margin: 1em;
+}
+.section_four div h2 span{
+    margin: 0;
+    color: var(--gray-low-color);
+    padding: 0;
+}
+.section_four div p{
+    font-size:var(--font-medium);
+    font-family: var(--body-font);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.section_five{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+.section_five section h2{
+    text-align: center;
+    font-size: var(--font-bigbig);
+    font-family: var(--title-font);
+}
+.section_five section p{
+    text-align: center;
+    font-size: var(--font-medium);
+    font-family: var(--body-font);
+}
+.contend_relojes_cambiantes{
+    background-image: url(".././../../img/SmartWatches/movil/SmartwachBlack/smart-black.jpeg");
+    width: 100vw;
+    height: 55vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.contend_relojes_cambiantes.active{
+    background-image: url(".././../../img/SmartWatches/movil/AntiguowatchBlack/AntiguoWatchBlack.jpeg");
+}
+.contend_relojes_cambiantes.pink{
+    background-image: url(".././../../img/SmartWatches/movil/SmartwatchPink/SmartwatchPink.jpeg");
+}
+.contend_relojes_cambiantes.active.pink{
+    background-image: url(".././../../img/SmartWatches/movil/AntiguowatchPink/AntiguoWatchPink.jpeg");
+}
+.imagenes_que_cambian{
+    justify-self: center;
+    align-self: center;
+    background-image: url(".././../../img/SmartWatches/movil/SmartwachBlack/5ec54994534c061ba11ecb4b.png");
+    width: 9em;
+    height: 12em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imagenes_que_cambian.active{
+    justify-self: center;
+    align-self: center;
+    background-image: url(".././../../img/SmartWatches/movil/AntiguowatchBlack/5ec54fb3534c061ba11edc6c.png");
+    width: 10em;
+    height: 10em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imagenes_que_cambian.pink{
+    background-image: url(".././../../img/SmartWatches/movil/SmartwatchPink/5ec6cfafad04237428df8938.png");
+}
+.imagenes_que_cambian.two{
+    background-image: url(".././../../img/SmartWatches/movil/SmartwachBlack/5ec54994534c061ba11ecb46.png");
+}
+.imagenes_que_cambian.three{
+    background-image: url(".././../../img/SmartWatches/movil/SmartwachBlack/5ec54994534c061ba11ecb47.png");
+}
+.imagenes_que_cambian.four{
+    background-image: url(".././../../img/SmartWatches/movil/SmartwachBlack/5ec54994534c061ba11ecb48.png");
+}
+/* PINK */
+.imagenes_que_cambian.pink.two{
+    background-image: url(".././../../img/SmartWatches/movil/SmartwatchPink/5ec6cfafad04237428df8939.png");
+}
+.imagenes_que_cambian.pink.three{
+    background-image: url(".././../../img/SmartWatches/movil/SmartwatchPink/5ec6cfaffaf7ea4751d2083b.png");
+}
+.imagenes_que_cambian.pink.four{
+    background-image: url(".././../../img/SmartWatches/movil/SmartwatchPink/5ec6cfaffaf7ea4751d2083c.png");
+}
+
+/* Active */
+
+.imagenes_que_cambian.active.two{
+    background-image: url(".././../../img/SmartWatches/movil/AntiguowatchBlack/5ec54fb3534c061ba11edc6d.png");
+}
+.imagenes_que_cambian.active.three{
+    background-image: url(".././../../img/SmartWatches/movil/AntiguowatchBlack/5ec54fb3534c061ba11edc6e.png");
+}
+.imagenes_que_cambian.active.four{
+    background-image: url(".././../../img/SmartWatches/movil/AntiguowatchBlack/5ec54fb3534c061ba11edc6f.png");
+}
+.imagenes_que_cambian.active.five{
+    background-image: url(".././../../img/SmartWatches/movil/AntiguowatchBlack/5ec54fb3534c061ba11edc70.png");
+}
+
+/* active pink */
+.imagenes_que_cambian.pink.active{
+    background-image: url(".././../../img/SmartWatches/movil/AntiguowatchPink/5ec6cfbcad04237428df8947.png");
+}
+.imagenes_que_cambian.pink.active.two{
+    background-image: url(".././../../img/SmartWatches/movil/AntiguowatchPink/5ec6cfbcad04237428df8948.png");
+}
+.imagenes_que_cambian.pink.active.three{
+    background-image: url(".././../../img/SmartWatches/movil/AntiguowatchPink/5ec6cfbcad04237428df8949.png");
+}
+.imagenes_que_cambian.pink.active.four{
+    background-image: url(".././../../img/SmartWatches/movil/AntiguowatchPink/5ec6cfbcfaf7ea4751d20854.png");
+}
+.imagenes_que_cambian.pink.active.five{
+    background-image: url(".././../../img/SmartWatches/movil/AntiguowatchPink/5ec6cfbcfaf7ea4751d20855.png");
+}
+.cambiar_images{
+    /* background: red; */
+    background: none;
+    position: absolute;
+    align-self: flex-end;
+    margin: 1em;
+    display: flex;
+    justify-content: space-around;
+}

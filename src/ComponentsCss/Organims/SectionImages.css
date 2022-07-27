@@ -71,7 +71,7 @@ body{
  .keep_time{
     color: white;
     position: relative;
-    top: 2em;
+    /* top: 2em; */
     font-family: var(--title-font);
     font-size: var(--font-large);
  }
@@ -107,12 +107,16 @@ body{
 }
 .contend_buttons{
     display: grid;
+    /* justify-content: center;
+    align-items: center; */
     grid-template-columns: 1fr 1fr;
 }
 .contend_buttons .button_add_to_bag{
     padding: 0.7em 4em;
     background-color: white;
     color: black;
+    border-radius: 1em;
     font-family: var(--title-font);
     font-size: var(--font-medium);
+    height: 4em;
 }
