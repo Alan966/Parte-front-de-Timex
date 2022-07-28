@@ -39,8 +39,18 @@ import Muscle from "../../img/SmartWatches/movil/muscle.png"
 import SectionFour from "../../img/SmartWatches/movil/section_Four.jpeg"
 import AntiguoWatchBlack from "../../img/SmartWatches/movil/AntiguowatchBlack/AntiguoWatchBlack.jpeg"
 import SmartWachBack from "../../img/SmartWatches/movil/SmartwachBlack/smart-black.jpeg"
-
-
+import backgroundOne from "../../img/Blog/Principal/responsive/backgroundOne.png"
+import eightResponsive from "../../img/Blog/Principal/responsive/eight-responsive.jpg"
+import fiveResponsive from "../../img/Blog/Principal/responsive/five-responsive.jpg"
+import fourResponsive from "../../img/Blog/Principal/responsive/four_responsive.jpg"
+import nineResponsive from "../../img/Blog/Principal/responsive/nine-responsive.jpg"
+import oneResponsive from "../../img/Blog/Principal/responsive/one-responsive.jpg"
+import sevenResponse from "../../img/Blog/Principal/responsive/seven-responsive.jpg"
+import sixResponsive from "../../img/Blog/Principal/responsive/sixResponsive.jpg"
+import twoResponsive from "../../img/Blog/Principal/responsive/two-responsive.jpg"
+import threeResponsive from "../../img/Blog/Principal/responsive/three_responsive.jpg"
+import WaterButyOcean from "../../img/Blog/second/WaterburyOcean_TW2V37400_3-768x1152.jpg"
+import WaterButyOceanTwo from "../../img/Blog/second/TW2V33100.png"
 
 export default
     {
@@ -84,6 +94,18 @@ export default
         "Muscle": Muscle,
         "SectionFour": SectionFour, 
         "AntiguoWatchBlack": AntiguoWatchBlack,
-        "SmartWachBack": SmartWachBack
+        "SmartWachBack": SmartWachBack, 
+        "backgroundOne": backgroundOne, 
+        "eightResponsive": eightResponsive,
+        "fiveResponsive": fiveResponsive, 
+        "fourResponsive": fourResponsive,
+        "nineResponsive": nineResponsive,
+        "oneResponsive": oneResponsive,
+        "sevenResponse": sevenResponse, 
+        "sixResponsive": sixResponsive,
+        "twoResponsive": twoResponsive, 
+        "threeResponsive": threeResponsive, 
+        "WaterButyOcean": WaterButyOcean, 
+        "WaterButyOceanTwo": WaterButyOceanTwo
     }
 

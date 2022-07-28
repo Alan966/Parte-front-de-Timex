@@ -16,6 +16,8 @@ import PagesSubmenuTwoandThreeAsignacion from "./Pages/PagesContinuoPages/PagesS
 import CardRelojesComprar from "./Pages/Relojes/CardRelojesComprar";
 import Pagostimex from "./Molecules/Pagostimex";
 import SMARTWATCHES from "./Pages/SmartWatches/SmartWatches";
+import BlogPrincipal from "./Pages/Blog/BlogPrincipal";
+import BlogSecondId from "./Pages/Blog/BlogSecondId";
 
 function App() {
   return (
@@ -93,9 +95,9 @@ function App() {
             name={'BEST SELLERS'}
         />}></Route>
         {/* BLOG */}
-        <Route path="/BLOG" element={ <h1>Blog</h1>}></Route>
-        <Route path="/BLOG/:id" element={<h1>Holaaaaaaa 2</h1>}></Route>
-        <Route path="/BLOG/:id/:url" element={<h1>Holaaaaaaa 3</h1>}></Route>
+        <Route path="/BLOG" element={ <BlogPrincipal />}></Route>
+        <Route path="/BLOG/:id" element={<BlogSecondId />}></Route>
+        <Route path="/BLOG/:id/:url" element={<BlogSecondId/>}></Route>
         {/* COMING SOON */}
         <Route path="*" element={<Error404 />}></Route>
       </Routes>

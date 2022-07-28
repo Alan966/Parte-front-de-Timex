@@ -59,7 +59,7 @@ div.contend_contend_button div.contendButton{
 a.ShopNow.Large.smartwatches{
     font-size: var(--font-medium);
 }
-.contend_img{
+.contend_img_smarth{
     display: block;
     background-image: url(../../../img/SmartWatches/movil/two_smart.jpeg);
     width: 95vw;
@@ -70,7 +70,7 @@ a.ShopNow.Large.smartwatches{
     border-radius: 1em;
     background-position: center;
 }
-.contend_img.active{
+.contend_img_smarth.active{
     background-image: url(../../../img/SmartWatches/movil/two_smart_two.jpeg);
 }
 .contend_buttton_watches{
@@ -352,4 +352,152 @@ div div.button-right{
     margin: 1em;
     display: flex;
     justify-content: space-around;
+}
+
+/* Section Six */
+.section_six.active{
+    background-image: url(../../../img/SmartWatches/movil/phonesSmarthwatches/one_phone.jpeg);
+    width: 100vw;
+    height: 120vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.section_six div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section_six div h1{
+    font-size: var(--font-bigbig);
+    font-family: var(--title-font);
+    margin: 1em;
+}
+.section_six div p{
+    font-size:var(--font-medium);
+    text-align: center;
+    margin: 0 2em;
+}
+.section_six.active.two{
+    background-image: url(../../../img/SmartWatches/movil/phonesSmarthwatches/two_phone.jpeg);
+}
+.section_six.active.three{
+    background-image: url(../../../img/SmartWatches/movil/phonesSmarthwatches/three_phone.jpeg);
+}
+.section_six.active.four{
+    background-image: url(../../../img/SmartWatches/movil/phonesSmarthwatches/four_phone.jpeg);
+}
+.section_six.active.five{
+    background-image: url(../../../img/SmartWatches/movil/phonesSmarthwatches/five_phone.jpeg);
+}
+.section_seven{
+    /* background: yellow; */
+    margin: 2em 3em;
+    height: 9em;
+}
+.contendor_movimiento{
+    /* background-color: red; */
+    height: 6em;
+    width: 100%;
+}
+.img_cambiante{
+    background-image: url(../../../img/SmartWatches/movil/phonesSmarthwatches/icons/heart-rate.png);
+    width: 1.8em;
+    height: 1.8em;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* box-shadow: white 0.5em 0.5em 0.5em; */
+}
+.contend_parrafo_sectionSeven::before{
+    content: "21/7 HEART RATE";
+    display: block;
+    color: white;
+    position: relative;
+    font-size: var(--font-large);
+    font-family: var(--title-font);
+}
+.contend_sub_parrafo::before{
+    content: "Continous Heart Rate tracks your Heart Rate throughout your day";
+    display: block;
+    color: white;
+    position: relative;
+    font-size: var(--font-medium);
+    font-family:var(--body-font);
+}
+/* two */
+.img_cambiante.two{
+    background-image: url(../../../img/SmartWatches/movil/phonesSmarthwatches/icons/low-battery.png);
+}
+.contend_parrafo_sectionSeven.two::before{
+    content: "SEARCH IT";
+}
+.contend_sub_parrafo.two::before{
+    content: "All the metrics you want in one easy-to-navigate home screen";
+}
+/* three */
+.img_cambiante.three{
+    background-image: url(../../../img/SmartWatches/movil/phonesSmarthwatches/icons/moon.png);
+}
+.contend_parrafo_sectionSeven.three::before{
+    content: "SLEEP BETTER";
+}
+.contend_sub_parrafo.three::before{
+    content: "Sleep tracking so you can improve your sleep quality";
+}
+/* four */
+.img_cambiante.four{
+    background-image: url(../../../img/SmartWatches/movil/phonesSmarthwatches/icons/people.png);
+}
+.contend_parrafo_sectionSeven.four::before{
+    content: "GO FOR IT";
+}
+.contend_sub_parrafo.four::before{
+    content: "Stay connected with friends for some friendly competition";
+}
+/* five */
+.img_cambiante.five{
+    background-image: url(../../../img/SmartWatches/movil/phonesSmarthwatches/icons/running.png);
+}
+.contend_parrafo_sectionSeven.five::before{
+    content: "TRACK IT";
+}
+.contend_sub_parrafo.five::before{
+    content: "Use GPS track workout using multiple sport modes";
+}
+.contendButtons.cambiar_images_two{
+    /* background: white; */
+    position: relative;
+    /* position: absolute; */
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    display: flex;
+    /* background-color: red; */
+    flex-direction: row;
+    justify-content: space-around;
+    background: none;
+}
+div.button-left_nose::before{
+    content: "";
+    background-image: url(../../../img/SmartWatches/movil/left-arrow.png);
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.button-right_nose::before{
+    content: "";
+    background-image: url(../../../img/SmartWatches/movil/right-chevron.png);
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
 }

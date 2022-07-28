@@ -15,6 +15,12 @@ const SMARTWATCHES = () => {
     const refSix = useRef(null);
     const refSeven = useRef(null);
     const refEight = useRef(null);
+    const refNine = useRef(null);
+    const refTen = useRef(null);
+    const refEleven = useRef(null);
+    const refTwelve = useRef(null);
+
+
 
     const claseAsing = id.replace(/ /g, "");
 
@@ -146,6 +152,19 @@ const SMARTWATCHES = () => {
         }
     }
 
+    const JuntarAccionTwo = (id1, id2, id3) => {
+        cambiarRelojTwo(id1)
+        cambiarRelojTwo(id2)
+        cambiarRelojTwo(id3)
+    }
+
+    const JuntarAccion = (id1, id2, id3) => {
+        cambiarReloj(id1)
+        cambiarReloj(id2)
+        cambiarReloj(id3)
+    }
+
+
     return(
         <main>
             <section className={`main-${claseAsing}`}>
@@ -163,7 +182,7 @@ const SMARTWATCHES = () => {
             </div>
             </section>
             <section className="section_two">
-                <div ref={ref} className="contend_img"></div>
+                <div ref={ref} className="contend_img_smarth"></div>
                 <div className="contend_buttton_watches">
                  <div className="circle_circulo" onClick={cambiarImagen}> </div> 
                  <div className="cuadro_cuadrado" onClick={cambiarImagen}></div>  
@@ -174,7 +193,7 @@ const SMARTWATCHES = () => {
                 </div>
             </section>
             <section className="section_two">
-                <div ref={refTwo} className="contend_img black"></div>
+                <div ref={refTwo} className="contend_img_smarth black"></div>
                 <div className="contend_buttton_watches">
                  <div className="circle_circulo dark" onClick={cambiarImagenTwo}> </div> 
                  <div className="cuadro_cuadrado dark" onClick={cambiarImagenTwo}></div>  
@@ -331,20 +350,32 @@ const SMARTWATCHES = () => {
                 </div>
                 </div>
             </section>
-            <section className="section_six">
-                <div>
-                    <h1>Play nice with  <br />
-                       your phone
-                    </h1>
-                    <p>Connect your Metropolitan watch to track steps, distance, <br />
-                     calories and more Click throungh below to view app.</p>
+            <section className="section_six active"  ref={refNine}
+            onTouchStart={() =>cambiarReloj(refNine)}
+            onMouseEnter={() =>cambiarReloj(refNine)}
+            >
+            <div>
+                <h1>Play nice with  <br />
+                    your phone
+                </h1>
+                <p>Connect your Metropolitan watch to track steps, distance, <br />
+                    calories and more Click throungh below to view app.</p>
+            </div>
+            <div className="section_seven">
+                <div className="contendor_movimiento">
+                <div className="img_cambiante"  ref={refTen}></div>
+                    <p ref={refEleven} 
+                    className="contend_parrafo_sectionSeven"></p>
+                    <p className="contend_sub_parrafo" ref={refTwelve}></p>
                 </div>
+                <div className="contendButtons cambiar_images_two">
+                    <div className="button-left_nose" onClick={() => JuntarAccionTwo(refTen, refEleven, refTwelve)}></div>
+                    <div className="button-right_nose" onClick={() => JuntarAccion(refTen, refEleven, refTwelve)}></div>
+                </div>
+            </div>
             </section>
         </main>
     )
-
-
-
 }
 
 export default SMARTWATCHES;
