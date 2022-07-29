@@ -19,6 +19,11 @@ const ToMonWithLove = () => {
         .catch(e => {
             console.log(e)
         })
+
+        return () => {
+            setData([]);
+        }
+
     },[document.documentElement.clientWidth])
 
     return(
@@ -35,7 +40,7 @@ const ToMonWithLove = () => {
                he'll wear and love
            </p>
            <div className="ShopNow blue">
-               <Link to="#">
+               <Link to="/">
                    SHOP FOR DAD
                </Link>
            </div>

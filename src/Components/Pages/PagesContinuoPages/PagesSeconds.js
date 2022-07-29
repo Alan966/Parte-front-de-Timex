@@ -57,7 +57,7 @@ return(
                                 return(
                                     <CardRelojPrincipal 
                                     key={e._id}
-                                    id={e._id}
+                                    identificador={e._id}
                                     price={e.price}
                                     name={e.name}
                                     description={e.description}
@@ -77,11 +77,11 @@ return(
                                 return(
                                     <CardRelojPrincipal 
                                     key={e._id}
-                                    id={e._id}
+                                    identificador={e._id}
                                     price={e.price}
                                     name={e.name}
                                     description={e.description}
-                                    submenutwo={e.submenutwo}
+                                    submenutwo={e.submenu}
                                     />
                                 )
                             }else{

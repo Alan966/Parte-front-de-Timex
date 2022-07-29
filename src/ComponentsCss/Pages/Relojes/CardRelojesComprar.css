@@ -57,33 +57,36 @@ body{
     white-space: nowrap;
 }
 
-
-
 a{
     text-decoration: none;
     color: white;
 }
-    .carousel_gray{
-        background:var(--color-relojes_gris);
-    }
+.carousel_gray{
+    background:var(--color-relojes_gris);
+}
 .title_reloj{
     font-size: var(--font-big);
     text-align: center;
     font-family:var(--title-font);
-    font-weight: 600;
-    margin: 0.5em;
+    /* font-weight: 600;  */
+    margin: 1em;
+    /* margin: 0.5em; */
 }
 .contend_start{
     display: flex;
-    margin: 1em;
+    margin: 0.5em;
     /* background-color: red; */
     width: 100vw;
     position: relative;
     padding-left: 0;
     margin-left: 0;
     display: flex;
+    padding: 0 0.5em;
     justify-content: flex-start;
     /* align-items: center; */
+}
+.contend_start p{
+    padding: 0 1em;
 }
 .contend_start img {
     max-width: 15px;
@@ -91,21 +94,23 @@ a{
 }
 .add_to_widhlist{
     display: flex;
-    gap: 0.5em;
+    /* gap: 0.5em; */
     /* background: red; */
     display: flex;
     height: var(--font-big);
+    /* background-color: red; */
     justify-content: flex-start;
     /* align-items: center; */
     align-content: center;
-    margin: 0.5em;
+    margin: 1em;
 }
 .add_to_widhlist p{
-    font-size:var(--font-large);
+    font-size:var(--font-medium);
+    padding: 0 0.3em;
 }
 .imgCorazon{
-    max-width: 20px;
-    max-height: 20px;
+    max-width: 15px;
+    max-height: 15px;
 }
 
 .write_a_review{
@@ -117,33 +122,41 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0.5em;
 }
-.contendButton{
-    margin: 0.3em;
-}
-.ShopNow{
+a.ShopNow.card{
     background-color: #000000;
-    border-radius: 5px;
-    padding: 0 .5em;
-    width: 6em;
+    /* border-radius: 5px; */
+    border-radius: 0;
+    font-weight: 0;
+    padding:0 1em;
+    /* width: 6em; */
     height: 2em;
+    min-width: 8em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     /* margin: 1em; */
     font-size: var(--font-large);
-    font-weight: 800;
+    font-family: var(--title-font);
+    /* font-weight: 800; */
     text-decoration: none;
+    font-weight: 300;
+
 }
 .Large{
-    width: 100% !important;
+    width: 100%;
     padding: 0 !important;
+}
+a.ShopNow.card.Large{
+    width: 90vw !important;
 }
 .estimated_delivery{
     /* background-color: red; */
     font-size: var(--font-medium);
     font-family: var(--title-font);
+    margin:  1em;
 }
 .link_mano{
     color: #000000;
@@ -155,10 +168,13 @@ a{
     /* align-content: center; */
     /* background: red; */
     height: 2em;
+    /* background-color: red; */
+    margin:0 1em;
 }
 .imgMano{
-    max-width: 19px;
-    max-height: 19px;
+    max-width: 16px;
+    max-height: 16px;
+    margin: 0.4em 0;
 }
 .contend_mano .link_mano{
     font-size:var(--font-medium);
@@ -171,19 +187,19 @@ ul.contend_list{
     margin: 0;
 }
 li.li_one{
-    padding: 0.5em;
+    padding: 1em;
 }
 ul.contend_list li{
     list-style: none;
     /* padding: .5em; */
-    border:  1px solid black;
+    border-top:  1px solid var(--gray-low-color);
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* background-color: red; */
     font-size: var(--font-medium);
-    font-weight: 600;
+    /* font-weight: 600; */
     font-family: var(--title-font);
 }
 ul.contend_list li::after{
@@ -244,6 +260,9 @@ ul.contend_list li.active ul li{
     max-width: 20px;
     max-height: 20px;
 }
+.link_mano p{
+    margin: 0.2em;
+}
 .contend_document{
     /* background-color: rebeccapurple; */
     display: flex;
@@ -257,5 +276,5 @@ ul.contend_list li.active ul li{
 .img_redesSociales{
     max-width: 30px;
     max-height: 30px;
-    margin: 0.3em;
+    margin: 0.5em 0 0.5em 0.5em;
 }

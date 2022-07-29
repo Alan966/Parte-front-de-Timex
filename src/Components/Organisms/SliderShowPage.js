@@ -33,7 +33,7 @@ return(
             guardaImg.map(({_id, description, name}) => {
                     return(
                     <Slide key={_id}>
-                        <Link to="/hola.com">
+                        <Link to="/NEW/WOMENS%20NEW%20ARRIVALS/Q%20TIMEX%20MALIBU%2036MM%20STAINLESS%20STEEL%20EXPANSION%20BAND%20WATCH">
                     <img 
                         className="img_sliderShow" 
                         src={`http://localhost:5000/slider/photo/${_id}`} 

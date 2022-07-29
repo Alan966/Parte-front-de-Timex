@@ -48,7 +48,7 @@ img.img_reloj_card{
     text-align: center;
     font-size:var(--font-large);
     font-family: var(--title-font);
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 .contend_new{

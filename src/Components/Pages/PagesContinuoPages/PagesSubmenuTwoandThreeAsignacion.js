@@ -1,4 +1,4 @@
-
+import "../../../ComponentsCss/Pages/NewShopAllNewArrivals.css"
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useAxios from "../../Atoms/getAxios";
@@ -52,7 +52,7 @@ const PagesSubmenuTwoandThreeAsignacion = ({
     return(
         <main className="ContenedorDeRelojes">
         <h1 className="url">{ `${direccion}/${id}/${url !== undefined ? url : ""}`}</h1>
-        <h2 className="title_relojes">{ `${name}/${id}/${url !== undefined ? url : ""}` }</h2>
+        <h2 className="title_relojes smartch">{ `${name}/${id}/${url !== undefined ? url : ""}`}</h2>
             <BuscadorRelojesThree 
             urlOne={relojes}
             nombre={nombre}
@@ -67,7 +67,7 @@ const PagesSubmenuTwoandThreeAsignacion = ({
                                 return(
                                     <CardRelojPrincipal 
                                     key={e._id}
-                                    id={e._id}
+                                    identificador={e._id}
                                     price={e.price}
                                     name={e.name}
                                     description={e.description}

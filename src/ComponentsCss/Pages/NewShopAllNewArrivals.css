@@ -33,6 +33,7 @@ body{
 }
 .ContenedorDeRelojes{
     display: flex;
+    /* flex-wrap: nowrap; */
     background-color: var(--color-relojes_gris);
 }
 .url{
@@ -41,17 +42,30 @@ body{
     font-family: var(--body-font);
     justify-self: flex-start;
     min-width: 100vw;
+    max-width: 100vw;   
     padding: 1rem;
     padding-left: 1rem;
     /* background-color: red; */
     margin-left:1rem;
 }
-.title_relojes{
+main h2.title_relojes{
     color: black;
+    font-size: var(--font-bigbig);
     font-family: var(--title-font);
-    justify-self: flex-start;
+    justify-self: flex-start; 
     min-width: 100vw;
-    padding: 1em;
+    padding: 1em;    
+    max-width: 100vw;
+    overflow-y: visible;
+}
+h2.title_relojes.smartch{
+    text-align: start;
+    text-align-last: auto;
+    text-anchor: start;
+    text-anchor: initial;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .sugerencia{

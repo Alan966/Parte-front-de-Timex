@@ -39,7 +39,7 @@ function App() {
             direccion={"/NEW"}
             relojes={'http://localhost:5000/relojestotalroute/all'}
         />}></Route>
-        <Route path="New/:id/:url" element={ <CardRelojesComprar 
+        <Route path="/New/:id/:url" element={ <CardRelojesComprar 
         relojes={'http://localhost:5000/relojestotalroute/all'}
         /> }></Route>
         <Route path="WATCHES" element={<NewShopAllNewArrivalsStatic 
@@ -57,6 +57,9 @@ function App() {
             relojes={'http://localhost:5000/relojestotalroute/all'}
             name={'WATCHES'}
         />}></Route>
+        <Route path="/WATCHES/:id/:url/:url2" element={ <CardRelojesComprar 
+        relojes={'http://localhost:5000/relojestotalroute/all'}
+        /> }></Route>
 
 
         {/* SMARTWATCHES */}
@@ -71,6 +74,9 @@ function App() {
         relojes={'http://localhost:5000/relojestotalroute/all'}
         name={'SMARTWATCHES'}
         />}></Route>
+        <Route path="/SMARTWATCHES/:id/:url/:url2" element={ <CardRelojesComprar 
+        relojes={'http://localhost:5000/relojestotalroute/all'}
+        /> }></Route>
         
         {/* CO_LABS */}
         <Route path="/CO_LABS" element={<PagesSeconds 
@@ -88,12 +94,19 @@ function App() {
             relojes={'http://localhost:5000/relojestotalroute/all'}
             name={'CO_LABS'}
         />}></Route>
+      <Route path="/CO_LABS/:id/:url/:url2" element={ <CardRelojesComprar 
+        relojes={'http://localhost:5000/relojestotalroute/all'}
+        /> }></Route>
+
         {/* BEST SELLERS */}
         <Route path="/BEST%20SELLERS" element={<PagesSeconds 
             direccion={"/BEST SELLERS"}
             relojes={'http://localhost:5000/relojestotalroute/all'}
             name={'BEST SELLERS'}
         />}></Route>
+        <Route path="/BEST%20SELLERS/:id" element={ <CardRelojesComprar 
+        relojes={'http://localhost:5000/relojestotalroute/all'}
+        /> }></Route>
         {/* BLOG */}
         <Route path="/BLOG" element={ <BlogPrincipal />}></Route>
         <Route path="/BLOG/:id" element={<BlogSecondId />}></Route>

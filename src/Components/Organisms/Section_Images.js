@@ -45,12 +45,12 @@ const SectionImages = () => {
                     </p>
                 </div>
                 <div className="contend_buttons">
-                    <Link to="#">
+                    <Link to="/NEW/SHOP%20NOW/TIMEX%20CAMPER%20X%20STRANGER%20THINGS%2040MM%20FABRIC%20STRAP%20WATCH%20FIVE">
                         <button className="button_add_to_bag">
                             SHOP NOW
                         </button>
                     </Link>
-                    <Link to="#">
+                    <Link to="/NEW/TIMEX%20X%20STRANGER%20THINGS">
                         <button className="button_add_to_bag">
                             LEARN MORE
                         </button>

@@ -1,45 +1,50 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
 import "../../../ComponentsCss/Atoms/relojes/cardRelojes.css"
+import { useParams } from "react-router-dom";
 
-export default class CardRelojPrincipal extends Component {
-    constructor(props){
-        super(props); 
-        this.state = {
-            key: this.props.id,
-            id: this.props.id,
-            price: this.props.price,
-            name: this.props.name,
-            description: this.props.description,
-            submenutwo: this.props.submenutwo
-        }
-    }
-    render(){
+const  CardRelojPrincipal= ({
+    price,
+    identificador, 
+    name, 
+    description, 
+    submenutwo
+}) =>  {
+
+    const { id, url } = useParams();
+    console.log(name, id , submenutwo, url)
+
+    const urlContend = name === `NEW`? 
+    `/${name}/${submenutwo}/${description}`:
+        name !==`BEST SELLERS`?
+    `/${name}/${submenutwo}/${submenutwo}/${description}` : 
+    `/${name}/${description}`
+
+
         return(
             <div className="contend_relojes">
             <Link 
             className="link-card"
-            id={this.state.description} 
-            to={`/${this.state.name}/${this.state.submenutwo}/${this.state.description}`}>
+            id={description} 
+            to={urlContend}>
                 <div className="contend_new">
                     <div className="background_new"></div>
                     <p>New</p>
                 </div>
                 <img 
-                src={`http://localhost:5000/relojestotalroute/photo/${this.state.id}`} 
-                alt={this.state.description} />
-                <h2 className="prueva">
-                    {this.state.description}
+                src={`http://localhost:5000/relojestotalroute/photo/${identificador}`} 
+                alt={description} />
+                <h2 className="prueva timex">
+                    {description}
                 </h2>
                 <p
                 data-price="Mex$ "
                 className="price">
-                    {this.state.price}
+                    {price}
                 </p>
                 </Link>
             </div>
 
         )
-    }
-
 }
+
+export default CardRelojPrincipal;

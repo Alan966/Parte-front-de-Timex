@@ -25,7 +25,7 @@ return(
             </p>
         </div>
         <div>
-            <Link to="#">
+            <Link to="/WATCHES">
                 <button className="button_add_to_bag">
                     ADD TO BAG
                 </button>

@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import {  useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import useAxios from "../../Atoms/getAxios";
 import ValidarImgOrVideo from "../../Molecules/relojes/ValidarImgOrVideo";
 import Carousel from "react-elastic-carousel"
@@ -15,7 +15,10 @@ const CardRelojesComprar = ({
 
 
     const [info, setInfo] = useState(null);
-    const { id, url } = useParams();
+    const { id, url, url2 } = useParams();
+
+    const navigate = useNavigate();
+
     const [data, error] = useAxios(relojes); 
 
     if(error){
@@ -25,7 +28,13 @@ const CardRelojesComprar = ({
     const paresInformacion = (informacion) =>{
         let variable = informacion.length > 0 
         if(variable !== false){
+            url2 !== undefined ?
+            setInfo(informacion.filter(p => p.description.includes(url2)))
+            : 
+            url ?
             setInfo(informacion.filter(p => p.description.includes(url)))
+            : 
+            setInfo(informacion.filter(p => p.description.includes(id)))
         }else {
             console.log("No hay informacion");
         }
@@ -57,9 +66,11 @@ const CardRelojesComprar = ({
                     <div className="triangle"></div>
                 </div>
                 <Link to={`NEW`}
-                className="ShopNow"
+                className="ShopNow card"
                 >
+                    <div onClick={() => navigate(-1)}>
                     {`Regresa <`}
+                    </div>
                 </Link>
             </div>
             <Carousel  renderArrow={myArrow} 
@@ -79,7 +90,7 @@ const CardRelojesComprar = ({
                 null
             }
         </Carousel>
-             <h2 className="title_reloj"> { url }</h2>
+             <h2 className="title_reloj"> { url2? url2: url ? url : id }</h2>
              <div className="contend_start">
                 <img src={images.star} alt="estrella" />
                 <img src={images.star} alt="estrella" />
@@ -97,7 +108,7 @@ const CardRelojesComprar = ({
                 </div>
                 <div className="contend_contend_button">
                 <div className="contendButton">
-                    <Link className="ShopNow Large" 
+                    <Link className="ShopNow card Large" 
                     to="#">
                         ADD TO BAG
                     </Link> 

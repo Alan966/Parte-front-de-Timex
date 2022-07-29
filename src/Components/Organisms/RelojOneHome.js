@@ -17,6 +17,7 @@ const RelojOneHome = ({ url }) => {
             console.log(error)
         })
 
+
     },[url, relojOne])
 
 

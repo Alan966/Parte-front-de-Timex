@@ -19,7 +19,7 @@ return(
         </div>
         <div className=" center_conter">
                 <div className="ShopNow">
-                    <Link to="#">SHOP NOW</Link>
+                    <Link to="/NEW/MENS%20NEW%20ARRIVALS/EXPEDITION%20NORTH%20SIERRA%2040MM%20LEATHER%20STRAP%20WATCH%20TWO">SHOP NOW</Link>
                 </div>
         </div>
     </div>

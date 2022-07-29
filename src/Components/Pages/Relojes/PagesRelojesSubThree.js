@@ -41,7 +41,7 @@ const PagesRelojesSubThree = ({
                         return(
                             <CardRelojPrincipal 
                             key={e._id}
-                            id={e._id}
+                            identificador={e._id}
                             price={e.price}
                             name={e.name}
                             description={e.description}
@@ -56,7 +56,7 @@ const PagesRelojesSubThree = ({
                             return(
                                 <CardRelojPrincipal 
                                 key={e._id}
-                                id={e._id}
+                                identificador={e._id}
                                 price={e.price}
                                 name={e.name}
                                 description={e.description}
@@ -78,7 +78,7 @@ const PagesRelojesSubThree = ({
                         return(
                             <CardRelojPrincipal 
                             key={e._id}
-                            id={e._id}
+                            identificador={e._id}
                             price={e.price}
                             name={e.name}
                             description={e.description}
@@ -92,7 +92,7 @@ const PagesRelojesSubThree = ({
                             return(
                                 <CardRelojPrincipal 
                                 key={e._id}
-                                id={e._id}
+                                identificador={e._id}
                                 price={e.price}
                                 name={e.name}
                                 description={e.description}
@@ -108,7 +108,7 @@ const PagesRelojesSubThree = ({
                             return(
                                 <CardRelojPrincipal 
                                 key={e._id}
-                                id={e._id}
+                                identificador={e._id}
                                 price={e.price}
                                 name={e.name}
                                 description={e.description}

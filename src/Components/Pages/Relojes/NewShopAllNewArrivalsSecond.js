@@ -45,7 +45,7 @@ export default function NewShopAllNewArrivalsTwo ({
                         return(
                             <CardRelojPrincipal
                             key={reloj._id}
-                            id={reloj._id}
+                            identificador={reloj._id}
                             price={reloj.price}
                             name={reloj.name}
                             description={reloj.description}
@@ -58,7 +58,7 @@ export default function NewShopAllNewArrivalsTwo ({
                         return(
                             <CardRelojPrincipal
                             key={reloj._id}
-                            id={reloj._id}
+                            identificador={reloj._id}
                             price={reloj.price}
                             name={reloj.name}
                             description={reloj.description}

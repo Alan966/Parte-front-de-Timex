@@ -12,10 +12,10 @@ const CardImgHome = ({accesible, name}, props) => {
             alt="reloj for Woman or Men" />
             <div className="contendButton">
                 {
-                    name == "b-Part-Two"? 
-                    <Link className="ShopNow Large" to="#">SHOP MENS BEST SELLERS</Link> 
+                    name === "b-Part-Two"? 
+                    <Link className="ShopNow Large" to="/WATCHES/BEST%20SELLERS">SHOP MENS BEST SELLERS</Link> 
                     :
-                    <Link className="ShopNow Large" to="#">SHOP WOMENS BEST SELLERS</Link> 
+                    <Link className="ShopNow Large" to="/WATCHES/WOMENS">SHOP WOMENS BEST SELLERS</Link> 
                 }
             </div>
         </div>

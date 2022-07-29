@@ -3,9 +3,10 @@ import "../../ComponentsCss/Moleculas/ContendImg_Parrafos.css";
 import useAxios from "../Atoms/getAxios"
 import { Link } from "react-router-dom"
 
-const ContendImg_Parrafo = ({numero, title, parrafo}) => {
+const ContendImg_Parrafo = ({numero, title, parrafo,url}) => {
 
-    const [data , error] = useAxios("http://localhost:5000/home/all")
+    const [data , error] = useAxios(url)
+
     
     let date = null 
 
@@ -34,7 +35,7 @@ return(
             <p className="parrafo_second">{parrafo}</p>
             <div className=" center_conter">
                     <div className="ShopNow">
-                        <Link to="/NEW">SHOP NOW</Link>
+                        <Link to="/NEW/MENS%20NEW%20ARRIVALS/Q%20TIMEX%2038MM%20SYNTHETIC%20RUBBER%20STRAP%20WATCH%20TWO">SHOP NOW</Link>
                     </div>
             </div>
         </div>
