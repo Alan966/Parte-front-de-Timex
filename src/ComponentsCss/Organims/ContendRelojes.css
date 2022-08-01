@@ -41,4 +41,8 @@ body{
 .contenedor_Slice{
     position: relative;
 }
-  
+@media screen and (min-width: 756px){
+  .title_center{
+    font-size:var(--font-big);
+  }
+}

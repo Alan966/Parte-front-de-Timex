@@ -20,10 +20,18 @@ const RelojOneHome = ({ url }) => {
 
     },[url, relojOne])
 
+    const conocerWith = () => {
+        let width = window.innerWidth
+        if(width > 756){
+            return 4
+        }else{
+            return 1
+        }
+    }
 
     return(
             < Carousel   
-                itemsToShow={1}
+                itemsToShow={conocerWith()}
                 >
                 {
                     relojOne? 

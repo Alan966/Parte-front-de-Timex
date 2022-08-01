@@ -5,12 +5,10 @@ import AutocompleteRelojesHeader from "../../Atoms/relojes/AutpcompleteRelojesHe
 
 
         return(
-            <div>
-                <form>
+            <div className="contend_contend_autocomplete">
                     <AutocompleteRelojesHeader 
                     url={urlOne}
                     />
-                </form>
             </div>
         )
 }

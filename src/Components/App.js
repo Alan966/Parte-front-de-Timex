@@ -25,7 +25,9 @@ function App() {
       <BrowserRouter>
        <>
         <AdOne/>
-        <Header/>
+        <Header
+        url={`http://localhost:5000/relojestotalroute/all`}
+        />
        </>
       <Routes>
         <Route path="/" element={<Home/>} />

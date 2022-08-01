@@ -21,11 +21,12 @@ const ponerActive = () => {
     const padre = twoRef.current.parentElement
     padre.classList.toggle('active')
     threeRef.current.classList.toggle('active')
+
 }
 
 
     return(
-        <>
+        <div className="grandFather_link">
         <li className={`item item-${grandFather}`} 
         data={_id} 
         ref={twoRef}
@@ -49,7 +50,7 @@ const ponerActive = () => {
                 null
         }
         </div>
-        </>
+        </div>
         )
 }
 

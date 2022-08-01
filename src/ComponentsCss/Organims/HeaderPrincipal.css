@@ -19,6 +19,7 @@ body{
   --font-large: 1em;
   --font-big: 1.2em;
   --font-bigbig: 1.4em;
+  --font_bigbigbig: 1.8em;
 
   /* Medidas */
   --header-menu-hamburguer:2em;
@@ -79,6 +80,14 @@ body{
   transform: translateY(50%) rotate(-45deg); 
 }
 
+@media screen and (min-width: 756px){
+  .hamburguer-button, 
+  .hamburguer-button::before,
+  .hamburguer-button:after,
+  .line{
+    display: none;
+  }
+}
 .header_principal{
   width: 100vw;
   display: flex;
@@ -88,19 +97,12 @@ body{
   /* Hacerlo fixed */
   height: 3em;
 }
-@media screen and (min-width: 768px){
-  .header_principal{
-    width: 99vw;
-  }
-}
-  
 .contend_one{
   font-size: var(--font-bigbig);
   margin: 0.5em;
   font-family: var(--body-font);
   font-weight: 800;
 }
-
 .header{
   display: none;
   position: fixed; 
@@ -113,13 +115,59 @@ body{
     transition: right .3s;
     z-index: var(--z-fixed);
 }
+
 .desplace_70vw{
   position: relative;
   right: -70vw;
 }
+
 .header_active{
   display: block;
 }
 .contend_shop{
   margin: .5em;
+  /* position: relative; */
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+
+}
+.contend_shop .numero{
+  font-size: var(--font-bigbig);
+  font-family: var(--body-font);
+  /* font-weight: 800; */
+  margin:0 0.5em 0 0;
+}
+.contend_shop .img_shopping_two{
+  /* position: absolute; */
+  width:2em;
+  height: 2em;
+}
+@media screen and (min-width: 768px){
+  .header_principal{
+    width: 100vw;
+    height: 5em;
+    /* background-color: red !important; */
+    justify-content: center;
+  }
+  .contend_one{
+    /* font-size: var(--font_bigbigbig); */
+    /* font-family: var(--title-font); */
+    display: none;
+    /* color: red; */
+  }
+  .header{
+    display: block;
+    position: relative;
+    min-width: 100vw;
+    height: none;
+    top: 0;
+    left: 0;
+  }
+  .contend_shop{
+    display: none;
+  }
+  .header{
+    height: 0;
+  }
 }

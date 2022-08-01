@@ -1,27 +1,30 @@
 import images from "../Templates/images";
 import "../../ComponentsCss/Organims/Buscador.css";
-const Buscador = () => {
+import BuscadorRelojesHeader from "../Molecules/relojes/BuscadorRelojesHeader";
+import { Link } from "react-router-dom";
+
+
+const Buscador = ({url}) => {
     return(
         <section className="section_search">
-            <div className="contend_timex">
-                <h2 className="timex_h2">TIMEX</h2>
-            </div>
+        <div className='contend_header_title'>
+            <Link to="/">
+                <h2 className='timex_title_hamburguer'>
+                    TIMEX
+                </h2>
+            </Link>
+            <p className='legend_timex_header'>MY TIMEX</p>
+        </div>
             <div className="contend_search">
-                <div>
-                    <form className="formulario buscador">
-                        <div className="container">
-                            <input type="text"  
-                            className="text_search"/>
-                            <label className="search">
-                                SEARCH
-                            </label>
-                        </div>
-                    </form>
-                </div>
+                    <BuscadorRelojesHeader 
+                    urlOne={url}
+                    />
                 <div className="contend_images">
-                    <img src={images.user} className="img_user" />
+                    <img src={images.user} 
+                    className="img_user" />
                 </div>
-                <div className="contend_images">
+                <div className="contend_images numeros">
+                    <div className="numero">1</div>
                     <img src={images.shopping} 
                     className="img_shopping" />
                 </div>

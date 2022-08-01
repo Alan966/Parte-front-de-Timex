@@ -133,7 +133,7 @@ const AutocompleteRelojes = ({url, id})=> {
 
 
     return(
-        <div className="App">
+        <div className="App n90">
                 <Autosuggest 
                 suggestions={relojes}
                 onSuggestionsFetchRequested={onSuggestionsFetchRequesteda}

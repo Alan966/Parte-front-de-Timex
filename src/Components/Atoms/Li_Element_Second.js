@@ -21,7 +21,7 @@ const Li_Element_Second = ({
     }
 
     return(
-        <>
+        <div className="para_posicionar_desktop">
         <li className={`item item-${grandFather}`} >
             <Link to={`/${comparativo}/${name}`} className={`link link-${_id}`}>
                 {
@@ -45,7 +45,7 @@ const Li_Element_Second = ({
                 null
         }
         </div>
-        </>
+        </div>
         )
 }
 

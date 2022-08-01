@@ -9,7 +9,6 @@ const PartTwoTimex = ({url}) => {
 
 return(
     <section className='two_section_timex'>
-        <div>
         { 
              data!= null ? 
              data.slice(1,3).map(({_id, name}) => {
@@ -24,8 +23,6 @@ return(
              : 
              null
         }
-        </div>
-        <div></div>
     </section>
 )
 }

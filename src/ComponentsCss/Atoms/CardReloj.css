@@ -44,7 +44,11 @@ body{
     position: relative;
     z-index: 0;
   }
-  
+  @media screen and (min-width: 756px){
+    .img_timex_one{
+      width: 100%;
+    }
+  }
   .description{
     font-family: var(--title-font);
     font-size: var(--font-medium);

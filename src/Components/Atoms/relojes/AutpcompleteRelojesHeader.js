@@ -46,7 +46,8 @@ const AutocompleteRelojesHeader = ({url}) => {
             return(
                 <div className="sugerencia" onClick={() => 
                     seleccionarReloj(suggestion)}>
-                        {`${suggestion.description}`}
+                        <p>{`${suggestion.description}`}</p>
+                        <img className="img_header" src={`http://localhost:5000/relojestotalroute/photo/${suggestion._id}`} alt={suggestion.description} />
                 </div>
             )
         }

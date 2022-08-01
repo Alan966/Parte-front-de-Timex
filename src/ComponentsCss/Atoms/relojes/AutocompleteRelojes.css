@@ -81,12 +81,12 @@ body{
     display: block;
     border: 1px solid black;
     position: absolute;
-    min-width: 90vw;
+
     background-color: #fff;
     font-family: var(--title-font);
     font-size: var(--font-medium);
     z-index: 20;
-    max-height: 300px;
+
     overflow: auto;
     left: 0;
     right: 0;
@@ -94,6 +94,10 @@ body{
     margin-right: auto;
   }
   
+  .App.n90 .react-autosuggest__suggestions-container--open {
+    min-width: 90vw;
+    max-height: 300px;
+  }
   .react-autosuggest__suggestions-list{
     list-style: none;
     margin-bottom: 0px;

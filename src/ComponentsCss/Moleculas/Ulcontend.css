@@ -18,7 +18,8 @@ body{
     --font-medium:.8em;
     --font-large: 1em;
     --font-big: 1.2em;
-    --font-bigbig: 1.4em;
+    --font-bigbig: 1.4em;  
+    --font_bigbigbig: 1.8em;
   
     /* Medidas */
     --header-menu-hamburguer:2em;
@@ -85,6 +86,7 @@ body{
     display: flex;
     justify-content: space-between;
 }
+/* Hasta aqui todo ready */
 .contenedor_two_sub{
   display:none;
 }
@@ -97,8 +99,14 @@ body{
 .contenedor_two_sub.active .submenu .item{
   padding:0 1em;   
 }
+
+
+
 ul.submenu.submenu-2{
   padding: 0 0 0 0;
+}
+.contenedor_three_sub{
+  display:none;
 }
 .contenedor_three_sub.active .submenu .item{
   padding: 1em 1em;   
@@ -106,13 +114,95 @@ ul.submenu.submenu-2{
 ul.submenu.submenu-3{
   padding: 0 0 0 0;
 }
-.contenedor_three_sub{
-  display:none;
-}
+
 .contenedor_three_sub.active{
   display:block;
   background-color: white;
 }
+@media screen and (min-width : 756px){
+
+  .grandFather_link:hover .contenedor_two_sub{
+    display: block;
+  }
+  .grandFather_link:hover .item-1 {
+    font-weight: 600;
+  }
+  .grandFather_link:hover .item-1{
+     background-color:var(--gray-low-color);
+  }
+  .grandFather_link:hover .item .link{
+    color: black;
+  }
+
+  .submenu.submenu-2{
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    /* background-color: red; */
+    justify-content: space-around;
+    /* top: 0; */
+    left: 0;
+    background-color: white;
+    /* justify-content: space-between; */
+  }
+  .submenu.submenu-2 .item{
+    /* padding: ; */
+    position: block;
+    margin: 0;
+    border: none;
+  }
+  .grandFather_link:hover .contenedor_two_sub .contenedor_three_sub{
+    display: block;
+  }
+  .contenedor_three_sub .item.item-3{
+    display: relative;
+    /* background-color: red; */
+    border: 0;
+  }
+}
+@media screen and (min-width: 756px){
+  .contend_header_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.menu .contend_header_title .timex_title_hamburguer{
+  font-size: var(--font_bigbigbig);
+  /* color: red; */
+  /* padding: 1em; */
+}
+.menu.menu-1 .legend_timex_header{
+  display: none;
+}
+.menu.menu-1{
+  display: grid;
+  grid-template-columns: repeat(6 , 1fr);
+  grid-template-rows: repeat( 2, 1fr); 
+  /* display: flex;
+  flex-direction: column; */
+  /* height: 100%; */
+  height: 100%;
+  width: 100vw;
+  /* background-color: red; */
+  position: relative;
+}
+.menu .contend_header_title{
+  grid-column: 1 / span 6;
+  grid-row: 1/ 2 ;
+  /* background-color: yellow; */
+  height: 100%;
+  /* padding: 1em; */
+}
+.menu.menu-1 .contend_header_title a{
+  padding: 0.5rem 0 0 0;
+}
+.menu.menu-1 .contend_contend_autocomplete{
+  display: none;
+}
+
+}
+
+
   /* Nos metemos con el menuOne */
 
 /*   

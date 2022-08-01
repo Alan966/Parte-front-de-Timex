@@ -47,6 +47,14 @@ body{
   display: flex;
   font-family: var(--title-font)
 }
+li.item.item-1 {
+  height: 100%;
+}
+li.item.item-1.active{
+  /* height: auto; */
+  /* background-color:red; */
+  height: 0;
+}
 .link{
   text-decoration: none;
   color: black;
@@ -74,3 +82,31 @@ body{
   background-image: url("../../img/icons/arrow-down-sign-to-navigate.png");
 }  
 
+@media screen and (min-width: 756px){
+  .line_one{
+    display: none;
+  }
+
+  .item{
+  justify-content: center;
+  align-items: center;
+  border: none;
+  /* background-color: red; */
+  padding: 0.5rem;
+  } 
+  .item .link{
+    /* color: red; */
+    /* background-color: blueviolet; */
+    width: 100%;
+    /* height: 100%; */
+    text-align: center;
+    /* background-color: yellow; */
+    height: 100%;  
+  }
+  a.link.link-1 {
+    height: 0;
+}
+  .item.item-2{
+    padding: 1em;
+  }
+}

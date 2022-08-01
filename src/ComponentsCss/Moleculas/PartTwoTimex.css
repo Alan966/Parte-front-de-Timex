@@ -38,3 +38,12 @@ body{
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (min-width: 756px){
+  .two_section_timex{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
+    margin: 1em 5em;
+  }
+}

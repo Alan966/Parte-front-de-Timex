@@ -16,11 +16,9 @@ const HeaderPrincipal = () => {
     }
     return(
         <div className="header_principal" ref={retThree}>
-            <div className="hamburguer-button" ref={ref} onClick={onClickMenu}>
+            <div className="hamburguer-button" 
+            ref={ref} onClick={onClickMenu}>
                 <div className="line"></div>
-            </div>
-            <div className="contend_one">
-                    <h1>TIMEX</h1>
             </div>
             <header className="header" ref={refTwo}>
                 <nav className="nav">
@@ -34,7 +32,10 @@ const HeaderPrincipal = () => {
                 </nav> 
             </header> 
             <div className="contend_shop">
-                    <img src={images.shoppingCard32} className="img_shopping_two" alt="imgshoppingtwo" />
+                <div className="numero">1</div>
+                    <img src={images.shoppingCard32} 
+                    className="img_shopping_two" 
+                    alt="imgshoppingtwo" />
             </div>
         </div>
     )

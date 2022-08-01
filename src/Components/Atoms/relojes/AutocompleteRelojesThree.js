@@ -106,7 +106,7 @@ const AutocompleteRelojesThree = ({url , name}) => {
         },[name, data, peticionData])
 
     return(
-        <div className="App">
+        <div className="App n90">
             <Autosuggest 
             suggestions={relojes}
             onSuggestionsFetchRequested={onSuggestionsFetchRequested}

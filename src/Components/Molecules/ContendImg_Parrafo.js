@@ -2,15 +2,24 @@ import styled from "styled-components"
 import "../../ComponentsCss/Moleculas/ContendImg_Parrafos.css";
 import useAxios from "../Atoms/getAxios"
 import { Link } from "react-router-dom"
+import { useEffect } from "react";
 
 const ContendImg_Parrafo = ({numero, title, parrafo,url}) => {
 
     const [data , error] = useAxios(url)
+if(error){
+    console.log(error)
+}
 
+    let width = window.innerWidth
+    useEffect(() => {
+        console.log(width)
+    }) 
     
-    let date = null 
+    let date = null
 
     if(data) date = data[numero]
+
     
 return(
     <ContenedorImg>
@@ -18,7 +27,7 @@ return(
             {
                 date && 
                     <img 
-                    src={`http://localhost:5000/home/photo/${date._id}`} 
+                    src={`http://localhost:5000/home/photo/${date._id}`}
                     alt={date.name}
                     className="img_parrafo"
                     />
@@ -50,6 +59,10 @@ const ContenedorImages = styled.div`
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 3fr;
+    
+    @media screen and (min-width: 700px){
+        grid-template-columns: 1fr 1fr;
+    }
 `
 
 export default ContendImg_Parrafo
