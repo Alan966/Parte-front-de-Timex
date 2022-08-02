@@ -48,3 +48,12 @@ body{
 display: flex; 
 flex-direction: column;
 }
+
+@media screen and (min-width: 756px){
+    .section_cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100vw;
+        margin: 0.5rem;
+    }
+}

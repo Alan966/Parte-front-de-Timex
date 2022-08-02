@@ -1,11 +1,27 @@
 import "../../ComponentsCss/Atoms/Section_img.css";
 import { Link } from "react-router-dom"
+import { useEffect, useState } from "react"
 
-const SectionIMg = ({ img, title}) => {
+const SectionIMg = ({ img, img2, title}) => {
+
+
+    const [imagen, setimagen] = useState(null)
+
+    useEffect(() => {
+        if(window.innerWidth > 756 && img2){
+            setimagen(img2)
+        }else{
+            setimagen(img)
+        }
+    },[window.innerWidth])
+
     return(
         <section className="section_img">
-            <img className="img_the_section" 
-            src={img} alt={title} />
+            {
+                imagen && 
+                <img className="img_the_section" 
+                src={imagen} alt={title} />
+            }
             <div className="contend_center">
             <h2 className="title_img_section">
                 {

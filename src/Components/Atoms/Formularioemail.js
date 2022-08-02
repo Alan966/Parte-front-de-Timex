@@ -20,7 +20,8 @@ return(
                 <div >
                 <label htmlFor="email">
                         <input 
-                        {...register("email", {required: "El correo es Obligatorio"})}
+                        {...register("email", 
+                        {required: "El correo es Obligatorio"})}
                         type="text"
                         className="input_formulario"
                         id={type}

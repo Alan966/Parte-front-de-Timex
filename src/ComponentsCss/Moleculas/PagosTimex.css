@@ -41,8 +41,18 @@ body{
     background-color: #F6F6F6;
     justify-content: space-between;
 } 
+
 .contend_formulario{
     width: 100vw;
+}
+@media screen and (min-width: 756px){
+    .contend_email_pagar{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contend_formulario{
+        width: 100%;
+    }
 }
 .contend_facebook::after{
     content: " ";
@@ -182,6 +192,7 @@ body{
     justify-content: center;
     left: -1em;
 }
+
 .contend_logos{
     display: flex;
     justify-content: space-around;
@@ -191,6 +202,7 @@ body{
     padding: 0;
     left: -1em;
 }
+
 .description_parrafo{
     display: block;
     padding: 0 2em;
@@ -220,4 +232,93 @@ body{
     padding: .5em .5em 1em .5em;
     font-size: var(--font-medium);
     font-family: var(--body-font);
+}
+
+@media screen and (min-width: 756px){
+    .contend_email_pagar{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contend_formulario{
+        width: 100%;
+    }
+    .contend_logos_tarjetas{
+        width: 100%;
+        padding: 2em 8em;
+    }
+    .stay_connected{
+        width: 100%;
+        left: 0;
+        padding: 2em 6em;
+    }
+    .contend_logos{
+        width: 100%;
+        padding:1em 1.5em;
+        justify-content: space-evenly;
+        left: 0;
+    }
+    .contend_three{
+        padding: 2em 7em;
+    }
+.contend_facebook::after{
+    width: 2em;
+    height: 2em;
+}
+.contend_twitter::after{
+    width: 2em;
+    height: 2em;
+}
+  .contend_pinteres::after{
+    width: 2em;
+    height: 2em;
+}
+.contend_instagram::after{
+    width: 2em;
+    height: 2em;
+}
+.contend_youtube::after{
+    width: 2em;
+    height: 2em;
+}
+.description_parrafo{
+    display: block;
+    /* padding: 0 2em; */
+    padding:1em 1.5em;
+    font-size: var(--font-large);
+    /* background-color: red; */
+    text-align: center;
+}
+.visa_card::after{
+    width: 2.5em;
+    height: 2.5em;
+}
+  
+.americanexpress::after{
+    width: 2.5em;
+    height: 2.5em;
+}
+.discover::after{
+    width: 2.5em;
+    height: 2.5em;
+}
+.jcb::after{
+    width: 2.5em;
+    height: 2.5em;
+}
+.maestro::after{
+    width: 2.5em;
+    height: 2.5em;
+}
+.mastercard::after{
+    width: 2.5em;
+    height: 2.5em;
+}
+.pay::after{
+    width: 2.5em;
+    height: 2.5em;
+}
+.paypal::after{
+    width: 2.5em;
+    height: 2.5em;
+}
 }

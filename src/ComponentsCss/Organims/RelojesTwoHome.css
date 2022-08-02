@@ -38,3 +38,10 @@ body{
     align-items: center;
     margin: 2em;
   }
+@media screen and (min-width: 756px){
+  .contend_two_relojes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1em 5em;
+  }
+}

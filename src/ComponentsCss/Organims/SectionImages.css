@@ -105,6 +105,59 @@ body{
 .background_two{
     background-image: url("../../img/background/Section_background_two.jpeg");
 }
+@media screen and (min-width: 756px){
+    .contendImages{
+        position: relative;
+        height: 80vh;
+    }
+    .contend_one_section{
+        height: 80vh;
+        position: absolute;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .contend_header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+        width: 90vw;
+     }
+     .contend_header h1{
+        margin: 0.5rem;
+     }
+     .contend_parrafo{
+        color: white;
+        font-size: var(--font-big); 
+        position: relative;
+        align-self: center;
+        /* top: 4em; */
+        /* width: 100vw; */
+        /* background-color: red; */
+    }
+    .background_one{
+        background-image: url("../../img/background/6285e0487826497d85dd19eb.jpeg");
+    }
+    .contend_two_section{
+        position: absolute;
+        background-image: none;
+    }
+    .contend_two_section{
+        content: ' ';
+        display: block;
+        width: 100vw;
+        display: flex;
+        height: 80vh;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        /* background-color: red; */
+        padding: 1em;
+    }
+    .background_two{
+        background-image: none;
+    }
+}
 .contend_buttons{
     display: grid;
     /* justify-content: center;

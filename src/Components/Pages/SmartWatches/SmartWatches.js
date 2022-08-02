@@ -181,7 +181,8 @@ const SMARTWATCHES = () => {
                 </div>
             </div>
             </section>
-            <section className="section_two">
+           <article className="article_grid_two">
+           <section className="section_two">
                 <div ref={ref} className="contend_img_smarth"></div>
                 <div className="contend_buttton_watches">
                  <div className="circle_circulo" onClick={cambiarImagen}> </div> 
@@ -203,6 +204,7 @@ const SMARTWATCHES = () => {
                     </Link>
                 </div>
             </section>
+           </article>
             <section className="section_three">
                 <h1>What we're 
                     made of
@@ -310,6 +312,7 @@ const SMARTWATCHES = () => {
                         your event or even your mood
                     </p>
                 </section>
+                <article>
                 <div className="contend_one_relojesCambian">
                     <div className="contend_relojes_cambiantes" ref={refFive}>
                       <div className="imagenes_que_cambian active" ref={refSix}>
@@ -349,6 +352,7 @@ const SMARTWATCHES = () => {
                     </Link>
                 </div>
                 </div>
+                </article>
             </section>
             <section className="section_six active"  ref={refNine}
             onTouchStart={() =>cambiarReloj(refNine)}

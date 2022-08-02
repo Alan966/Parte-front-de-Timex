@@ -2,8 +2,8 @@ import FormularioEmail from "../Atoms/Formularioemail";
 import "../../ComponentsCss/Moleculas/PagosTimex.css";
 const Pagostimex = () => {
     return(
-        <div className="contend_email_pagar">
-            <div className="contend_formulario">
+    <div className="contend_email_pagar">
+        <div className="contend_formulario">
             {
                 <FormularioEmail 
                 name={"BE THE FIRST TO KNOW & RECEIVE 15% OFF AN ORDER"} 

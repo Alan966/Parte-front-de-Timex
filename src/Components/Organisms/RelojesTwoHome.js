@@ -23,7 +23,7 @@ const RelojesTwoHome = ({url}) => {
         <div className="contend_two_relojes" >
             {
                 guardarData?
-                guardarData.slice(4,7).map(({ _id, description}) => {
+                guardarData.slice(5,8).map(({ _id, description}) => {
                     return(
                         <CardRelojesTwo 
                         _id={_id} 

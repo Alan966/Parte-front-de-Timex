@@ -2,33 +2,37 @@ import styled from "styled-components"
 import "../../ComponentsCss/Moleculas/ContendImg_Parrafos.css";
 import useAxios from "../Atoms/getAxios"
 import { Link } from "react-router-dom"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const ContendImg_Parrafo = ({numero, title, parrafo,url}) => {
+const ContendImg_Parrafo = ({ title, parrafo,url}) => {
 
     const [data , error] = useAxios(url)
+    const [imagenTimex, setImagenTimex] = useState(null)
 if(error){
     console.log(error)
 }
 
-    let width = window.innerWidth
     useEffect(() => {
-        console.log(width)
-    }) 
-    
-    let date = null
+        if(window.innerWidth > 768 && data){
+            setImagenTimex(data[4])
+        }else if(window.innerWidth < 768 && data){
+            setImagenTimex(data[3])
+        }
 
-    if(data) date = data[numero]
+        return ()  => {
+            setImagenTimex([])
+        }
+    },[window.innerWidth])
 
     
 return(
     <ContenedorImg>
         <ContenedorImages>
             {
-                date && 
+                imagenTimex && 
                     <img 
-                    src={`http://localhost:5000/home/photo/${date._id}`}
-                    alt={date.name}
+                    src={`http://localhost:5000/home/photo/${imagenTimex._id}`}
+                    alt={imagenTimex.name}
                     className="img_parrafo"
                     />
             }
@@ -60,7 +64,7 @@ const ContenedorImages = styled.div`
     align-items: center;
     grid-template-columns: 1fr 3fr;
     
-    @media screen and (min-width: 700px){
+    @media screen and (min-width: 756px){
         grid-template-columns: 1fr 1fr;
     }
 `

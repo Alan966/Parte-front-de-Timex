@@ -89,3 +89,18 @@ body{
   .ShopNow{
   color: white;
   }
+
+  @media screen and (min-width: 756px){
+    .card_relojes_two{
+      margin: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .img_card_reloj{
+      width: 90%;
+      margin : 0 5%;
+    }
+
+  }

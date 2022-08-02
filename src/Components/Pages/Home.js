@@ -31,7 +31,6 @@ const Home = () => {
                 />}
             />
             <ContendImg_Parrafo 
-            numero={3}
             title={"RETRO AND REFINED"}
             url={"http://localhost:5000/home/all"}
             parrafo={"Our Q Timex watches get a new feature for spring. You can now wear your iconic Q Timex in a black synthetic rubber strap.First released in the 1970s our original Q Timex gave the people a modern watch with quartz technology"}
@@ -43,6 +42,7 @@ const Home = () => {
             />
             <SectionIMg 
             img={images.celebritiImg} 
+            img2={images.celebriti}
             title={'CELEBRATING 50 YEARS OF QUARTZ'}
             />
             <ContendPieTimex />
