@@ -3,12 +3,13 @@ import {Slideshow, Slide, TextoSlide} from "../Molecules/SliderShow"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import "../../ComponentsCss/Organims/SliderShowPage.css";
+import { BACKEND } from "../Atoms/backend";
 
 const SliderShowPage = ()=> {
 
     const [guardaImg, setGuardarImg] = useState(null);
     useEffect(() => {
-        fetch('http://localhost:5000/slider/slidershow')
+        fetch(`${BACKEND}/slider/slidershow`)
         .then(response => response.json())
         .then(data => {
             if(document.documentElement.clientWidth > 768){
@@ -36,7 +37,7 @@ return(
                         <Link to="/NEW/WOMENS%20NEW%20ARRIVALS/Q%20TIMEX%20MALIBU%2036MM%20STAINLESS%20STEEL%20EXPANSION%20BAND%20WATCH">
                     <img 
                         className="img_sliderShow" 
-                        src={`http://localhost:5000/slider/photo/${_id}`} 
+                        src={`${BACKEND}/slider/photo/${_id}`} 
                         alt={name} />
                         </Link>
                         <TextoSlide colorFondo="rgba(0,0,0, 0.6)"

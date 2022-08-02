@@ -11,6 +11,7 @@ import SectionIMg from "../Atoms/section_img"
 import SectionImages from "../Organisms/Section_Images"
 import ContendPieTimex from "../Organisms/ContendPieTimex"
 import Modal from "../Atoms/modal"
+import { BACKEND } from "../Atoms/backend"
 
 const Home = () => {
     return(
@@ -21,22 +22,22 @@ const Home = () => {
             <ToMonWithLove />
             <WordEcology />
             <PartTwoTimex 
-            url={"http://localhost:5000/home/all"}
+            url={`${BACKEND}/home/all`}
             />
             <ContendRelojesHome 
                 id={1}
                 children={<RelojOneHome 
-                    url={'http://localhost:5000/relojesTimexOne/all'}
+                    url={`${BACKEND}/relojesTimexOne/all`}
                     id={1}
                 />}
             />
             <ContendImg_Parrafo 
             title={"RETRO AND REFINED"}
-            url={"http://localhost:5000/home/all"}
+            url={`${BACKEND}/home/all`}
             parrafo={"Our Q Timex watches get a new feature for spring. You can now wear your iconic Q Timex in a black synthetic rubber strap.First released in the 1970s our original Q Timex gave the people a modern watch with quartz technology"}
             /> 
             <RelojesTwoHome 
-            url={'http://localhost:5000/home/all'}
+            url={`${BACKEND}/home/all`}
             />
             <SectionImages  
             />

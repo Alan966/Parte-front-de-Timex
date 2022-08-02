@@ -4,6 +4,7 @@ import useAxios from '../Atoms/getAxios';
 import "../../ComponentsCss/Moleculas/Ulcontend.css";
 import { Link } from "react-router-dom";
 import BuscadorRelojesHeader from './relojes/BuscadorRelojesHeader';
+import { BACKEND } from '../Atoms/backend';
 
 const UlcontendOne = ({ url, _id, urlTwo, urlThree})  =>  {
 
@@ -20,7 +21,7 @@ return(
             <p className='legend_timex_header'>MY TIMEX</p>
         </div>
             <BuscadorRelojesHeader 
-            urlOne={`http://localhost:5000/relojestotalroute/all`}
+            urlOne={`${BACKEND}/relojestotalroute/all`}
             />
         {
             data ?

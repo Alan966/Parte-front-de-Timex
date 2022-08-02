@@ -1,4 +1,5 @@
 import {useEffect, useState } from "react"
+import { BACKEND } from "../Atoms/backend";
 
 const MoleculaImg = (idSubmenuTwo, ApiImage) => {  
 
@@ -12,7 +13,7 @@ const MoleculaImg = (idSubmenuTwo, ApiImage) => {
 
     return (
         <div>
-            <img src={`http://localhost:3001/image/photo/${idImagen}`} alt={ApiImage.photo} /> 
+            <img src={`${BACKEND}/image/photo/${idImagen}`} alt={ApiImage.photo} /> 
         </div>
     )
 }

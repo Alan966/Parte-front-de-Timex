@@ -18,6 +18,7 @@ import Pagostimex from "./Molecules/Pagostimex";
 import SMARTWATCHES from "./Pages/SmartWatches/SmartWatches";
 import BlogPrincipal from "./Pages/Blog/BlogPrincipal";
 import BlogSecondId from "./Pages/Blog/BlogSecondId";
+import { BACKEND } from "./Atoms/backend";
 
 function App() {
   return (
@@ -26,88 +27,88 @@ function App() {
        <>
         <AdOne/>
         <Header
-        url={`http://localhost:5000/relojestotalroute/all`}
+        url={`${BACKEND}/relojestotalroute/all`}
         />
        </>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path ="New" element={<NewShopAllNewArrivalsStatic 
         direccion={"/NEW"}
-        relojes={'http://localhost:5000/relojestotalroute/all'}
+        relojes={`${BACKEND}/relojestotalroute/all`}
         name={'NEW'}
         />}></Route>
         <Route path="New/:id" 
             element={< NewShopAllNewArrivalsTwo
             direccion={"/NEW"}
-            relojes={'http://localhost:5000/relojestotalroute/all'}
+            relojes={`${BACKEND}/relojestotalroute/all`}
         />}></Route>
         <Route path="/New/:id/:url" element={ <CardRelojesComprar 
-        relojes={'http://localhost:5000/relojestotalroute/all'}
+        relojes={`${BACKEND}/relojestotalroute/all`}
         /> }></Route>
         <Route path="WATCHES" element={<NewShopAllNewArrivalsStatic 
         direccion={"/WATCHES"}
-        relojes={'http://localhost:5000/relojestotalroute/all'}
+        relojes={`${BACKEND}/relojestotalroute/all`}
         name={'WATCHES'}
         />}/>
         <Route path="WATCHES/:id" element={<PagesRelojesSubThree 
             direccion={"/WATCHES"}
-            relojes={'http://localhost:5000/relojestotalroute/all'}
+            relojes={`${BACKEND}/relojestotalroute/all`}
             name={'WATCHES'}
         />}></Route>
         <Route path="WATCHES/:id/:url" element={<PagesRelojesSubThree 
             direccion={"/WATCHES"}
-            relojes={'http://localhost:5000/relojestotalroute/all'}
+            relojes={`${BACKEND}/relojestotalroute/all`}
             name={'WATCHES'}
         />}></Route>
         <Route path="/WATCHES/:id/:url/:url2" element={ <CardRelojesComprar 
-        relojes={'http://localhost:5000/relojestotalroute/all'}
+        relojes={`${BACKEND}/relojestotalroute/all`}
         /> }></Route>
 
 
         {/* SMARTWATCHES */}
         <Route path="/SMARTWATCHES" element={<PagesSeconds 
            direccion={"/SMARTWATCHES"}
-           relojes={'http://localhost:5000/relojestotalroute/all'}
+           relojes={`${BACKEND}/relojestotalroute/all`}
            name={'SMARTWATCHES'}
         />}></Route>
         <Route path="/SMARTWATCHES/:id" element={<SMARTWATCHES />}></Route>
         <Route path="/SMARTWATCHES/:id/:url" element={<PagesSubmenuTwoandThreeAsignacion 
         direccion={"/SMARTWATCHES"}
-        relojes={'http://localhost:5000/relojestotalroute/all'}
+        relojes={`${BACKEND}/relojestotalroute/all`}
         name={'SMARTWATCHES'}
         />}></Route>
         <Route path="/SMARTWATCHES/:id/:url/:url2" element={ <CardRelojesComprar 
-        relojes={'http://localhost:5000/relojestotalroute/all'}
+        relojes={`${BACKEND}/relojestotalroute/all`}
         /> }></Route>
         
         {/* CO_LABS */}
         <Route path="/CO_LABS" element={<PagesSeconds 
             direccion={"/CO_LABS"}
-            relojes={'http://localhost:5000/relojestotalroute/all'}
+            relojes={`${BACKEND}/relojestotalroute/all`}
             name={'CO_LABS'}
         />}></Route>
         <Route path="/CO_LABS/:id" element={<PagesSubmenuTwoandThreeAsignacion 
             direccion={"/CO_LABS"}
-            relojes={'http://localhost:5000/relojestotalroute/all'}
+            relojes={`${BACKEND}/relojestotalroute/all'`}
             name={'CO_LABS'}
         />}></Route>
         <Route path="/CO_LABS/:id/:url" element={<PagesSubmenuTwoandThreeAsignacion 
             direccion={"/CO_LABS"}
-            relojes={'http://localhost:5000/relojestotalroute/all'}
+            relojes={`${BACKEND}/relojestotalroute/all`}
             name={'CO_LABS'}
         />}></Route>
       <Route path="/CO_LABS/:id/:url/:url2" element={ <CardRelojesComprar 
-        relojes={'http://localhost:5000/relojestotalroute/all'}
+        relojes={`${BACKEND}/relojestotalroute/all`}
         /> }></Route>
 
         {/* BEST SELLERS */}
         <Route path="/BEST%20SELLERS" element={<PagesSeconds 
             direccion={"/BEST SELLERS"}
-            relojes={'http://localhost:5000/relojestotalroute/all'}
+            relojes={`${BACKEND}/relojestotalroute/all`}
             name={'BEST SELLERS'}
         />}></Route>
         <Route path="/BEST%20SELLERS/:id" element={ <CardRelojesComprar 
-        relojes={'http://localhost:5000/relojestotalroute/all'}
+        relojes={`${BACKEND}/relojestotalroute/all`}
         /> }></Route>
         {/* BLOG */}
         <Route path="/BLOG" element={ <BlogPrincipal />}></Route>

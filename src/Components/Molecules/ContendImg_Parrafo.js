@@ -3,6 +3,7 @@ import "../../ComponentsCss/Moleculas/ContendImg_Parrafos.css";
 import useAxios from "../Atoms/getAxios"
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react";
+import { BACKEND } from "../Atoms/backend";
 
 const ContendImg_Parrafo = ({ title, parrafo,url}) => {
 
@@ -31,7 +32,7 @@ return(
             {
                 imagenTimex && 
                     <img 
-                    src={`http://localhost:5000/home/photo/${imagenTimex._id}`}
+                    src={`${BACKEND}/home/photo/${imagenTimex._id}`}
                     alt={imagenTimex.name}
                     className="img_parrafo"
                     />

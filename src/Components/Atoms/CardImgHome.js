@@ -1,5 +1,6 @@
 import "../../ComponentsCss/Atoms/CardImgHome.css";
 import { Link } from "react-router-dom"
+import { BACKEND } from "./backend";
 
 const CardImgHome = ({accesible, name}, props) => {
 
@@ -8,7 +9,7 @@ const CardImgHome = ({accesible, name}, props) => {
         <div className="contend_Img" key={props.key}>
             <img 
             className="img_card_home"
-            src={`http://localhost:5000/home/photo/${accesible}`} 
+            src={`${BACKEND}/home/photo/${accesible}`} 
             alt="reloj for Woman or Men" />
             <div className="contendButton">
                 {

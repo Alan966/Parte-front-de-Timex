@@ -1,8 +1,10 @@
+import { BACKEND } from "./backend";
+
 const ImgReturn = ({id}) => {
     if(id){
         return(
         <img className="img_subMenu" 
-        src={`http://localhost:5000/image/photo/${id}`} 
+        src={`${BACKEND}/image/photo/${id}`} 
         alt={id} />
     )
     }else{

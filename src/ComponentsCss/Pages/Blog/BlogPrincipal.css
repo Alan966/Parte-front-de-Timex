@@ -57,6 +57,7 @@ main .oneSection p{
     color: white;
     background-color: var(--color-header);
 }
+
 .contend_Noticia{
     display: flex;
     flex-direction: column;
@@ -87,4 +88,58 @@ main .oneSection p{
     font-size:var(--font-medium);
     font-family:var(--body-font);
     color: #141618;
+}
+@media  screen and (min-width: 756px) {
+    main .oneSection img{
+        width: 100%;
+    }
+    main .oneSection{
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    main .oneSection p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--body-font);
+        font-size: var(--font-big);
+    }
+    .contend_Noticia{
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        /* background-color: red; */
+        justify-content: center;
+        align-items: center;
+    }
+    .contend_Noticia img{
+        width: 100%;
+        margin: 2em;
+        text-align: center;
+    }
+    .contend_relojes{
+        /* background: yellow; */
+        width: 90%;
+        position: relative;
+        margin: 3em;
+        /* width: 50vw; */
+    }
+    .contend_relojes h2{
+        font-size:var(--font-big);
+        font-family:var(--title-font);
+        color: #141618;
+        font-weight: 600;
+    }
+    .contend_relojes h3{
+        font-size:var(--font-large);
+        font-family:var(--title-font);
+        color: #141618;
+        font-weight: 600;
+        margin: 1em;
+    }
+    .contend_relojes p{
+        font-size: var(--font-large);
+        font-family:var(--body-font);
+        color: #141618;
+        margin: 1.5em;
+    }
 }

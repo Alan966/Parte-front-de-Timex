@@ -1,10 +1,11 @@
 import useAxios from "../Atoms/getAxios"
 import PieTimex from "../Molecules/PieTimex"
 import "../../ComponentsCss/Organims/ContendPieTimex.css"
+import { BACKEND } from "../Atoms/backend"
 
 const ContendPieTimex = () => {
 
-    const [data, error] = useAxios(`http://localhost:5000/pie/all`)
+    const [data, error] = useAxios(`${BACKEND}}/pie/all`)
 
     return(
         <div className="pie_card">

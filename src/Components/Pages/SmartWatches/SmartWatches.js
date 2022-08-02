@@ -354,11 +354,12 @@ const SMARTWATCHES = () => {
                 </div>
                 </article>
             </section>
+            <article className="six-section-article">
             <section className="section_six active"  ref={refNine}
             onTouchStart={() =>cambiarReloj(refNine)}
             onMouseEnter={() =>cambiarReloj(refNine)}
             >
-            <div>
+            <div className="mover_one_six">
                 <h1>Play nice with  <br />
                     your phone
                 </h1>
@@ -378,6 +379,7 @@ const SMARTWATCHES = () => {
                 </div>
             </div>
             </section>
+            </article>
         </main>
     )
 }

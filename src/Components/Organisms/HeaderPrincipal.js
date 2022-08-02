@@ -2,6 +2,7 @@ import UlcontendOne from "../Molecules/UlcontendOne";
 import images from "../Templates/images";
 import "../../ComponentsCss/Organims/HeaderPrincipal.css";
 import { useRef } from "react";
+import { BACKEND } from "../Atoms/backend";
 
 const HeaderPrincipal = () => {
 
@@ -25,9 +26,9 @@ const HeaderPrincipal = () => {
                     <UlcontendOne 
                     _id={1} 
                     key={1} 
-                    url={`http://localhost:5000/submenu/one/all`} 
-                    urlTwo={`http://localhost:5000/submenu/two/all`}
-                    urlThree={`http://localhost:5000/submenu/three/all`}
+                    url={`${BACKEND}/submenu/one/all`} 
+                    urlTwo={`${BACKEND}/submenu/two/all`}
+                    urlThree={`${BACKEND}/submenu/three/all`}
                     />
                 </nav> 
             </header> 

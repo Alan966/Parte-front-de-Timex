@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../../ComponentsCss/Moleculas/relojes/ValidarimgOrVideo.css";
+import { BACKEND } from "../../Atoms/backend";
 
 const ValidarImgOrVideo = ({id, price}) => {
 
@@ -8,7 +9,7 @@ const ValidarImgOrVideo = ({id, price}) => {
 
     const comprovar = () => {
         const img = document.createElement("img");
-        img.setAttribute("src",`http://localhost:5000/relojestotalroute/photo/${id}`);
+        img.setAttribute("src",`${BACKEND}/relojestotalroute/photo/${id}`);
         img.setAttribute("alt",id);
         img.addEventListener('error', ()=> {
             setError(id);
@@ -30,10 +31,10 @@ const ValidarImgOrVideo = ({id, price}) => {
             </div>
             {
                 info ? 
-                <img className="img_reloj_card" src={`http://localhost:5000/relojestotalroute/photo/${id}`} alt={id} />
+                <img className="img_reloj_card" src={`${BACKEND}/relojestotalroute/photo/${id}`} alt={id} />
                 : 
                 error &&
-                <video src={`http://localhost:5000/relojestotalroute/photo/${id}`} controls  loop></video>
+                <video src={`${BACKEND}/relojestotalroute/photo/${id}`} controls  loop></video>
             }
             <p className="validar_price">{`MEX$${price}.00`}</p>
         </div>)

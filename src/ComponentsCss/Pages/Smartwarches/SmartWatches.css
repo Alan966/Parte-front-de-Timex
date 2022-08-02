@@ -43,6 +43,14 @@ body{
     background-position: bottom;
     background-color: var(--color-relojes_gris);
 }
+.main-TIMEXIRONMANR300GPS{
+    background-image: url(../../../img/SmartWatches/movil/timex-iron-movil.jpeg);
+    height: 90vh;
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-position: bottom;
+    background-color: var(--color-relojes_gris);
+}
 
 .title_smart{
     margin: 1em;
@@ -360,154 +368,7 @@ div div.button-right{
     display: flex;
     justify-content: space-around;
 }
-@media screen and (min-width: 756px){
-    div.contend_contend_button div.contendButton{
-        width: 12em;
-        height: 2em;
-        margin: 0.6em 6em;
-    }
-    .title_smart{
-        text-align: center;
-        margin: 0.6em 3em;
-        font-size: var(--font-bigbigbig);
-    }
-    .main-METROPOLITAN{
-        width: 100vw;
-        height: 72vh;
-        background-repeat: no-repeat;
-        background-position: 0 0;
-        background-size: contain;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        background-image: url(../../../img/SmartWatches/desktop/one-desktop.jpeg);
-    }
-    article.article_grid_two{
-        display: grid ;
-        grid-template-columns: 1fr 1fr;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .contend_img_smarth{
-        width: 100%;
-        height: 50vh;
 
-    }
-    .section_two{
-        margin: 0 5em;
-    }
-    
-.contendCard_reglas.one,
-.contendCard_reglas.two,
-.contendCard_reglas.one.active,
-.contendCard_reglas.two.active,
-.contendCard_reglas.one.desactive,
-.contendCard_reglas.two.desactive{
-    display: block;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-}
-
-.section_three .contendButtons{
-    display: none;
-}
-.card_reglas {
-    background: yellow;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 1em;
-    background: linear-gradient( 145deg, white 40%, var(--gray-low-color) 80%);
-    border-radius: 0.8em;
-    width: 50vw;
-}
-.card_reglas img{
-    width:2em; 
-    height:2em;
-}
-
-.card_reglas div h2{
-    font-size:var(--font-large);
-    font-family: var(--title-font);
-    font-weight: 600;
-    margin: 0 1em;
-}
-.card_reglas div p {
-    font-size:var(--font-medium);
-    font-family: var(--body-font);
-    margin: 0 1em;
-}
-section.section_three{
-    background-color: var(--gray-low-color);
-    width: 100vw;
-    height: 75vh;
-    margin: 1rem;
-}
-.section_four img{
-    width:100%;
-    height: 100%;
-}
-.section_four{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.section_four div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.section_four div h2{
-    font-size: var(--font-bigbigbig);
-    font-family: var(--title-font);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* background-color: #00ACB6; */
-    text-align: center;
-    /* font-weight: 600; */
-    margin: 1em;
-}
-.section_four div h2 span{
-    margin: 0;
-    color: var(--gray-low-color);
-    padding: 0;
-}
-.section_four div p{
-    font-size:var(--font-large);
-    font-family: var(--body-font);
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-.section_five{
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.section_five section{
-    margin: 1em;
-}
-.contend_relojes_cambiantes{
-    width: 100%;
-}
-.section_five article {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 100vw;
-    justify-content: space-around;
-}
-.contend_relojes_cambiantes{
-    width: 50%;
-    /* height: 55vh; */
-    /* margin: 1em 10em; */
-}
-}
 /* Section Six */
 .section_six.active{
     background-image: url(../../../img/SmartWatches/movil/phonesSmarthwatches/one_phone.jpeg);
@@ -654,4 +515,260 @@ div.button-right_nose::before{
     height: 1em;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+
+@media screen and (min-width: 756px){
+    div.contend_contend_button div.contendButton{
+        width: 12em;
+        height: 2em;
+        margin: 0.6em 6em;
+    }
+    .title_smart{
+        text-align: center;
+        margin: 0.6em 3em;
+        font-size: var(--font-bigbigbig);
+    }
+    .main-METROPOLITAN{
+        width: 100vw;
+        height: 72vh;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: contain;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url(../../../img/SmartWatches/desktop/one-desktop.jpeg);
+    }
+    .main-TIMEXIRONMANR300GPS{
+        width: 100vw;
+        height: 50vh;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: contain;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url(../../../img/SmartWatches/desktop/two-desktop.jpeg);
+    }
+    .main-TIMEXIRONMANR300GPS  .title_smart, 
+    .main-TIMEXIRONMANR300GPS .parrafo_all{
+        color: white;
+        /* background-color: red; */
+    }
+    .main-TIMEXIRONMANR300GPS .parrafo_all{
+        position: relative;
+        left: 5em;
+    }
+    .main-TIMEXIRONMANR300GPS .contendButton .ShopNow.Large.smartwatches{
+        border: white 1px solid;
+        border-radius: 0;
+    }
+    article.article_grid_two{
+        display: grid ;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .contend_img_smarth{
+        width: 100%;
+        height: 50vh;
+
+    }
+    .section_two{
+        margin: 0 5em;
+    }
+    
+.contendCard_reglas.one,
+.contendCard_reglas.two,
+.contendCard_reglas.one.active,
+.contendCard_reglas.two.active,
+.contendCard_reglas.one.desactive,
+.contendCard_reglas.two.desactive{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.section_three .contendButtons{
+    display: none;
+}
+.card_reglas {
+    background: yellow;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1em;
+    background: linear-gradient( 145deg, white 40%, var(--gray-low-color) 80%);
+    border-radius: 0.8em;
+    width: 50vw;
+}
+.card_reglas img{
+    width:2em; 
+    height:2em;
+}
+
+.card_reglas div h2{
+    font-size:var(--font-large);
+    font-family: var(--title-font);
+    font-weight: 600;
+    margin: 0 1em;
+}
+.card_reglas div p {
+    font-size:var(--font-medium);
+    font-family: var(--body-font);
+    margin: 0 1em;
+}
+section.section_three{
+    background-color: var(--gray-low-color);
+    width: 100vw;
+    height: 75vh;
+    margin: 1rem;
+}
+.section_four img{
+    width:100%;
+    height: 100%;
+}
+.section_four{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.section_four div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section_four div h2{
+    font-size: var(--font-bigbigbig);
+    font-family: var(--title-font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #00ACB6; */
+    text-align: center;
+    /* font-weight: 600; */
+    margin: 1em;
+}
+.section_four div h2 span{
+    margin: 0;
+    color: var(--gray-low-color);
+    padding: 0;
+}
+.section_four div p{
+    font-size:var(--font-large);
+    font-family: var(--body-font);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.section_five{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section_five section{
+    margin: 1em;
+}
+.contend_relojes_cambiantes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section_five article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100vw;
+    justify-content: space-around;
+}
+
+.contend_one_relojesCambian{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.contend_relojes_cambiantes{
+    width: 50%;
+    /* height: 55vh; */
+    /* margin: 1em 10em; */
+}
+.contendButtons{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+}
+.cambiar_images{
+    /* background: red; */
+    background: none;
+    position: absolute;
+    align-self: center;
+    /* margin: 2em; */
+    display: flex;
+    justify-content: space-around;
+}
+article.six-section-article{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    background-color: #000000;
+    width: 100vw;
+}
+.section_six.active{
+    width:70%;
+    height: 85vh;
+    position: relative;
+    right: -30%;
+    grid-column: 2/3;
+    position: relative;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section_six.active div.mover_one_six{
+    color: white;
+    position: relative;
+    left: -150%;
+    
+}
+.section_six.active div.section_seven{
+    position: relative;
+    left: -150%;
+}
+
+.contendor_movimiento{
+    /* background-color: red; */
+    position: relative;
+    height: 6em;
+    width: 100%;
+}
+
+
+.contendButtons.cambiar_images_two{
+    /* background-color: royalblue; */
+}
+div.button-left_nose::before{
+    filter: drop-shadow(0.5em 4px 1px rgb(255, 255, 255));
+}
+
+div.button-right_nose::before{
+    filter: drop-shadow(0.5em 4px 1px rgb(255, 255, 255));
+}
+.img_cambiante{
+    /* background-color: red; */
+    filter: drop-shadow(0.5em 1px 0.5px rgb(255, 255, 255));
+    margin: 5px;
+    /* box-shadow: white 0.5em 0.5em 0.5em; */
+}
 }

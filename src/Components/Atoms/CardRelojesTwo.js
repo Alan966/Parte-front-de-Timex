@@ -1,5 +1,6 @@
 import "../../ComponentsCss/Atoms/CardRelojesTwo.css";
 import { Link } from "react-router-dom"
+import { BACKEND } from "./backend";
 
 const CardRelojesTwo = ({ _id, description}) => {
 return(
@@ -7,7 +8,7 @@ return(
     className="card_relojes_two" >
         <div className="contend_img_reloj">
             <img className="img_card_reloj" 
-    src={`http://localhost:5000/home/photo/${_id}`} 
+    src={`${BACKEND}/home/photo/${_id}`} 
     alt={description} />
             <div className="capa"></div>
         </div>
