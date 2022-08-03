@@ -64,6 +64,7 @@ a{
 .carousel_gray{
     background:var(--color-relojes_gris);
 }
+
 .title_reloj{
     font-size: var(--font-big);
     text-align: center;
@@ -152,6 +153,7 @@ a.ShopNow.card{
 a.ShopNow.card.Large{
     width: 90vw !important;
 }
+
 .estimated_delivery{
     /* background-color: red; */
     font-size: var(--font-medium);
@@ -241,6 +243,49 @@ ul.contend_list li.active ul {
     width: 100vw;
     padding-left: 0;
     /* background-color: #00ACB6; */
+}
+@media screen and (min-width: 756px){
+    .contenedor_two_all{
+        margin: 3em 4em;
+        /* background-color: yellow; */
+    }
+    .contend_start{
+        width: 100%;
+    }
+    .acomodar_todo_desorden{
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    div.rec.rec-swipable{
+    display: grid !important;
+    /* grid-template-rows: repeat(, 1fr); */
+    grid-template-columns: repeat(2,1fr);
+    width: 50vw;
+    }
+    .sc-gsnTZi.guIbWC.rec.rec-item-wrapper{
+        width: 90% !important;
+        height: 90%;
+        margin: 0 !important;
+        padding: 0em !important;
+    }
+    a.ShopNow.card.Large{
+        width: 150% !important;
+    }
+    .contend_contend_button{
+        min-width: 100%;
+    }
+    ul.contend_list li.active ul {
+        width: 100%;
+    }
+    .sc-iBkjds.kdCslO.rec.rec-pagination{
+        display: none;
+    }
+    .validar_price_title{
+        text-align: center;
+        font-size:var(--font-large);
+        font-family: var(--title-font);
+        /* font-weight: 600; */
+    }
 }
 ul.contend_list li.active ul li::after{
     background-image: none;

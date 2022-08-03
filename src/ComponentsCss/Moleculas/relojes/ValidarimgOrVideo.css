@@ -85,3 +85,23 @@ img.img_reloj_card{
     font-size: var(--font-large);
     font-family: var(--body-font);
 }
+
+@media screen and (min-width: 756px){
+    img.img_reloj_card{
+        height: 100%;
+        width: 100%;
+    }
+    .contend_new{
+        width: 100%;
+    }
+    .validar_price{
+        display: none;
+    }
+    .validaror{
+        display: none;
+    }
+    video.video_reloj_card{
+        width: 100%;
+        height: 100%;
+    }
+}

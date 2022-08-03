@@ -109,4 +109,11 @@ text-decoration: none;
     text-align: center;
     /* background-color: red; */
   }
+  .contend_img_date{
+    width:100%;
+    /* background-color: red; */
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+  }
 }

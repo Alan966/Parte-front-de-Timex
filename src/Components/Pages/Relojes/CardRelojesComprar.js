@@ -58,8 +58,18 @@ const CardRelojesComprar = ({
         e.classList.toggle("active");
       }
 
+      const conocerWith = () => {
+        let width = window.innerWidth
+        if(width > 756){
+            return 9
+        }else{
+            return 1
+        }
+    }
+
     return(
-        <div>
+        <div className="acomodar_todo_desorden">
+            <div className="contendor_one_all">
             <div className="container">
                 <div  className="tooltip">
                     <div className="content">{`Regresar`}</div>
@@ -73,7 +83,9 @@ const CardRelojesComprar = ({
                     </div>
                 </Link>
             </div>
-            <Carousel  renderArrow={myArrow} 
+        <Carousel
+            itemsToShow={conocerWith()}
+            renderArrow={myArrow} 
             className="carousel_gray">
             {
                 info ? 
@@ -87,9 +99,18 @@ const CardRelojesComprar = ({
                     )
                 })
                 : 
-                null
+                <h1>Cargando...</h1>
             }
         </Carousel>
+            </div>
+        <div className="contenedor_two_all">
+        {
+             window.innerWidth > 756 && info?
+            <h1 className="validar_price_title">{`MEX$${info[0].price}.00`}</h1>
+            : 
+            null
+
+        }
              <h2 className="title_reloj"> { url2? url2: url ? url : id }</h2>
              <div className="contend_start">
                 <img src={images.star} alt="estrella" />
@@ -241,7 +262,7 @@ const CardRelojesComprar = ({
                     <img className="img_redesSociales" src={images.TwitterCard} alt="twitter" />
                 </div>
             </ul>
-
+        </div>
         </div>
     )
 }

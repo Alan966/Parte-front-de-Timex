@@ -5,38 +5,28 @@ import { Link } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { BACKEND } from "../Atoms/backend";
 
-const ContendImg_Parrafo = ({ title, parrafo,url}) => {
+const ContendImg_Parrafo = ({ title, parrafo,url, numero}) => {
 
-    const [data , error] = useAxios(url)
-    const [imagenTimex, setImagenTimex] = useState(null)
-if(error){
-    console.log(error)
-}
+    const [data , error] = useAxios("http://localhost:5000/home/all")
+    
+    let date = null 
 
-    useEffect(() => {
-        if(window.innerWidth > 768 && data){
-            setImagenTimex(data[4])
-        }else if(window.innerWidth < 768 && data){
-            setImagenTimex(data[3])
-        }
-
-        return ()  => {
-            setImagenTimex([])
-        }
-    },[window.innerWidth])
+    if(data) date = data[numero]
 
     
 return(
     <ContenedorImg>
         <ContenedorImages>
+            <div className="contend_img_date">
             {
-                imagenTimex && 
+                date && 
                     <img 
-                    src={`${BACKEND}/home/photo/${imagenTimex._id}`}
-                    alt={imagenTimex.name}
+                    src={`${BACKEND}/home/photo/${date._id}`}
+                    alt={date.name}
                     className="img_parrafo"
                     />
             }
+            </div>
             <iframe 
             className="video_parrafo"
             src="https://www.youtube.com/embed/ex8IQpUAhbg" 

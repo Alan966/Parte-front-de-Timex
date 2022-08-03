@@ -34,7 +34,7 @@ const ValidarImgOrVideo = ({id, price}) => {
                 <img className="img_reloj_card" src={`${BACKEND}/relojestotalroute/photo/${id}`} alt={id} />
                 : 
                 error &&
-                <video src={`${BACKEND}/relojestotalroute/photo/${id}`} controls  loop></video>
+                <video className="video_reloj_card" src={`${BACKEND}/relojestotalroute/photo/${id}`} controls  loop></video>
             }
             <p className="validar_price">{`MEX$${price}.00`}</p>
         </div>)

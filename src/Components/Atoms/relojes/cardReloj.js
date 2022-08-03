@@ -11,7 +11,6 @@ const  CardRelojPrincipal= ({
 }) =>  {
 
     const { id, url } = useParams();
-    console.log(name, id , submenutwo, url)
 
     const urlContend = name === `NEW`? 
     `/${name}/${submenutwo}/${description}`:
