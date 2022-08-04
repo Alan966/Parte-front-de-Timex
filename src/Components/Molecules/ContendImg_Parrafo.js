@@ -7,7 +7,7 @@ import { BACKEND } from "../Atoms/backend";
 
 const ContendImg_Parrafo = ({ title, parrafo,url, numero}) => {
 
-    const [data , error] = useAxios("http://localhost:5000/home/all")
+    const [data , error] = useAxios(url)
     
     let date = null 
 
