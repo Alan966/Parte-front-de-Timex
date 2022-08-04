@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../../../ComponentsCss/Atoms/relojes/cardRelojes.css"
 import { useParams } from "react-router-dom";
+import { BACKEND } from "../backend";
 
 const  CardRelojPrincipal= ({
     price,
@@ -30,7 +31,7 @@ const  CardRelojPrincipal= ({
                     <p>New</p>
                 </div>
                 <img 
-                src={`http://localhost:5000/relojestotalroute/photo/${identificador}`} 
+                src={`${BACKEND}/relojestotalroute/photo/${identificador}`} 
                 alt={description} />
                 <h2 className="prueva timex">
                     {description}
