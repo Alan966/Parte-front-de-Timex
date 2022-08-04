@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Autosuggest from "react-autosuggest";
 import useAxios from "../getAxios";
 import { useCallback } from "react";
+import { BACKEND } from "../backend";
 
 const AutocompleteRelojesHeader = ({url}) => {
 
@@ -47,7 +48,7 @@ const AutocompleteRelojesHeader = ({url}) => {
                 <div className="sugerencia" onClick={() => 
                     seleccionarReloj(suggestion)}>
                         <p>{`${suggestion.description}`}</p>
-                        <img className="img_header" src={`http://localhost:5000/relojestotalroute/photo/${suggestion._id}`} alt={suggestion.description} />
+                        <img className="img_header" src={`${BACKEND}/relojestotalroute/photo/${suggestion._id}`} alt={suggestion.description} />
                 </div>
             )
         }
