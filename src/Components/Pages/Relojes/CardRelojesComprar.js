@@ -8,6 +8,7 @@ import styled from "styled-components"
 import images from "../../Templates/images";
 import "../../../ComponentsCss/Pages/Relojes/CardRelojesComprar.css"
 import { Link } from "react-router-dom";
+import ButtonRedux from "../../Organisms/Redux/ButtonRedux";
 
 const CardRelojesComprar = ({
     relojes
@@ -58,14 +59,7 @@ const CardRelojesComprar = ({
         e.classList.toggle("active");
       }
 
-      const conocerWith = () => {
-        let width = window.innerWidth
-        if(width > 756){
-            return 9
-        }else{
-            return 1
-        }
-    }
+      
 
     return(
         <div className="acomodar_todo_desorden">
@@ -84,7 +78,6 @@ const CardRelojesComprar = ({
                 </Link>
             </div>
         <Carousel
-            itemsToShow={conocerWith()}
             renderArrow={myArrow} 
             className="carousel_gray">
             {
@@ -127,14 +120,12 @@ const CardRelojesComprar = ({
                     src={images.heart} alt="Corazon" />
                     <p>Add to Wishlist</p>
                 </div>
-                <div className="contend_contend_button">
-                <div className="contendButton">
-                    <Link className="ShopNow card Large" 
-                    to="#">
-                        ADD TO BAG
-                    </Link> 
-                </div>
-                </div>
+                {
+                    info &&
+                    <ButtonRedux 
+                    info={info[0]}
+                    />
+                }
             </div>
 
             <p className="estimated_delivery">

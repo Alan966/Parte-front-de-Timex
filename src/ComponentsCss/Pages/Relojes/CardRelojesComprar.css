@@ -256,13 +256,13 @@ ul.contend_list li.active ul {
         display: grid; 
         grid-template-columns: repeat(2, 1fr);
     }
-    div.rec.rec-swipable{
+    .acomodar_todo_desorden div.rec.rec-swipable{
     display: grid !important;
     /* grid-template-rows: repeat(, 1fr); */
     grid-template-columns: repeat(2,1fr);
     width: 50vw;
     }
-    .sc-gsnTZi.guIbWC.rec.rec-item-wrapper{
+    .acomodar_todo_desorden .sc-gsnTZi.guIbWC.rec.rec-item-wrapper{
         width: 90% !important;
         height: 90%;
         margin: 0 !important;
@@ -277,7 +277,7 @@ ul.contend_list li.active ul {
     ul.contend_list li.active ul {
         width: 100%;
     }
-    .sc-iBkjds.kdCslO.rec.rec-pagination{
+    .acomodar_todo_desorden .sc-iBkjds.kdCslO.rec.rec-pagination{
         display: none;
     }
     .validar_price_title{

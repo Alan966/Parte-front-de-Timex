@@ -2,6 +2,7 @@ import images from "../Templates/images";
 import "../../ComponentsCss/Organims/Buscador.css";
 import BuscadorRelojesHeader from "../Molecules/relojes/BuscadorRelojesHeader";
 import { Link } from "react-router-dom";
+import CartCounter from "../Molecules/redux/CartCounter";
 
 
 const Buscador = ({url}) => {
@@ -24,7 +25,9 @@ const Buscador = ({url}) => {
                     className="img_user" />
                 </div>
                 <div className="contend_images numeros">
-                    <div className="numero">1</div>
+                    <div className="numero">
+                        <CartCounter />
+                    </div>
                     <img src={images.shopping} 
                     className="img_shopping" />
                 </div>

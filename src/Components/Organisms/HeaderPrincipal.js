@@ -3,6 +3,7 @@ import images from "../Templates/images";
 import "../../ComponentsCss/Organims/HeaderPrincipal.css";
 import { useRef } from "react";
 import { BACKEND } from "../Atoms/backend";
+import CartCounter from "../Molecules/redux/CartCounter";
 
 const HeaderPrincipal = () => {
 
@@ -33,7 +34,9 @@ const HeaderPrincipal = () => {
                 </nav> 
             </header> 
             <div className="contend_shop">
-                <div className="numero">1</div>
+                <div className="numero">
+                    <CartCounter />
+                </div>
                     <img src={images.shoppingCard32} 
                     className="img_shopping_two" 
                     alt="imgshoppingtwo" />

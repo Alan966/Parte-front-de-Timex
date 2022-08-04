@@ -78,6 +78,7 @@ p.price{
     align-items: center;
     color: var(--color-oscurito);
     font-size: var(--font-medium);
+    font-family: var(--body-font);
 }
 p.price::before{
     content: attr(data-price);

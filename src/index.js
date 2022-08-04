@@ -1,7 +1,6 @@
-
 import { render } from 'react-dom';
-import App from './Components/App';
+import AppRedux from './Components/AppRedux';
 
 const rootElement = document.getElementById('root'); 
-render(<App/>, rootElement); 
+render(<AppRedux/>, rootElement); 
 
