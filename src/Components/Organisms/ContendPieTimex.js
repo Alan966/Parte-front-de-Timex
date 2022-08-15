@@ -14,17 +14,17 @@ const ContendPieTimex = () => {
         </div>
         <div className="section_cards">
         {
-            data? 
+            data?
             data.map(({name, _id}) => {
                 return(
-                    <PieTimex 
+                    <PieTimex
                     name={name}
                     key={_id}
                     accesible={_id}
                     />
                 )
             })
-            : 
+            :
             null
         }
          </div>
