@@ -1,0 +1,89 @@
+/* Importacion de fuentes */
+body{
+    font-size: 16px;
+  }
+
+:root{
+    /* Colors */
+    --turkey-color:#00ACB6;
+    --white-color: #FFFFFF;
+    --gray-low-color: #D1D1D4;
+    --color-oscurito:#141618;
+    --color-header:#bbb8b8;
+    --color-relojes_gris :#F3F3F3;
+    --color_rosa_claro: #E4B9B3;
+    --color_rosa_oscuro: #C08A8A;
+    /* Fuentes para la Pagina */
+    --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Ubuntu', sans-serif;
+    /* Tamaños de letra */
+    --font-small: .6em;
+    --font-medium:.8em;
+    --font-large: 1em;
+    --font-big: 1.2em;
+    --font-bigbig: 1.4em;
+    --font-bigbigbig: 2em;
+
+    /* Medidas */
+    --header-menu-hamburguer:2em;
+
+    /* Variables de apilamiento */
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip:10;
+    --z-fixed:100;
+    --z-modal:1000;
+}
+
+section.section_autentication{
+    min-width: 100vw;
+    min-height: 100vh;
+}
+div.contend_autentication{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: red; */
+    /* padding: 0.5rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2em 0;
+}
+.parrafo_autenticacion{
+    font-size: var(--font-large);
+    font-family: var(--body-font);
+    margin: 1em;
+}
+
+div h1.title_autentication{
+    font-size:var(--font-big);
+    font-family: var(--title-font);
+    margin: 1em;
+}
+
+.contend_button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+.contend_button button{
+    width: 12em;
+    height: 4em;
+    border-radius: 0.5em;
+    margin: 1em;
+    background-color: var(--color_rosa_oscuro);
+    color: white;
+    font-size:var(--font-big);
+    font-family:var(--body-font);
+}
+
+@media screen and (min-width: 756px){
+    .contend_button{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -19,6 +19,8 @@ import SMARTWATCHES from "./Pages/SmartWatches/SmartWatches";
 import BlogPrincipal from "./Pages/Blog/BlogPrincipal";
 import BlogSecondId from "./Pages/Blog/BlogSecondId";
 import { BACKEND } from "./Atoms/backend";
+import Autenticacion from "./Pages/Autenticacion/Autenticacion";
+import Login from "./Organisms/Autenticacion/Login";
 
 function App() {
   return (
@@ -114,7 +116,9 @@ function App() {
         <Route path="/BLOG" element={ <BlogPrincipal />}></Route>
         <Route path="/BLOG/:id" element={<BlogSecondId />}></Route>
         <Route path="/BLOG/:id/:url" element={<BlogSecondId/>}></Route>
-        {/* COMING SOON */}
+        {/* Autenticacion Aplicacion*/}
+        <Route path="/Autenticacion" element={<Autenticacion/>}></Route>
+        <Route path="/Autenticacion/Login" element={<Login/>}></Route>
         <Route path="*" element={<Error404 />}></Route>
       </Routes>
       <Pagostimex />

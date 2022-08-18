@@ -31,7 +31,7 @@ const Home = () => {
                     id={1}
                 />}
             />
-            <ContendImg_Parrafo 
+            <ContendImg_Parrafo
             numero={3}
             title={"RETRO AND REFINED"}
             url={`${BACKEND}/home/all`}

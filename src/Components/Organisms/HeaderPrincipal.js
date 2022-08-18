@@ -4,7 +4,7 @@ import "../../ComponentsCss/Organims/HeaderPrincipal.css";
 import { useRef } from "react";
 import { BACKEND } from "../Atoms/backend";
 import CartCounter from "../Molecules/redux/CartCounter";
-
+import { Link } from "react-router-dom";
 const HeaderPrincipal = () => {
 
     const ref = useRef()
@@ -37,9 +37,11 @@ const HeaderPrincipal = () => {
                 <div className="numero">
                     <CartCounter />
                 </div>
+                    <Link to="/Autenticacion">
                     <img src={images.shoppingCard32} 
                     className="img_shopping_two" 
                     alt="imgshoppingtwo" />
+                    </Link>
             </div>
         </div>
     )

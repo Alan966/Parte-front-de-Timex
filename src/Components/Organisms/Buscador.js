@@ -17,19 +17,21 @@ const Buscador = ({url}) => {
             <p className='legend_timex_header'>MY TIMEX</p>
         </div>
             <div className="contend_search">
-                    <BuscadorRelojesHeader 
+                    <BuscadorRelojesHeader
                     urlOne={url}
                     />
                 <div className="contend_images">
-                    <img src={images.user} 
-                    className="img_user" />
+                <Link to="/Autenticacion">
+                    <img src={images.user} className="img_user" alt="Imagen de un Usuario"/>
+                </Link>
                 </div>
                 <div className="contend_images numeros">
                     <div className="numero">
                         <CartCounter />
                     </div>
-                    <img src={images.shopping} 
-                    className="img_shopping" />
+                <Link to="/Autenticacion">
+                <img src={images.shopping} className="img_shopping" alt="Imagen de un Carrito" />
+                </Link>
                 </div>
             </div>
         </section>
