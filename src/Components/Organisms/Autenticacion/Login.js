@@ -40,7 +40,7 @@ export default function Login() {
             .then(res => {
                 if(res.userData){
                     console.log(res.userData.user)
-                    localStorage.setItem('user', JSON.stringify(res.userData.user))
+                    localStorage.setItem('user', JSON.stringify(res.userData))
                     // window.location.href = '/'
                 }else{
                     console.log(res)
